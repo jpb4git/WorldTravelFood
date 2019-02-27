@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $name = 'jpb';
+    return view('welcome', ['name' => $name]);
 });
 
 /**
@@ -29,3 +30,10 @@ Route::get('/produits', function () {
     return view('pages.produits');
 });
 
+/**
+ *
+ *
+ */
+Route::get('/login', function () {
+    return view('pages.login');
+});
