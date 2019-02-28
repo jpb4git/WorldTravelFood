@@ -30,7 +30,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="panier">Panier</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="user">Mon Compte</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"></a>
                 </li>

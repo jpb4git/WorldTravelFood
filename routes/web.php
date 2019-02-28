@@ -11,50 +11,40 @@
 |
 */
 
-Route::get('/', function () {
-    $name = 'jpb';
-    return view('index', ['name' => $name]);
-});
+Route::get('/', "HomeController@index");
 
 /**
  *
  */
-Route::get('/about', function () {
-    $arr = [
-        'name' => 'jp',
-        'surname' => 'b'
-    ];
-    return view('pages.about',$arr);
-});
-
-/**
- *
- */
-Route::get('/produit', function () {
-    $arr = [
-        'name' => 'jp',
-        'surname' => 'b'
-    ];
-    return view('pages.produit',compact('arr'));
-});
+Route::get('/product/{id}', 'Product\ProducController@getProduit');
 
 
 
 /**
  *
  */
-Route::get('/produits', function () {
-    $arr = [
-        'name' => 'jp',
-        'surname' => 'b'
-    ];
-    return view('pages.produits',compact('arr'));
-});
+Route::get('/produits', 'Product\ProductController@showAll');
+
+
+
 
 /**
  *
  *
  */
-Route::get('/panier', function () {
-    return view('pages.panier');
-});
+Route::get('/panier', 'Basket\BasketController@index');
+
+
+
+/**
+ *
+ *
+ */
+Route::get('/order', 'Order\OrderController@show');
+
+
+/**
+ *
+ *
+ */
+Route::get('/user', 'UserController@login');
