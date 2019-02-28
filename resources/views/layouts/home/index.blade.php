@@ -1,16 +1,16 @@
 @extends('layouts.app', ['title' => 'Home'])
 @section('content')
-<style>
+    <style>
 
-    .container-fluid{
+        .container-fluid {
 
 
-    }
+        }
 
-    .img-car {
-        height: 500px;
-    }
-</style>
+        .img-car {
+            height: 500px;
+        }
+    </style>
 
     <div class="container">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -52,11 +52,15 @@
             </a>
         </div>
     </div>
-   @
+    @
     <div class="container">
         <div class="row">
             <div class="col-md-4 text-center">
-              t
+                <div class="wrapper">
+                    <div class="wave"></div>
+                    <div><img src="" alt="">
+                    </div>
+                </div>
             </div>
             <div class="col-md-4 text-center">T
             </div>
