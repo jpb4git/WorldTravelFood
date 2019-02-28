@@ -13,27 +13,48 @@
 
 Route::get('/', function () {
     $name = 'jpb';
-    return view('welcome', ['name' => $name]);
+    return view('index', ['name' => $name]);
 });
 
 /**
  *
  */
 Route::get('/about', function () {
-    return view('pages.about');
+    $arr = [
+        'name' => 'jp',
+        'surname' => 'b'
+    ];
+    return view('pages.about',$arr);
 });
+
+/**
+ *
+ */
+Route::get('/produit', function () {
+    $arr = [
+        'name' => 'jp',
+        'surname' => 'b'
+    ];
+    return view('pages.produit',compact('arr'));
+});
+
+
 
 /**
  *
  */
 Route::get('/produits', function () {
-    return view('pages.produits');
+    $arr = [
+        'name' => 'jp',
+        'surname' => 'b'
+    ];
+    return view('pages.produits',compact('arr'));
 });
 
 /**
  *
  *
  */
-Route::get('/login', function () {
-    return view('pages.login');
+Route::get('/panier', function () {
+    return view('pages.panier');
 });
