@@ -16,23 +16,15 @@ Route::get('/', "HomeController@index");
 /**
  *
  */
-Route::get('/product/{id}', 'Product\ProducController@getProduit');
+Route::get('/product/{id}', 'ProducController@getProduct');
 
 
 
 /**
  *
  */
-Route::get('/produits', 'Product\ProductController@showAll');
+Route::get('/produits', 'ProductController@showAll');
 
-
-
-
-/**
- *
- *
- */
-Route::get('/panier', 'Basket\BasketController@index');
 
 
 
@@ -40,11 +32,19 @@ Route::get('/panier', 'Basket\BasketController@index');
  *
  *
  */
-Route::get('/order', 'Order\OrderController@show');
+Route::get('/panier', 'BasketController@index');
 
 
 /**
  *
  *
  */
-Route::get('/user', 'UserController@login');
+Route::get('/newsLetter', 'NewLetterController@show');
+
+/**
+ *
+ *
+ */
+Route::get('/order', 'OrderController@show');
+
+
