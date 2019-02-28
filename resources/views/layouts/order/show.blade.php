@@ -1,4 +1,4 @@
-@extends('layouts.master', ['title' => 'Votre Panier'])
+@extends('layouts.app', ['title' => 'Votre Panier'])
 
 @section('content')
 

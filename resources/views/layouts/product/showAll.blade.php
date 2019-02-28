@@ -1,4 +1,4 @@
-@extends('layouts.master', ['title' => 'Catalogue'])
+@extends('layouts.app', ['title' => 'Catalogue'])
 
 
 @section('content')
