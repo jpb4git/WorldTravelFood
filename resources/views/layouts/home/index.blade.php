@@ -88,7 +88,7 @@
 
     <div class="container">
         {{-------------------------------  GAMMES  --------------------------------------------------}}
-        <div class="row mt-4">
+        <dlocalhost:8000iv class="row mt-4">
             <div class="col-md-4 text-center">
                 <div class="wrapper m-1">
                     <div class="wave blue d-flex justify-content-center align-items-center">
@@ -111,7 +111,7 @@
                     <div><img class="w-50 img-fluid" src="{{asset('assets/images/gamme.jpg')}}" alt=""></div>
                 </div>
             </div>
-        </div>
+        </dlocalhost:8000iv>
         {{-------------------------------  HEADER SPAN EN CE MOMENT------------------------------------------------}}
         <div class="row mt-5 mb-5">
             <div class="col-sm-12 header-tonique blue">

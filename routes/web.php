@@ -13,12 +13,14 @@
 
 Route::get('/', "HomeController@index");
 
+
+
+
+
 /**
  *
  */
-Route::get('/product/{id}', 'ProducController@getProduct');
-
-
+Route::get('/product/{id}', 'ProductController@getProduct');
 
 /**
  *

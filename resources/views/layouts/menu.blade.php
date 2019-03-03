@@ -22,19 +22,19 @@
                     <a class="nav-link" href="/">ACCUEIL <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('product.showAll') }}" class="nav-link">BOUTIQUE</a>
+                    <a href="{{-- route('layouts.product.showAll') --}}" class="nav-link">BOUTIQUE</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('pays.showAll') }}" class="nav-link">PAYS</a>
+                    <a href="{{-- route('layouts.pays.showAll') --}}" class="nav-link">PAYS</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('cat.showAll') }}" class="nav-link">CATÉGORIES</a>
+                    <a href="{{--route('layouts.cat.showAll') --}}" class="nav-link">CATÉGORIES</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('concept.showAll') }}" class="nav-link">CONCEPT</a>
+                    <a href="{{--route('layouts.concept.showAll') --}}" class="nav-link">CONCEPT</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('contact.showAll') }}" class="nav-link">CONTACT</a>
+                    <a href="{{--route('layouts.contact.showAll') --}}" class="nav-link">CONTACT</a>
                 </li>
             </ul>
         </div>

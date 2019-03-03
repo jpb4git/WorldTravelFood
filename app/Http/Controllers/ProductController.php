@@ -11,12 +11,12 @@ class ProductController extends Controller
 
     public function showAll()
     {
-        return  view("product.showAll" ,['name' => 'catalogue']);
+        return  view("layouts.product.showAll" ,['name' => 'catalogue']);
     }
 
-    public function getProduct($id)
+    public function getProduct()
     {
-        return  view("product.getProduct" ,['name' => 'Home']);
+        return  view("layouts.product.getProduct" ,['name' => 'produit Description']);
     }
 
 }
