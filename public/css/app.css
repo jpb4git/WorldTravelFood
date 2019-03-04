@@ -10708,6 +10708,25 @@ a.text-dark:focus {
   height: 40px;
 }
 
+.panier {
+  border-top: 1px solid #dd352e;
+}
+
+.comFrame {
+  border: 2px solid #67c7c6;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #f5fbfb;
+}
+
+.barre {
+  background-color: #e87570;
+  width: 15px;
+  height: 15px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
 div.dropdown-menu a {
   font-family: "Nunito", sans-serif;
 }
