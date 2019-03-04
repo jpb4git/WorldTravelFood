@@ -33,7 +33,7 @@
                         <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
                         <img class="starSize" src="{{asset('assets/images/starOff.svg')}}" alt="">
                         <span><a class="text-primary" href=""> 3 commentaires</a></span> | <span><a class="text-primary"
-                                                                                                   href="">Ecrire un commentaire</a></span>
+                                                                                                    href="">Ecrire un commentaire</a></span>
                     </div>
                     <hr>
 
@@ -58,8 +58,9 @@
                 <div class="mt-5 d-flex justify-content-start ">
 
                     <div class="row w-100 panier p-3">
-                        <div class="col-md-4 d-flex align-items-center ">
-                            <h4 class="h1 p-3 bg-primary justify-content-center text-light align-items-center">89,90
+                        <div class="col-sm-12 col-lg-4 d-flex align-items-center ">
+                            <h4 class="w-100 h1 p-3 bg-primary justify-content-center text-center text-light align-items-center">
+                                89,90
                                 €</h4>
                         </div>
                         <div class="col-md-8 d-flex flex-row justify-content-center ">
@@ -91,62 +92,71 @@
 
     {{-- COMMENTAIRE --}}
     <div class="container mt-5">
-        <div class="row">
+        <div class="row d-flex  flex-column">
             <h4> Commentaires</h4>
-            <div class="w-100  p-2 comFrame d-flex flex-row">
-                <div class="col-md-3 d-flex flex-column">
-                    <div class="wrapper-stars">
-                        <span class="p-2"><strong>Note</strong></span>
-                        <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
-                        <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
-                        <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
-                        <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
-                        <img class="starSize" src="{{asset('assets/images/starOff.svg')}}" alt="">
+            <div class="col-sm-12 w-100  p-2 comFrame d-flex flex-row">
+                <div class="row">
+                    <div class="col-md-3 d-flex flex-column">
+                        <div class="wrapper-stars">
+                            <span class="p-2"><strong>Note</strong></span>
+                            <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
+                            <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
+                            <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
+                            <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
+                            <img class="starSize" src="{{asset('assets/images/starOff.svg')}}" alt="">
+                        </div>
+                        <span class="p-2">Eric dumont </span>
+                        <span class="p-2">2019-03-15</span>
                     </div>
-                    <span class="p-2">Eric dumont </span>
-                    <span class="p-2">2019-03-15</span>
-                </div>
-                <div class="col-md-9">
-                    <h5>
-                        <strong>Ajoutez du gout à vos plats grâce aux fleurs comestibles</strong>
-                    </h5>
-                    <p>
-                        bonjour,
-                        Merci d'avoir fait connaitre que les fleurs étaient également comestibles. Au tout début, je
-                        n'avais aucune idée qu'il existaient des fleurs qui pouvaient être mangé. Et pour tous ceux qui
-                        veulent vivre une nouvelle expérience sur le plan culinaire, je vous recommande d'opter pour ce
-                        pack Découverte Florale, qui donne un nouveau gout aux plats les plus ordinaires.
-                    </p>
-                    <hr>
+                    <div class="col-md-9">
+                        <h5>
+                            <strong>Ajoutez du gout à vos plats grâce aux fleurs comestibles</strong>
+                        </h5>
+                        <p>
+                            bonjour,
+                            Merci d'avoir fait connaitre que les fleurs étaient également comestibles. Au tout début, je
+                            n'avais aucune idée qu'il existaient des fleurs qui pouvaient être mangé. Et pour tous ceux
+                            qui
+                            veulent vivre une nouvelle expérience sur le plan culinaire, je vous recommande d'opter pour
+                            ce
+                            pack Découverte Florale, qui donne un nouveau gout aux plats les plus ordinaires.
+                        </p>
+                        <hr>
+                    </div>
                 </div>
             </div>
-            <div class="w-100  p-2 comFrame d-flex flex-row mt-3">
-                <div class="col-md-3 d-flex flex-column">
-                    <div class="wrapper-stars">
-                        <span class="p-2"><strong>Note</strong></span>
-                        <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
-                        <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
-                        <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
-                        <img class="starSize" src="{{asset('assets/images/starOff.svg')}}" alt="">
-                        <img class="starSize" src="{{asset('assets/images/starOff.svg')}}" alt="">
+            <div class="col-sm-12 w-100  p-2 comFrame d-flex flex-row mt-4">
+                <div class="row">
+                    <div class="col-md-3 d-flex flex-column">
+                        <div class="wrapper-stars">
+                            <span class="p-2"><strong>Note</strong></span>
+                            <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
+                            <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
+                            <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
+                            <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
+                            <img class="starSize" src="{{asset('assets/images/starOff.svg')}}" alt="">
+                        </div>
+                        <span class="p-2">Eric dumont </span>
+                        <span class="p-2">2019-03-15</span>
                     </div>
-                    <span class="p-2">Martia Baîla </span>
-                    <span class="p-2">2019-03-15</span>
-                </div>
-                <div class="col-md-9">
-                    <h5>
-                        <strong>Terrible !!!</strong>
-                    </h5>
-                    <p>
-                        bonjour,
-                        Merci d'avoir fait connaitre que les fleurs étaient également comestibles. Au tout début, je
-                        n'avais aucune idée qu'il existaient des fleurs qui pouvaient être mangé. Et pour tous ceux qui
-                        veulent vivre une nouvelle expérience sur le plan culinaire, je vous recommande d'opter pour ce
-                        pack Découverte Florale, qui donne un nouveau gout aux plats les plus ordinaires.
-                    </p>
-                    <hr>
+                    <div class="col-md-9">
+                        <h5>
+                            <strong>Ajoutez du gout à vos plats grâce aux fleurs comestibles</strong>
+                        </h5>
+                        <p>
+                            bonjour,
+                            Merci d'avoir fait connaitre que les fleurs étaient également comestibles. Au tout début, je
+                            n'avais aucune idée qu'il existaient des fleurs qui pouvaient être mangé. Et pour tous ceux
+                            qui
+                            veulent vivre une nouvelle expérience sur le plan culinaire, je vous recommande d'opter pour
+                            ce
+                            pack Découverte Florale, qui donne un nouveau gout aux plats les plus ordinaires.
+                        </p>
+                        <hr>
+                    </div>
                 </div>
             </div>
+
 
         </div>
         {{-- Vous aimerez aussi--}}
@@ -155,7 +165,7 @@
             <div class="col-sm-12 header-tonique bg-secondary d-flex justify-content-start align-items-center">
                 <div class="barre"></div>
                 <div class="w-100">
-                    <span class="ml-2" ><strong> Vous Aimerez aussi ...</strong></span>
+                    <span class="ml-2"><strong> Vous Aimerez aussi ...</strong></span>
                 </div>
             </div>
         </div>
@@ -163,7 +173,7 @@
         <div class="row mt-4 mb-5">
             <div class="col-xl-4 text-center">
                 <a class="product-a" href="">
-                    <div class="card text-center">
+                    <div class="card text-center mb-3">
                         <div class="text-center pt-2">
                             <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 " alt="product 1 ">
                         </div>
@@ -171,13 +181,32 @@
                             <h5 class="card-title"><strong>M&M's Cookies</strong></h5>
                             <h6 class="card-title">M&M's </h6>
                             <p class="card-text">1,96 Euros</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row d-flex flex-row">
+                                <div class="col">
+                                    <a class="product-a" href="">
+                                        <img class="basket-size" src="{{asset('assets/images/basket-plus.svg')}}"
+                                             alt="basket">
+                                        Ajouter
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="product-a" href="">
+                                             <span class="orange-Text grey p-1 mr-1"><img
+                                                     src="{{asset('assets/images/eye.svg')}}"
+                                                     alt="eye"> En savoir +</span>
+                                        <span class="orange-Text grey p-1"></span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-xl-4 text-center">
                 <a class="product-a" href="">
-                    <div class="card text-center">
+                    <div class="card text-center mb-3">
                         <div class="text-center pt-2">
                             <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 " alt="product 1 ">
                         </div>
@@ -185,13 +214,32 @@
                             <h5 class="card-title"><strong>M&M's Cookies</strong></h5>
                             <h6 class="card-title">M&M's </h6>
                             <p class="card-text">1,96 Euros</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row d-flex flex-row">
+                                <div class="col">
+                                    <a class="product-a" href="">
+                                        <img class="basket-size" src="{{asset('assets/images/basket-plus.svg')}}"
+                                             alt="basket">
+                                        Ajouter
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="product-a" href="">
+                                             <span class="orange-Text grey p-1 mr-1"><img
+                                                     src="{{asset('assets/images/eye.svg')}}"
+                                                     alt="eye"> En savoir +</span>
+                                        <span class="orange-Text grey p-1"></span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-xl-4 text-center">
                 <a class="product-a" href="">
-                    <div class="card text-center">
+                    <div class="card text-center mb-3">
                         <div class="text-center pt-2">
                             <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 " alt="product 1 ">
                         </div>
@@ -199,6 +247,25 @@
                             <h5 class="card-title"><strong>M&M's Cookies</strong></h5>
                             <h6 class="card-title">M&M's </h6>
                             <p class="card-text">1,96 Euros</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row d-flex flex-row">
+                                <div class="col">
+                                    <a class="product-a" href="">
+                                        <img class="basket-size" src="{{asset('assets/images/basket-plus.svg')}}"
+                                             alt="basket">
+                                        Ajouter
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="product-a" href="">
+                                             <span class="orange-Text grey p-1 mr-1"><img
+                                                     src="{{asset('assets/images/eye.svg')}}"
+                                                     alt="eye"> En savoir +</span>
+                                        <span class="orange-Text grey p-1"></span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </a>
