@@ -1,46 +1,6 @@
 @extends('layouts.app', ['title' => 'Home'])
 @section('content')
-    <style>
-        .primary {
-            background-color: #dd352e !important;
-        }
-        .secondary {
-            background-color: #67c7c6 !important;
-        }
-        .grey {
-            background-color: #a5babc !important;
-        }
-        .img-car {
-            height: 500px;
-        }
-        .wave {
-            position: absolute;
-            width: 90%;
-            height: 90%;
-            opacity: 0.5;
-        }
-        .header-tonique {
-            height: 2.5em;
-        }
-        .header-tonique span {
-            color: white;
-        }
-        .new-left {
-            width: 650px;
-            height: 700px;
-        }
-        .new-right {
-            width: 380px;
-            height: 350px;
-        }
-        .product-a {
-            text-decoration: none !important;
-            color: black;
-        }
-        .product-a:hover {
-            color: #67c7c6;
-        }
-    </style>
+
 
 
     {{-------------------------------  GAMMES  --------------------------------------------------}}
@@ -88,10 +48,10 @@
 
     <div class="container">
         {{-------------------------------  GAMMES  --------------------------------------------------}}
-        <dlocalhost:8000iv class="row mt-4">
+        <div class="row mt-4">
             <div class="col-md-4 text-center">
                 <div class="wrapper m-1">
-                    <div class="wave blue d-flex justify-content-center align-items-center">
+                    <div class="wave bg-secondary d-flex justify-content-center align-items-center">
                         <h2>Gamme</h2>
                     </div>
                     <div><img class="w-50 img-fluid" src="{{asset('assets/images/gamme.jpg')}}" alt="">
@@ -111,10 +71,10 @@
                     <div><img class="w-50 img-fluid" src="{{asset('assets/images/gamme.jpg')}}" alt=""></div>
                 </div>
             </div>
-        </dlocalhost:8000iv>
+        </div>
         {{-------------------------------  HEADER SPAN EN CE MOMENT------------------------------------------------}}
         <div class="row mt-5 mb-5">
-            <div class="col-sm-12 header-tonique blue">
+            <div class="col-sm-12 header-tonique bg-secondary">
                 <div class="w-100 d-flex justify-content-center">
                     <span>En ce Moment</span>
                 </div>
@@ -269,23 +229,23 @@
         {{-------------------------------  CONFIANCE    -----------------------------------------------}}
         <div class="row mt-5 ">
             <div class="col-sm-12 p-0">
-                <div class="d-flex justify-content-center header-tonique blue">
+                <div class="d-flex justify-content-center header-tonique bg-secondary">
                     <span>CONFIANCE</span>
                 </div>
             </div>
         </div>
         <div class="row ">
-            <div class="col-md-4 orange d-flex flex-column justify-content-center align-items-center p-0 m-0">
+            <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
                 <img class="w-25 text-center" src="{{asset('assets/images/car.svg')}}" alt="car">
                 <p class="text-light mb-0">DÉJÀ PLUS DE </p>
                 <p class="text-light">69884 COMMANDES</p>
             </div>
-            <div class="col-md-4 orange d-flex flex-column justify-content-center align-items-center p-0 m-0">
+            <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
                 <img class="w-25 text-center " src="{{asset('assets/images/car.svg')}}" alt="car">
                 <p class="text-light mb-0">DÉJÀ PLUS DE </p>
                 <p class="text-light">69884 COMMANDES</p>
             </div>
-            <div class="col-md-4 orange d-flex flex-column justify-content-center align-items-center p-0 m-0">
+            <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
                 <img class="w-25 text-center" src="{{asset('assets/images/car.svg')}}" alt="car">
                 <p class="text-light mb-0">DÉJÀ PLUS DE </p>
                 <p class="text-light">69884 COMMANDES</p>
