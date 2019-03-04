@@ -2,6 +2,7 @@
 @section('content')
 
 
+
     {{-------------------------------  GAMMES  --------------------------------------------------}}
     <div class="container mt-5 mb-5">
         <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">

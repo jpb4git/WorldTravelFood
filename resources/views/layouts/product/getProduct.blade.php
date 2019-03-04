@@ -1,9 +1,7 @@
 @extends('layouts.app', ['title' => 'Fiche Produit'])
 
 @section('content')
-    <style>
 
-    </style>
 
     <div class="container-fluid ">
         <div class="row row-breadcrumb ">
