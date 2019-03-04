@@ -1,10 +1,10 @@
 @extends('layouts.app', ['title' => 'Home'])
 @section('content')
     <style>
-        .orange {
+        .primary {
             background-color: #dd352e !important;
         }
-        .blue {
+        .secondary {
             background-color: #67c7c6 !important;
         }
         .grey {

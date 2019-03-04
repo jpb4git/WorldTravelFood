@@ -2,7 +2,7 @@
 
 @section('content')
     <style>
-        .orange {
+        .primary {
             background-color: #dd352e !important;
         }
 
@@ -10,7 +10,7 @@
             color: #dd352e !important;
         }
 
-        .blue {
+        .secondary {
             background-color: #67c7c6 !important;
         }
 
@@ -75,7 +75,7 @@
             background-color: red;
         }
 
-        }
+
     </style>
     <div class="container-fluid ">
         <div class="row row-breadcrumb ">
