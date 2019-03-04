@@ -1,53 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
-.img-car {
-  height: 500px;
-}
-
-.wave {
-  position: absolute;
-  width: 90%;
-  height: 90%;
-  opacity: 0.5;
-}
-
-.header-tonique {
-  height: 2.5em;
-}
-
-.header-tonique span {
-  color: white;
-}
-
-.new-left {
-  width: 650px;
-  height: 700px;
-}
-
-.new-right {
-  width: 380px;
-  height: 350px;
-}
-
-.product-a {
-  text-decoration: none !important;
-  color: black;
-}
-
-.product-a:hover {
-  color: #67c7c6;
-}
-
-.starSize {
-  width: 1em;
-  height: 1em;
-}
-
-#qtsInput {
-  width: 40px;
-  height: 40px;
-}
-
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -10703,31 +10655,99 @@ a.text-dark:focus {
   }
 }
 
-.blue {
-  background-color: #67c7c6 !important;
+.img-car {
+  height: 500px;
 }
 
-a {
+.wave {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  opacity: 0.5;
+}
+
+.header-tonique {
+  height: 2.5em;
+}
+
+.header-tonique span {
+  color: white;
+}
+
+.new-left {
+  width: 650px;
+  height: 700px;
+}
+
+.new-right {
+  width: 380px;
+  height: 350px;
+}
+
+.product-a {
+  text-decoration: none !important;
   color: black;
 }
 
-a:hover {
-  color: black;
+.product-a:hover {
+  color: #67c7c6;
+}
+
+.starSize {
+  width: 1em;
+  height: 1em;
+}
+
+#qtsInput {
+  width: 40px;
+  height: 40px;
+}
+
+div.dropdown-menu a {
+  font-family: "Nunito", sans-serif;
+}
+
+a.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav {
+  font-family: Amatic SC, cursive;
+}
+
+a.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #67c7c6;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #2a2a2a;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  opacity: 0.8;
+  background-color: #67c7c6;
+}
+
+a.nav-link {
+  letter-spacing: 0.1rem;
+}
+
+nav {
+  color: #ffffff;
+  font-size: 20px;
   font-weight: bold;
 }
 
-i {
-  width: 30 px;
-  height: 30px;
+hr.style1 {
+  border-top: 6px solid #67c7c6;
 }
 
-.logo {
-  width: 50px;
-  height: 50px;
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 5rem;
+  padding-left: 0.5rem;
 }
 
-.RSociaux {
-  width: 30px;
-  height: 30px;
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 

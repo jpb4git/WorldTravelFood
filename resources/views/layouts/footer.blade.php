@@ -5,7 +5,7 @@
 <footer>
     <div class="container-fluid blue p-4 mt-5">
         <div class="row no-gutters">
-            <div class="col-12, col-md-6, col-lg-3  ">
+            <div class="col-12, col-md-6, col-lg-3">
                 <a href="">
                     <i class="fab fa-cc-paypal "></i>
                     <i class="fab fa-cc-mastercard"></i>
@@ -43,7 +43,7 @@
             </div>
             <div class="col-12, col-md-6, col-lg-3">
                 <form action="" method="post">
-                    <div class="form-group">
+                    <div class="form-inline">
                         <label for=mail">S'inscrire à la newsletter</label>
                         <input type="email" class="form-control" name="mail" placeholder="email">
                         <button type="submit" name="submitNewsletter" class="btn btn-success">OK</button>
@@ -68,7 +68,7 @@
                 <img class="RSociaux" src="{{asset('assets/images/pinterest.png')}}" alt="logo pinterest">
             </a>
         </div>
-        <div class="row d-inline ">
+        <div class="row d-inline">
             <a href="" class="p-5">Conditions générales de vente</a>
             <a href="" class="p-5">Mentions légales</a>
             <a href="" class="p-5">Politique de confidentialité</a>
