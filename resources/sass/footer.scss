@@ -1,22 +1,40 @@
 .blue {
   background-color: #67c7c6 !important;
 }
-a{
-  color :black;
+
+footer .row.avantages {
+  font-size: 1.7em !important;
 }
-a:hover{
-  color:black;
-  font-weight:bold;
+
+footer .row:not(.legal) {
+  font-size: 1.3em;
 }
-i{
+
+footer a {
+  color: black;
+  transition: all 0.25s ease;
+}
+
+footer a:hover{
+  color: black;
+  transform: scale(1.1);
+}
+
+footer .legal a {
+  color: #2d5757;
+  font-size: 0.9em;
+}
+
+footer i {
   width:30 px;
   height: 30px;
-
 }
-.logo{
+
+.logo {
   width: 50px;
   height: 50px;
 }
+
 .RSociaux{
   width: 30px;
   height: 30px;
