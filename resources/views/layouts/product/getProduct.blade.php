@@ -1,7 +1,9 @@
 @extends('layouts.app', ['title' => 'Fiche Produit'])
 
 @section('content')
+    <style>
 
+    </style>
 
     <div class="container-fluid ">
         <div class="row row-breadcrumb ">
@@ -24,14 +26,14 @@
                 <img class="size-Product img-fluid" src="{{asset('assets/images/gamme.jpg')}}" alt="">
             </div>
             <div class="col-md-8">
-                <div class="wrapper mb-5" id="warp-stars">
+                <div class="wrapper mb-5">
                     <span><strong>VIN DE COBRA & SCORPION - GRANDE BOUTEILLE</strong></span>
                     <div class="wrapper-stars">
-                        <img class="star-size" src="{{asset('assets/images/starOn.svg')}}" alt="">
-                        <img class="star-size" src="{{asset('assets/images/starOn.svg')}}" alt="">
-                        <img class="star-size" src="{{asset('assets/images/starOn.svg')}}" alt="">
-                        <img class="star-size" src="{{asset('assets/images/starOn.svg')}}" alt="">
-                        <img class="star-size" src="{{asset('assets/images/starOff.svg')}}" alt="">
+                        <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
+                        <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
+                        <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
+                        <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
+                        <img class="starSize" src="{{asset('assets/images/starOff.svg')}}" alt="">
                         <span><a class="text-primary" href=""> 3 commentaire</a></span> | <span><a class="text-primary" href="">Ecrire un commentaire</a></span>
                     </div>
                     <hr>
@@ -51,23 +53,26 @@
                                                                  alt="eye"></span>
                     <span class="orange-Text grey p-1">En savoir +</span>
                 </div>
-                <div class="mt-5 w-100 d-flex justify-content-start bg-info">
-                    <div class="wrapper-price">
+                <div class="mt-5 w-100 d-flex justify-content-start bg-info" >
+                    
                         <div class="row">
-                            <div class="col-md-3 content-price ">
-                                <h4 class="h4 p-1">89,90 €</h4>
+                            <div class="col-md-3 content-price">
+                                <h4 class="p-1">89,90 €</h4>
                             </div>
-                            <div class="col-md-9">
-
+                            <div class="col-md-9 d-flex justify-content-end">
+                                <form action="">
+                                    <input id="qtsInput" type="number"  value="1">
+                                    <input class="btn btn-primary " type="submit">
+                                </form>
                             </div>
                         </div>
 
-                    </div>
+
                 </div>
-                <div class="row-fluid bg-light">
+                <div class="row-fluid">
                     <div class="col-md-12 ">
                         <span class="spot bg-primary">7</span>
-                        <span class=" text-center bg-danger">En rupture de Sotck</span>
+                        <span class=" text-center bg-primary">En rupture de Sotck</span>
                     </div>
                 </div>
             </div>
