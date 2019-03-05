@@ -1,5 +1,10 @@
+.linkProd{
+    text-decoration: none!important;
 
-
+}
+linkProd:hover{
+    color: $primary!important;
+}
 .starSize {
     width: 1em;
     height: 1em;
@@ -9,4 +14,35 @@
     width:40px;
     height:40px;
 }
+
+
+.panier{
+    border-top: 1px solid $primary;
+}
+
+.comFrame{
+    border :2px solid $secondary;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: lighten($secondary,38%);
+}
+.barre{
+    background-color: lighten($primary,15%);
+    width : 15px;
+    height: 15px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.basket-size{
+    width:2em;
+    height: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+       // background-color: lightblue;
+    }
+}
+
 

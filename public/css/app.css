@@ -10698,6 +10698,14 @@ a.text-dark:focus {
   color: #67c7c6;
 }
 
+.linkProd {
+  text-decoration: none !important;
+}
+
+linkProd:hover {
+  color: #dd352e !important;
+}
+
 .starSize {
   width: 1em;
   height: 1em;
@@ -10706,6 +10714,30 @@ a.text-dark:focus {
 #qtsInput {
   width: 40px;
   height: 40px;
+}
+
+.panier {
+  border-top: 1px solid #dd352e;
+}
+
+.comFrame {
+  border: 2px solid #67c7c6;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #f5fbfb;
+}
+
+.barre {
+  background-color: #e87570;
+  width: 15px;
+  height: 15px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.basket-size {
+  width: 2em;
+  height: 2em;
 }
 
 div.dropdown-menu a {

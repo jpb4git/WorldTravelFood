@@ -14,6 +14,16 @@ class ProductController extends Controller
         return  view("layouts.product.showAll" ,['name' => 'catalogue']);
     }
 
+    public function showByCat()
+    {
+        return  view("layouts.product.showByCat" ,['cat' => 'catalogue']);
+    }
+
+    public function showByCountry()
+    {
+        return  view("layouts.product.showByCountry" ,['name' => 'catalogue']);
+    }
+
     public function getProduct()
     {
         return  view("layouts.product.getProduct" ,['name' => 'produit Description']);
