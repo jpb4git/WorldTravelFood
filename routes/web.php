@@ -27,11 +27,40 @@ Route::get('/produits', 'ProductController@showAll');
 Route::get('/produitsCat', 'ProductController@showByCat');
 Route::get('/produitsCountry', 'ProductController@showByCountry');
 
+
+
+/**
+ *
+ *
+ *      BASKET
+ *
+ *
+ *
+ */
+
+
+
+
+
 /**
  *
  *
  */
 Route::get('/panier', 'BasketController@index');
+
+Route::get('/panier/identification', 'BasketController@identification');
+
+Route::get('/panier/createAccount', 'BasketController@createAccount');
+
+Route::get('/panier/adresse1', 'BasketController@adresse1');
+
+Route::get('/panier/adresse2', 'BasketController@adresse2');
+
+Route::get('/panier/adresseChoix', 'BasketController@adresseChoix');
+
+Route::get('/panier/fraisDePort', 'BasketController@fraisDePort');
+
+Route::get('/panier/paiement', 'BasketController@paiement');
 
 
 /**
