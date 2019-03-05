@@ -110,7 +110,7 @@
         {{-------------------------------  BEST SELLERS    -----------------------------------------------}}
         <div class="row mt-4 mb-5">
             <div class="col-xl-3 text-center">
-                <a class="product-a" href="">
+                <a class="product-a" href="{{route('product.getProduct', ['id' => 1]) }}">
                     <div class="card text-center">
                         <div class="text-center pt-2">
                             <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 " alt="product 1 ">
@@ -124,7 +124,7 @@
                 </a>
             </div>
             <div class="col-xl-3 text-center">
-                <a class="product-a" href="">
+                <a class="product-a" href="href="{{route('product.getProduct', ['id' => 1]) }}">
                     <div class="card text-center">
                         <div class="text-center pt-2">
                             <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 " alt="product 1 ">
@@ -234,7 +234,7 @@
                 </div>
             </div>
         </div>
-        <div class="row ">
+        <div class="row mb-5">
             <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
                 <img class="w-25 text-center" src="{{asset('assets/images/car.svg')}}" alt="car">
                 <p class="text-light mb-0">DÉJÀ PLUS DE </p>

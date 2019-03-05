@@ -100,6 +100,3 @@
         </main>
     </form>
 @endsection
-
-
-

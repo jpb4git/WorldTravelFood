@@ -6,17 +6,16 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
-// Acceuil css
+// header css
 @import 'headerstyle';
 
 @import 'home';
 
 @import 'product';
-
-@import 'basket.scss';
-
+@import 'basket';
 @import 'nav';
+
+
 
 @import'footer.scss';
 

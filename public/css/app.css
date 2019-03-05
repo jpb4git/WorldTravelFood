@@ -10740,6 +10740,21 @@ linkProd:hover {
   height: 2em;
 }
 
+.infoBox {
+  border: 2px solid #ef9f9c;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #f1fafa;
+}
+
+.requiredField {
+  color: #dd352e;
+}
+
+.inputSpan {
+  width: 200px !important;
+}
+
 .ChampsRequis {
   color: #dd352e !important;
 }

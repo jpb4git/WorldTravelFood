@@ -17,7 +17,7 @@ Route::get('/', "HomeController@index");
 /**
  *
  */
-Route::get('/product/{id}', 'ProductController@getProduct');
+Route::get('/product/{id}', 'ProductController@getProduct')->name('product.getProduct');
 
 /**
  *
