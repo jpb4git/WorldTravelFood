@@ -9,7 +9,7 @@ class BasketController extends Controller
 {
     public function index()
     {
-        return  view("layouts.basket.panier");
+        return  view("layouts.basket.index");
     }
 
 

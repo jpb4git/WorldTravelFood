@@ -46,7 +46,7 @@ Route::get('/produitsCountry', 'ProductController@showByCountry');
  *
  *
  */
-Route::get('/panier', 'BasketController@index');
+Route::get('/panier', 'BasketController@index')->name('panier.index');
 
 Route::get('/panier/identification', 'BasketController@identification');
 
