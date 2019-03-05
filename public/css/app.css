@@ -10755,6 +10755,10 @@ linkProd:hover {
   width: 200px !important;
 }
 
+.ChampsRequis {
+  color: #dd352e !important;
+}
+
 div.dropdown-menu a {
   font-family: "Nunito", sans-serif;
 }
