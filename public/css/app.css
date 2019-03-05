@@ -10740,6 +10740,21 @@ linkProd:hover {
   height: 2em;
 }
 
+.infoBox {
+  border: 2px solid #67c7c6;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #f1fafa;
+}
+
+.requiredField {
+  color: #dd352e;
+}
+
+.inputSpan {
+  width: 200px !important;
+}
+
 div.dropdown-menu a {
   font-family: "Nunito", sans-serif;
 }

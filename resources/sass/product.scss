@@ -39,6 +39,21 @@ linkProd:hover{
     height: 2em;
 }
 
+.infoBox{
+    border :2px solid $secondary;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: lighten($secondary,37%);
+}
+
+.requiredField{
+    color:$primary;
+}
+
+.inputSpan{
+    width: 200px!important;
+
+}
 @media only screen and (max-width: 600px) {
     body {
        // background-color: lightblue;
