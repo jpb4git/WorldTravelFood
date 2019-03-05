@@ -1,6 +1,6 @@
 <header>
 
-    <div class="container-fluid primary  ">
+    <div class="container-fluid bg-primary ">
 
         <div class="row ">
             <div class="col p-2 text-white d-flex justify-content-center  ">
@@ -9,7 +9,7 @@
         </div>
     </div>
 
-    <div class="container-fluid secondary p-3">
+    <div class="container-fluid bg-secondary p-3">
 
         <div class="row ">
             <div class="col-lg-2">
