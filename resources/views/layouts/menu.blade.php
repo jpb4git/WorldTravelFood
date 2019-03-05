@@ -13,13 +13,13 @@
         <ul class="navbar-nav justify-content-center">
 
             <li class="nav-item">
-                <a class="nav-link" href="#">ACCUEIL</a>
+                <a class="nav-link" href="{{route('home.index')}}">ACCUEIL</a>
             </li>
             <li class="nav-item dropdown">
 
             <li class="nav-item">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false" href="{{-- route('layouts.pays.showAll') --}}">CONTINENTS</a>
+                   aria-expanded="false" href="{{--route('layouts.pays.showAll')--}}">CONTINENTS</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Amérique</a>
                     <a class="dropdown-item" href="#">Asie</a>
@@ -32,7 +32,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false" href="{{--route('layouts.cat.showAll') --}}">CATÉGORIES</a>
+                   aria-expanded="false" href="{{--route('layouts.cat.showAll')--}}">CATÉGORIES</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Boissons</a>
                     <a class="dropdown-item" href="#">Bonbons</a>
@@ -44,10 +44,10 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{--route('layouts.concept.showAll') --}}">LE CONCEPT</a>
+                <a class="nav-link" href="{{--route('layouts.concept.showAll')--}}">LE CONCEPT</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{--route('layouts.contact.showAll') --}}">CONTACT</a>
+                <a class="nav-link" href="{{--route('layouts.contact.showAll')--}}">CONTACT</a>
             </li>
         </ul>
     </div>
