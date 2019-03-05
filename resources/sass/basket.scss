@@ -1,0 +1,17 @@
+.infoBox{
+    border :2px solid lighten($primary,25%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: lighten($secondary,37%);
+}
+
+.requiredField{
+    color:$primary;
+}
+
+.inputSpan{
+    width: 200px!important;
+
+}
+
+
