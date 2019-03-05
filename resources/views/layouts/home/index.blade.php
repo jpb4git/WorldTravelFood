@@ -234,7 +234,7 @@
                 </div>
             </div>
         </div>
-        <div class="row ">
+        <div class="row mb-5">
             <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
                 <img class="w-25 text-center" src="{{asset('assets/images/car.svg')}}" alt="car">
                 <p class="text-light mb-0">DÉJÀ PLUS DE </p>
