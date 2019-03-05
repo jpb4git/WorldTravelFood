@@ -25,6 +25,7 @@ Route::get('/product/{id}', 'ProductController@getProduct')->name('product.getPr
 Route::get('/produits', 'ProductController@showAll');
 
 Route::get('/produitsCat', 'ProductController@showByCat');
+
 Route::get('/produitsCountry', 'ProductController@showByCountry');
 
 
