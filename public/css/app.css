@@ -10740,6 +10740,10 @@ linkProd:hover {
   height: 2em;
 }
 
+.ChampsRequis {
+  color: #dd352e !important;
+}
+
 div.dropdown-menu a {
   font-family: "Nunito", sans-serif;
 }

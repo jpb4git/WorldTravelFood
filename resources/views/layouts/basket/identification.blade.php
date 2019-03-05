@@ -6,12 +6,11 @@
         <div class="col-sm-12 ">
             <h1 class="h5 my-auto">IDENTIFICATION</h1>
         </div>
-
     </div>
 
     <div class="row my-5">
         <div class="col-lg-6 ">
-            <span>CRÉEZ VOTRE COMPTE</span>
+            <span class="text-primary">CRÉEZ VOTRE COMPTE</span>
                  <p class="mt-3">Saisissez votre adresse mail pour créer votre compte : </p>
                 <form action="" method="post">
                     <div class="form-inline">
@@ -24,7 +23,7 @@
                 </form>
         </div>
         <div class="col-lg-6">
-            <span>DÉJÀ INSCRIT?</span>
+            <span class="text-primary">DÉJÀ INSCRIT?</span>
                 <form action="" method="post">
                     <div class="form-group">
                         <label for="mail" class="mr-3 mt-3">Votre adresse mail</label>
