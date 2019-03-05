@@ -2,17 +2,28 @@
 
 
 @section('content')
-    <div class="container">
-        {{--            TITRE CATÉGORIE                      --}}
-        <div class="row mt-5 mb-5">
-            <div class="col-sm-12 header-tonique bg-secondary d-flex justify-content-start align-items-center">
-                <div class="barre"></div>
-                <div class="w-100">
-                    <span class="ml-2"><strong> Amerique</strong></span>
+
+    <div class="wrap-country-prod">
+        <div class="jumbotron jumbotron-fluid jumboImg">
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-4 d-flex justify-content-end">
+
+                    </div>
+                    <div class="col-8">
+                        <h1 class="display-4">Amérique</h1>
+                        <p class="lead">accroche Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto
+                            aspernatur aut consequatur culpa</p>
+                    </div>
                 </div>
+
+
             </div>
         </div>
+        <img class="img-fluid imgCard ml-5"  src="{{asset('assets/images/pays/america.jpg')}}" alt="">
+    </div>
 
+    <div class="container">
         {{--            trier par                      --}}
         <div class="row mt-5 mb-5">
             <div class="col-sm-12 header-tonique bg-secondary d-flex justify-content-start align-items-center">

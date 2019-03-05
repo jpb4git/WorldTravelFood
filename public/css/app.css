@@ -10698,6 +10698,35 @@ a.text-dark:focus {
   color: #67c7c6;
 }
 
+wrap-country-prod {
+  position: relative;
+}
+
+.jumboImg {
+  position: relative;
+  background-image: url("/assets/images/pays/america.jpg");
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 522px;
+  z-index: 1;
+  -webkit-filter: opacity(1) grayscale(100%) contrast(130%);
+          filter: opacity(1) grayscale(100%) contrast(130%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.3;
+}
+
+.imgCard {
+  position: relative;
+  top: -450px;
+  width: 340px;
+  height: 300px;
+  opacity: 1;
+  z-index: 1;
+}
+
 .linkProd {
   text-decoration: none !important;
 }
