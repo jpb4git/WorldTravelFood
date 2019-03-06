@@ -51,13 +51,13 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                 <div class="text-left py-5">
                     <button type="submit" name="submitPrecedentNouvelleAdresse" class="btn btn-primary">PRÉCEDENT
                     </button>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                 <div class="text-right py-5">
                     <button type="submit" name="submitSuivantNouvelleAdresse" class="btn btn-primary">SUIVANT
                     </button>
