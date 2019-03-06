@@ -29,10 +29,11 @@
                         <label for="mail" class="mr-3 mt-3">Votre adresse mail</label>
                         <input type="email" class="form-control" name="mail" placeholder="email">
                         <label for="mail" class="mr-3 mt-3">Votre mot de passe</label>
-                        <input type="password" class="form-control mb-5" name="motdepasse" placeholder="xxxxxxx">
+                        <input type="password" class="form-control mb-2" name="motdepasse" placeholder="xxxxxxx">
+                        <a href="">Mot de passe oublié?</a>
                     </div>
                     <div>
-                        <button type="submit" name="submitIdentification" class="btn btn-primary">IDENTIFICATION
+                        <button type="submit" name="submitIdentification" class="btn btn-primary mt-4">IDENTIFICATION
                         </button>
                     </div>
                 </form>
