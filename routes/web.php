@@ -15,37 +15,23 @@ Route::get('/', "HomeController@index");
 
 
 /**
- *
+ *      PRODUCTS
  */
 Route::get('/product/{id}', 'ProductController@getProduct')->name('product.getProduct');
 
-/**
- *
- */
 Route::get('/produits', 'ProductController@showAll');
 
 Route::get('/produitsCat', 'ProductController@showByCat');
+
 Route::get('/produitsCountry', 'ProductController@showByCountry');
 
 
 
 /**
- *
- *
  *      BASKET
  *
- *
- *
  */
 
-
-
-
-
-/**
- *
- *
- */
 Route::get('/panier', 'BasketController@index');
 
 Route::get('/panier/identification', 'BasketController@identification');

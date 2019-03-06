@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -11,7 +12,9 @@ class ProductController extends Controller
 
     public function showAll()
     {
-        return  view("layouts.product.showAll" ,['name' => 'catalogue']);
+        $products = DB::select('select * from products ');
+
+        return  view("layouts.product.showAll" ,['title' => 'catalogue' ,'products' => $products]);
     }
 
     public function showByCat()
@@ -24,9 +27,15 @@ class ProductController extends Controller
         return  view("layouts.product.showByCountry" ,['name' => 'catalogue']);
     }
 
-    public function getProduct()
+    public function getProduct($id)
     {
-        return  view("layouts.product.getProduct" ,['name' => 'produit Description']);
+        $product = DB::select('select * from products WHERE id = :id',[':id' => $id]);
+        $product = $product[0];
+        //$product = DB::table('products')->where('id',$id);
+
+
+
+        return  view("layouts.product.getProduct" ,['name' => 'produit Description','product' => $product]);
     }
 
 }
