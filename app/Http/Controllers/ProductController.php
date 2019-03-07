@@ -14,7 +14,7 @@ class ProductController extends Controller
     {
         //$products = Product::all();
         //$products = Product::orderBy('nom','ASC')->get();
-        $products = Product::orderBy('nom','DESC')->get();
+        $products = Product::orderBy('prix','ASC')->get();
 
         return view('layouts.product.showAll',['products'=>$products]);
     }
