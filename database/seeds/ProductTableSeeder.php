@@ -15,7 +15,7 @@ class ProductTableSeeder extends Seeder
 
             "title" => "Mon produit 1",
             "price" => 8,
-            "image" => "Maphoto1.jpg",
+            "imaggie" => "Maphoto1.jpg",
             "provenance" => "Chine",
             "categorie" => "Boissons",
         ]);
