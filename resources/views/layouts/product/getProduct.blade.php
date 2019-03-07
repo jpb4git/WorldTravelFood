@@ -21,11 +21,11 @@
 
         <div class="row ">
             <div class="col-md-4">
-                <img class="size-Product img-fluid" src="{{asset('assets/images/gamme.jpg')}}" alt="">
+                <img class="size-Product img-fluid" src="{{asset('assets/images/' .$product->image)}}" alt="">
             </div>
             <div class="col-md-8">
                 <div class="wrapper mb-5">
-                    <span><strong>VIN DE COBRA & SCORPION - GRANDE BOUTEILLE</strong></span>
+                    <span><strong>{{$product->nom}}</strong></span>
                     <div class="wrapper-stars">
                         <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
                         <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
@@ -43,10 +43,7 @@
                     <p class="provenance">catégorie : Food</p>
                 </div>
                 <div class="mt-5">
-                    <p class="description ">Vous cherchez l'alcool le plus extrême et le plus insolite. Félicitations !
-                        Vous êtes arrivés sur la bonne page, celle de l'alcool entomophage. Découvrez ici notre Vin de
-                        Cobra & Scorpion, une idée innovante pour un cadeau insolite. L'alcool de serpent possède un
-                        piquant révolutionnaire.</p>
+                    <p class="description ">{{$product->description}}</p>
                 </div>
                 <div class="mt-5 w-100 d-flex justify-content-end">
                     <a href="">
@@ -60,8 +57,9 @@
                     <div class="row w-100 panier p-3">
                         <div class="col-sm-12 col-lg-4 d-flex align-items-center ">
                             <h4 class="w-100 h1 p-3 bg-primary justify-content-center text-center text-light align-items-center">
-                                89,90
-                                €</h4>
+                                {{$product->prix}} €
+                            </h4>
+
                         </div>
                         <div class="col-md-8 d-flex flex-row justify-content-center ">
                             <form action="" method="">
