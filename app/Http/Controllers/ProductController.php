@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use DB;
+use App\Product;
+
 
 class ProductController extends Controller
 {
@@ -11,7 +13,11 @@ class ProductController extends Controller
 
     public function showAll()
     {
-        return  view("layouts.product.showAll" ,['name' => 'catalogue']);
+        $products = Product::orderBy('price','asc')->get();
+
+        return view("layouts.product.showAll", [
+            'products' => $products
+        ]);
     }
 
     public function showByCat()
@@ -24,9 +30,12 @@ class ProductController extends Controller
         return  view("layouts.product.showByCountry" ,['name' => 'catalogue']);
     }
 
-    public function getProduct()
+  public function getProduct($id)
     {
-        return  view("layouts.product.getProduct" ,['name' => 'produit Description']);
-    }
+        $product = Product::find($id);
 
+       return  view("layouts.product.getProduct" ,[
+        'product' => $product
+       ]);
+   }
 }

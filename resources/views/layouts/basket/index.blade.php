@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </form>
-                <div class="row">
+                <div class="row mb-2">
                     <div class="col-lg-10 d-flex justify-content-end ">
                         <h5 class="">Total produit HT:</h5>
                     </div>
@@ -69,7 +69,7 @@
                         <h5>€</h5>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-2">
                     <div class="col-lg-10 d-flex justify-content-end ">
                         <h5 class="">Frais de port:</h5>
                     </div>
@@ -87,8 +87,7 @@
                 </div>
             <div class="row pt-5">
                 <div class="col d-flex justify-content-start ">
-                    <input class="text-right btn btn-outline-primary" type="submit" value="CONTINUER MES ACHATS"
-                           name="return">
+                    <a class="text-right btn btn-outline-primary" href="{{route('home.index')}}">Continuer mes achats</a>
                 </div>
                 <div class="col d-flex justify-content-end">
                     <input class="btn btn-primary" type="submit" value="COMMANDER" name="recalcul">

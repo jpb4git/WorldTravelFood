@@ -21,11 +21,11 @@
 
         <div class="row ">
             <div class="col-md-4">
-                <img class="size-Product img-fluid" src="{{asset('assets/images/gamme.jpg')}}" alt="">
+                <img class="size-Product img-fluid" src="{{ $product->image }}" alt="">
             </div>
             <div class="col-md-8">
                 <div class="wrapper mb-5">
-                    <span><strong>VIN DE COBRA & SCORPION - GRANDE BOUTEILLE</strong></span>
+                    <span><strong>{{ $product->title }}</strong></span>
                     <div class="wrapper-stars">
                         <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
                         <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
@@ -60,8 +60,7 @@
                     <div class="row w-100 panier p-3">
                         <div class="col-sm-12 col-lg-4 d-flex align-items-center ">
                             <h4 class="w-100 h1 p-3 bg-primary justify-content-center text-center text-light align-items-center">
-                                89,90
-                                €</h4>
+                                {{ $product->price }}</h4>
                         </div>
                         <div class="col-md-8 d-flex flex-row justify-content-center ">
                             <form action="" method="">
