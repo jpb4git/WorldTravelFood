@@ -5,14 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
-
+use App\Product;
 class ProductController extends Controller
 {
     //
 
     public function showAll()
     {
-        $products = DB::select('select * from products');
+        //$products = Product::all();
+        //$products = Product::orderBy('nom','ASC')->get();
+        $products = Product::orderBy('nom','DESC')->get();
 
         return view('layouts.product.showAll',['products'=>$products]);
     }
@@ -29,7 +31,7 @@ class ProductController extends Controller
 
     public function getProduct($id)
     {
-        $product = DB::select('select * from products where id = :id', ['id' => $id]);
+        $product = Product::where('id',$id)-> get();
         $product=$product[0];
         return view('layouts.product.getProduct', ['product'=>$product]);
     }
