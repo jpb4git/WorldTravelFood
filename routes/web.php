@@ -41,8 +41,6 @@ Route::get('/produitsCountry', 'ProductController@showByCountry');
 
 
 
-
-
 /**
  *
  *

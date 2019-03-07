@@ -32,8 +32,7 @@
                         <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
                         <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
                         <img class="starSize" src="{{asset('assets/images/starOff.svg')}}" alt="">
-                        <span><a class="text-primary" href=""> 3 commentaires</a></span> | <span><a class="text-primary"
-                                                                                                    href="">Ecrire un commentaire</a></span>
+                        <span><a class="text-primary" href=""> 3 commentaires</a></span> | <span><a class="text-primary" href="">Ecrire un commentaire</a></span>
                     </div>
                     <hr>
 
