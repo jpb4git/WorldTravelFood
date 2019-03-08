@@ -17,7 +17,7 @@ class CreateAddressesTable extends Migration
             $table->increments('id');
             $table->string('street',200);
             $table->integer('zip_code');
-            $table->string('complement',200);
+            $table->string('complement',200)->nullable();;
             $table->string('city',150);
             $table->string('country',100);
             $table->string('last_name',150);
