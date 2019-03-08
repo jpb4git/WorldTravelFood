@@ -81,14 +81,9 @@ Route::get('/order', 'OrderController@show');
  *BACK OFFICE
  *
  */
+Route::namespace('Backoffice')->prefix('/admin')->name('admin.')->middleware('auth')->group(function () {
+    Route::get('', 'AdminController@index')->name('index');
+    Route::resource('categories', 'CategoryController');
+});
 
-Route::get('/admin', 'backoffice\AdminController@index')->name('admin');
 
-
-/*
- *  CATÉGORIES
- *
- */
-Route::get('/admin/cat', 'backoffice\CategoryController@showAll')->name('admin/cats');
-Route::get('/admin/cat/form', 'backoffice\CategoryController@form')->name('admin/cat/form');
-Route::get('/admin/cat/insert', 'backoffice\CategoryController@insert')->name('admin/cat/insert');
