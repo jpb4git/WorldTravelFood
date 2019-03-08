@@ -20,7 +20,7 @@ class OrderTableSeeder extends Seeder
             $order->user_id = 1;
             $order->address_shipping = 1;
             $order->address_delivery = 1;
-
+            $order->save();
         }
     }
 }
