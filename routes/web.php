@@ -75,3 +75,20 @@ Route::get('/newsLetter', 'NewLetterController@show');
 Route::get('/order', 'OrderController@show');
 
 
+
+
+/**
+ *BACK OFFICE
+ *
+ */
+
+Route::get('/admin', 'backoffice\AdminController@index')->name('admin');
+
+
+/*
+ *  CATÉGORIES
+ *
+ */
+Route::get('/admin/cat', 'backoffice\CategoryController@showAll')->name('admin/cats');
+Route::get('/admin/cat/form', 'backoffice\CategoryController@form')->name('admin/cat/form');
+Route::get('/admin/cat/insert', 'backoffice\CategoryController@insert')->name('admin/cat/insert');
