@@ -34,9 +34,7 @@ class ProductController extends Controller
     {
         $product = Product::where('id', $id)->get();
 
-        return  view("layouts.product.getProduct" ,[
-            'products' => $id
-        ]);
+        return  view("layouts.product.getProduct" ,['products' => $id]);
     }
 
 }

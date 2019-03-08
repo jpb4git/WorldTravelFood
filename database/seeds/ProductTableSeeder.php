@@ -11,42 +11,18 @@ class ProductTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table("products")->insert([
 
-            "title" => "Mon produit 1",
-            "price" => 8,
-            "image" => "Maphoto1.jpg",
-            "provenance" => "Chine",
-            "categorie" => "Boissons",
-        ]);
+        for ($i = 0; $i < 10; $i++) {
+            DB::table('products')->insert([
+                'label' => 'Produit ' . $i,
+                'description' => 'Déscription produit' . $i,
+                'poids' => 0.50 + $i,
+                'stock' => 25 + $i,
+                'urlimage' => 'new-1.jpg',
+                'price' => 52.0 + $i
+            ]);
 
-        DB::table("products")->insert([
-
-            "title" => "Mon produit 2",
-            "price" => 9,
-            "image" => "Maphoto2.jpg",
-            "provenance" => "Amérique",
-            "categorie" => "Boissons",
-        ]);
-
-        DB::table("products")->insert([
-
-            "title" => "Mon produit 3",
-            "price" => 12,
-            "image" => "Maphoto3.jpg",
-            "provenance" => "Mexique",
-            "categorie" => "Boissons",
-        ]);
-
-        DB::table("products")->insert([
-
-            "title" => "Mon produit 4",
-            "price" => 18,
-            "image" => "Maphoto4.jpg",
-            "provenance" => "Chine",
-            "categorie" => "Boissons",
-        ]);
-
+        }
 
     }
 }
