@@ -22,8 +22,9 @@ class CreateProductsTable extends Migration
             $table->decimal('weight',2,2);
             $table->integer('stock');
             $table->unsignedInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 

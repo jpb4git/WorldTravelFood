@@ -8,7 +8,8 @@ class UserController extends Controller
 {
     //
 
-    public function login(){
-        return view('pages.user.login',['title' => 'Authentification']);
+    public function login()
+    {
+        return view('pages.user.login', ['title' => 'Authentification']);
     }
 }
