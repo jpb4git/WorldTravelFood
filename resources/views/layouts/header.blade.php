@@ -28,7 +28,7 @@
                         <i class="fas fa-user"> Mon compte</i>
                     </a>
                     <span class="border-right"></span>
-                    <a class="nav-link text-decoration-none text-dark " href="{{route('panier.index')}}">
+                    <a class="nav-link text-decoration-none text-dark " href="{{route('panier.recapitulatif')}}">
                         <i class="fas fa-shopping-basket"> Mon panier</i>
                     </a>
                 </div>

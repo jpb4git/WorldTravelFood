@@ -10755,8 +10755,9 @@ linkProd:hover {
   width: 200px !important;
 }
 
-.ChampsRequis {
-  color: #dd352e !important;
+.imgPaiement {
+  width: 100px;
+  height: 100px;
 }
 
 div.dropdown-menu a {
@@ -10890,11 +10891,6 @@ footer i {
 
 a.fdp {
   color: #FFFFFF !important;
-}
-
-.bandeau {
-  height: 30px;
-  background-color: #dd352e;
 }
 
 .choix {
