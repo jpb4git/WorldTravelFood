@@ -10,6 +10,6 @@ class OrderController extends Controller
     //
     public function show()
     {
-        return  view("order.show");
+        return view("order.show");
     }
 }

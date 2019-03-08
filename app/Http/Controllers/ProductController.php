@@ -22,19 +22,19 @@ class ProductController extends Controller
 
     public function showByCat()
     {
-        return  view("layouts.product.showByCat" ,['cat' => 'catalogue']);
+        return view("layouts.product.showByCat", ['cat' => 'catalogue']);
     }
 
     public function showByCountry()
     {
-        return  view("layouts.product.showByCountry" ,['name' => 'catalogue']);
+        return view("layouts.product.showByCountry", ['name' => 'catalogue']);
     }
 
     public function getProduct($id)
     {
         $product = Product::where('id', $id)->get();
 
-        return  view("layouts.product.getProduct" ,[
+        return view("layouts.product.getProduct", [
             'products' => $id
         ]);
     }
