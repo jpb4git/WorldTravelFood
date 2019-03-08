@@ -15,14 +15,14 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('number',10);
+            $table->string('number', 10);
             $table->dateTime('date');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedInteger('address_shipping');
             $table->foreign('address_shipping')->references('id')->on('addresses');
             $table->unsignedInteger('address_delivery');
-            $table->foreign('address_delivery')->references('id')->on('addresses');                
+            $table->foreign('address_delivery')->references('id')->on('addresses');
             $table->timestamps();
         });
     }
