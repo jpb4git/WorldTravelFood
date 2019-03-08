@@ -13,11 +13,11 @@
         <ul class="navbar-nav justify-content-center">
 
             <li class="nav-item">
-                <a class="nav-link" href="{{route('admin')}}">BACK-OFFICE</a>
+                <a class="nav-link" href="{{route('index')}}">BACK-OFFICE</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{route('admin/cats')}}">CATÉGORIES</a>
+                <a class="nav-link" href="{{route('cat.index')}}">CATÉGORIES</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{--route('layouts.contact.showAll')--}}">PRODUITS</a>

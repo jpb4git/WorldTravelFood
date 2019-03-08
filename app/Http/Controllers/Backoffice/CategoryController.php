@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backoffice;
 
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+
+        return view('admin.Categories.showAll',['cats'=>$categories]);
+
     }
 
     /**
@@ -25,6 +29,8 @@ class CategoryController extends Controller
     public function create()
     {
         //
+        return view('admin.Categories.formulaireCat');
+
     }
 
     /**
@@ -35,7 +41,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       dd($request);
     }
 
     /**

@@ -81,9 +81,17 @@ Route::get('/order', 'OrderController@show');
  *BACK OFFICE
  *
  */
-Route::namespace('Backoffice')->prefix('/admin')->name('admin.')->middleware('auth')->group(function () {
+Route::get('/admin', 'Backoffice\AdminController@index')->name('index');
+Route::get('/admin/cats', 'Backoffice\CategoryController@index')->name('cat.index');
+Route::get('/admin/cat/create', 'Backoffice\CategoryController@create')->name('cat.create');
+
+Route::post('/admin/cat/store', 'Backoffice\CategoryController@store')->name('cat.store');
+
+
+
+/*Route::namespace('Backoffice')->prefix('/admin')->name('admin.')->group(function () {
     Route::get('', 'AdminController@index')->name('index');
     Route::resource('categories', 'CategoryController');
 });
-
+*/
 

@@ -1,9 +1,9 @@
-@extends('layouts.admin.admin', ['title' => 'Catégories'])
+@extends('admin.admin', ['title' => 'Catégories'])
 
 
 @section('content')
     <h1 class="w100 bg-dark text-light text-center mt-5 mb-5">All Cats</h1>
-    <a href="{{route('admin/cat/form')}}">Ajouter cats</a>
+    <a class="btn btn-primary" href="{{route('cat.create')}}">Ajouter cats</a>
 
     <table class="table">
         <thead>
@@ -15,18 +15,17 @@
         </tr>
         </thead>
 
-    @foreach($cats as $cat)
+        @foreach($cats as $cat)
             <tbody>
             <tr>
-                <th scope="row">1</th>
+                <th scope="row">{{$cat->id}}</th>
                 <td>{{$cat->name}}</td>
-                <td><a href="">Modifier</a></td>
-                <td><a href="">supprimer</a></td>
+                <td><a class="btn btn-primary" href="">Modifier</a></td>
+                <td><a class="btn btn-primary" href="">supprimer</a></td>
             </tr>
 
 
-
-    @endforeach
+            @endforeach
 
             </tbody>
     </table>
