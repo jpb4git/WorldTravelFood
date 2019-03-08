@@ -19,7 +19,7 @@ class ProductTableSeeder extends Seeder
                 'poids' => 0.50 + $i,
                 'stock' => 25 + $i,
                 'urlimage' => 'new-1.jpg',
-                'price' => 52.0 + $i
+                'price' => 52.0 + $i,
             ]);
 
         }
