@@ -18,7 +18,7 @@ class CreateDiscountsTable extends Migration
             $table->string('name',100);
             $table->date('start');
             $table->date('end');
-            $table->decimal('new_price',5,2);
+            $table->decimal('new_price',5,2)->nullable();
             $table->integer('percent');
             $table->unsignedInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products');

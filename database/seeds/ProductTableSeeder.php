@@ -23,8 +23,8 @@ class ProductTableSeeder extends Seeder
             $product->description = 'blabla'.$i;
             $product->price = '10'. $i;
             $product->image = 'new-1.jpeg';
-            $product->weight = 1 . $i;
-            $product->stock = 100 . $i;
+            $product->weight = 1.50;
+            $product->stock = 100;
             $product->category_id = $i;
 
             $product->save();
@@ -33,4 +33,3 @@ class ProductTableSeeder extends Seeder
 
     }
 }
-
