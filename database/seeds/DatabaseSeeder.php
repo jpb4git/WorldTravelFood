@@ -11,6 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
+        // tables bases
+        // cat
+
         // $this->call(UsersTableSeeder::class);
     }
 }
