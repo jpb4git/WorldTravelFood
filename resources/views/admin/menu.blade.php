@@ -20,7 +20,7 @@
                 <a class="nav-link" href="{{route('cat.index')}}">CATÉGORIES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{--route('layouts.contact.showAll')--}}">PRODUITS</a>
+                <a class="nav-link" href="{{route('product.index')}}">PRODUITS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{--route('layouts.contact.showAll')--}}">PAYS</a>

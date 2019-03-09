@@ -82,6 +82,10 @@ Route::get('/order', 'OrderController@show');
  *
  */
 Route::get('/admin', 'Backoffice\AdminController@index')->name('index');
+
+/**
+ * CATS
+ */
 Route::get('/admin/cats', 'Backoffice\CategoryController@index')->name('cat.index');
 Route::get('/admin/cat/create', 'Backoffice\CategoryController@create')->name('cat.create');
 Route::post('/admin/cat/store', 'Backoffice\CategoryController@store')->name('cat.store');
@@ -95,4 +99,17 @@ Route::post('/admin/cat/update/{id}', 'Backoffice\CategoryController@update')->n
     Route::resource('categories', 'CategoryController');
 });
 */
+
+/**
+ * PRODUCT
+ */
+
+Route::get('/admin/products', 'Backoffice\ProductController@index')->name('product.index');
+Route::get('/admin/product/create', 'Backoffice\ProductController@create')->name('product.create');
+Route::post('/admin/product/store', 'Backoffice\ProductController@store')->name('product.store');
+Route::post('/admin/product/destroy/{id}', 'Backoffice\ProductController@destroy')->name('product.destroy');
+Route::post('/admin/product/edit/{id}', 'Backoffice\ProductController@edit')->name('product.edit');
+Route::post('/admin/product/update/{id}', 'Backoffice\ProductController@update')->name('product.update');
+
+
 
