@@ -15,7 +15,7 @@
                     <div class="form-group">
                         @csrf
                         <label for="exampleInputEmail1">Nom de la Catégorie</label>
-                        <input type="text" class="form-control" name="name" aria-describedby="" placeholder="">
+                        <input type="text" class="form-control" name="name">
                     </div>
 
                     <button type="submit" class="btn btn-primary" value="submit">submit</button>

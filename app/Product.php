@@ -26,9 +26,9 @@ class Product extends Model
 
 
     /**
-     * The order that belong to the product.
+     * The orders that belong to the product. manyToMany
      */
-    public function order()
+    public function orders()
     {
         return $this->belongsToMany('App\Order');
     }
