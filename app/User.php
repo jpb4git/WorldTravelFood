@@ -10,6 +10,18 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+
+
+    /**
+     * Get the address that owns the user.
+     */
+    public function Address()
+    {
+        return $this->belongsTo('App\Address');
+    }
+
+
+
     /**
      * The attributes that are mass assignable.
      *
@@ -36,4 +48,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
 }
