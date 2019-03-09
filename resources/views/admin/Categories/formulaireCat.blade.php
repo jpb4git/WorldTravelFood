@@ -16,6 +16,15 @@
                         @csrf
                         <label for="exampleInputEmail1">Nom de la Catégorie</label>
                         <input type="text" class="form-control" name="name">
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                     </div>
 
                     <button type="submit" class="btn btn-primary" value="submit">submit</button>

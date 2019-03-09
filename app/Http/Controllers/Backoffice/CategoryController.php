@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backoffice;
 
+use Validator;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -41,7 +42,29 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-       dd($request);
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|max:255'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('admin/cat/create')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+       $cat = new Category();
+       $cat->name = $request->input('name');
+       $cat->save();
+
+
+       $categories = Category::all();
+       return view('admin.Categories.showAll',['cats'=>$categories,
+           'AddCat'=>'la catégorie '.$request->input('name'). ' est enregistrée avec success.'
+
+       ]);
+
+
     }
 
     /**
@@ -75,7 +98,8 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+
     }
 
     /**
@@ -86,6 +110,31 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        //grab from Model ... nite !
+        $cat = Category::find($id);
+
+        $label = $cat->name;
+        try {
+            $cat->delete();
+
+        } catch (\Illuminate\Database\QueryException $e) {
+
+            $categories = Category::all();
+            return view('admin.Categories.showAll',['cats'=>$categories,
+                'errorsConstraint'=>'l\'enregistrement est lié à au moins un produit. Vous ne pouvez pas supprimer cette catégorie.']);
+        }
+
+
+
+
+
+
+
+
+        $categories = Category::all();
+        return view('admin.Categories.showAll',['cats'=>$categories,
+            'supprCat'=>'la catégorie ' . $label . " est supprimée de la base de données."
+        ]);
     }
 }
