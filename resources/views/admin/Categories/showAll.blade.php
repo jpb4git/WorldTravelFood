@@ -1,9 +1,9 @@
-@extends('admin.admin', ['title' => 'Catégories'])
+@extends('admin.admin', ['title' => 'Liste des Catégories'])
 
 
 @section('content')
-    <h1 class="w100 bg-dark text-light text-center mt-5 mb-5">All Cats</h1>
-    <a class="btn btn-primary" href="{{route('cat.create')}}">Ajouter cats</a>
+    <h1 class="w100 bg-dark text-light text-center mt-5 mb-5">Catégories</h1>
+    <a class="btn btn-success ml-5 mb-5" href="{{route('cat.create')}}">Ajouter une  catégorie</a>
 
     @if (isset($errorsConstraint))
         <div class="row toaster-info">
@@ -47,8 +47,16 @@
             <tr>
                 <th scope="row">{{$cat->id}}</th>
                 <td>{{$cat->name}}</td>
-                <td><a class="btn btn-primary" href="/admin/cat/update/{{$cat->id}}">Modifier</a></td>
-                <td><a class="btn btn-primary" href="/admin/cat/destroy/{{$cat->id}}">supprimer</a></td>
+                <form action="/admin/cat/edit/{{$cat->id}}" method="post">
+                    @csrf
+                    <td><button type="submit" class="btn btn-secondary" href="/admin/cat/edit/{{$cat->id}}">Modifier</button></td>
+                </form>
+                <form action="/admin/cat/destroy/{{$cat->id}}" method="post">
+                    @csrf
+                    <td><button type="submit" class="btn btn-primary" href="/admin/cat/destroy/{{$cat->id}}">supprimer</button></td>
+                </form>
+
+
             </tr>
 
 

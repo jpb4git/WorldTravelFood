@@ -18,7 +18,7 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
 
-        return view('admin.Categories.showAll',['cats'=>$categories]);
+        return view('admin.Categories.showAll', ['cats' => $categories]);
 
     }
 
@@ -30,14 +30,14 @@ class CategoryController extends Controller
     public function create()
     {
         //
-        return view('admin.Categories.formulaireCat');
+        return view('admin.Categories.create');
 
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -53,16 +53,16 @@ class CategoryController extends Controller
                 ->withInput();
         }
 
-       $cat = new Category();
-       $cat->name = $request->input('name');
-       $cat->save();
+        $cat = new Category();
+        $cat->name = $request->input('name');
+        $cat->save();
 
 
-       $categories = Category::all();
-       return view('admin.Categories.showAll',['cats'=>$categories,
-           'AddCat'=>'la catégorie '.$request->input('name'). ' est enregistrée avec success.'
+        $categories = Category::all();
+        return view('admin.Categories.showAll', ['cats' => $categories,
+            'AddCat' => 'la catégorie ' . $request->input('name') . ' est enregistrée avec success.'
 
-       ]);
+        ]);
 
 
     }
@@ -70,7 +70,7 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -81,31 +81,54 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+
+        $cat = Category::find($id);
+        return view('admin.Categories.edit', ['cat' => $cat]);
+
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
 
+        //grab from Model ... nite !
+        $cat = Category::find($id);
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|max:255'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('admin/cat/edit')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+
+        $cat->name = $request->input('name');
+        $cat->save();
+
+
+        $categories = Category::all();
+        return view('admin.Categories.showAll', ['cats' => $categories]);
 
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -113,28 +136,21 @@ class CategoryController extends Controller
 
         //grab from Model ... nite !
         $cat = Category::find($id);
+        if (!is_null($cat)) {
+            $label = $cat->name;
+            try {
+                $cat->delete();
+            } catch (\Illuminate\Database\QueryException $e) {
+                $categories = Category::all();
+                return view('admin.Categories.showAll', ['cats' => $categories, 'errorsConstraint' => 'l\'enregistrement est lié à au moins un produit. Vous ne pouvez pas supprimer cette catégorie.']);
+            }
+            $categories = Category::all();
+            return view('admin.Categories.showAll', ['cats' => $categories, 'supprCat' => 'la catégorie ' . $label . " est supprimée de la base de données."]);
 
-        $label = $cat->name;
-        try {
-            $cat->delete();
-
-        } catch (\Illuminate\Database\QueryException $e) {
+        } else {
 
             $categories = Category::all();
-            return view('admin.Categories.showAll',['cats'=>$categories,
-                'errorsConstraint'=>'l\'enregistrement est lié à au moins un produit. Vous ne pouvez pas supprimer cette catégorie.']);
+            return view('admin.Categories.showAll', ['cats' => $categories]);
         }
-
-
-
-
-
-
-
-
-        $categories = Category::all();
-        return view('admin.Categories.showAll',['cats'=>$categories,
-            'supprCat'=>'la catégorie ' . $label . " est supprimée de la base de données."
-        ]);
     }
 }

@@ -1,4 +1,4 @@
-@extends('admin.admin', ['title' => 'Catégories'])
+@extends('admin.admin', ['title' => 'Modification Catégories'])
 
 
 @section('content')
@@ -6,16 +6,16 @@
     <div class="container mt-5">
         <div class="row text-center">
             <div class="col">
-                <h1>Ajout Catégorie</h1>
+                <h1>Modification Catégorie</h1>
             </div>
         </div>
         <div class="row text-center">
             <div class="col">
-                <form action="store" method="post">
+                <form action="/admin/cat/update/{{$cat->id}}" method="post">
                     <div class="form-group">
                         @csrf
                         <label for="exampleInputEmail1">Nom de la Catégorie</label>
-                        <input type="text" class="form-control" name="name">
+                        <input type="text" class="form-control" name="name" value="{{$cat->name}}">
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>

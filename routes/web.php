@@ -85,8 +85,9 @@ Route::get('/admin', 'Backoffice\AdminController@index')->name('index');
 Route::get('/admin/cats', 'Backoffice\CategoryController@index')->name('cat.index');
 Route::get('/admin/cat/create', 'Backoffice\CategoryController@create')->name('cat.create');
 Route::post('/admin/cat/store', 'Backoffice\CategoryController@store')->name('cat.store');
-Route::get('/admin/cat/destroy/{id}', 'Backoffice\CategoryController@destroy')->name('cat.destroy');
-Route::get('/admin/cat/update/{id}', 'Backoffice\CategoryController@update')->name('cat.update');
+Route::post('/admin/cat/destroy/{id}', 'Backoffice\CategoryController@destroy')->name('cat.destroy');
+Route::post('/admin/cat/edit/{id}', 'Backoffice\CategoryController@edit')->name('cat.edit');
+Route::post('/admin/cat/update/{id}', 'Backoffice\CategoryController@update')->name('cat.update');
 
 
 /*Route::namespace('Backoffice')->prefix('/admin')->name('admin.')->group(function () {
