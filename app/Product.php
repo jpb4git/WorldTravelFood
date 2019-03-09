@@ -13,7 +13,7 @@ class Product extends Model
     public function category()
     {
 
-        return $this->hasOne('Category');
+        return $this->belongsTo('App\Category');
     }
 
     /**
@@ -21,7 +21,7 @@ class Product extends Model
      */
     public function discount()
     {
-        return $this->belongsTo('App\Discount');
+        return $this->hasMany('App\Discount');
     }
 
 

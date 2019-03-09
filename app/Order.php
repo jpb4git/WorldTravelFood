@@ -16,11 +16,11 @@ class Order extends Model
      *
      */
     public function AddressF(){
-        return $this->hasOne('Address');
+        return $this->belongsTo('App\Address');
     }
 
     public function AddressL(){
-        return $this->hasOne('Address');
+        return $this->belongsTo('App\Address');
     }
 
 

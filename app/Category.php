@@ -9,8 +9,8 @@ class Category extends Model
     /**
      * Get the product that owns the category.
      */
-    public function product()
+    public function products()
     {
-        return $this->belongsTo('App\Product');
+        return $this->hasMany('App\Product');
     }
 }
