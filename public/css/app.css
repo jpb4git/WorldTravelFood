@@ -10890,8 +10890,8 @@ body {
 }
 
 .adminImgLogo {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
