@@ -10874,7 +10874,7 @@ div.choix {
 }
 
 body {
-  background-color: #ecf3f9 !important;
+  background-color: #f3f7f9 !important;
 }
 
 .row .col {
@@ -10904,11 +10904,11 @@ body {
 .big-icon {
   padding: 5px;
   font-size: 100px;
-  color: #204060;
+  color: #2f4858;
 }
 
 .h1-color {
-  color: #204060;
+  color: #2f4858;
   font-style: italic;
 }
 
@@ -10916,7 +10916,7 @@ body {
   position: fixed;
   opacity: 0.05;
   font-size: 228px;
-  color: #204060;
+  color: #2f4858;
 }
 
 .color-active {
@@ -10939,11 +10939,11 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #204060;
+  background-color: #2f4858;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
-  box-shadow: 3px 0px 10px #1a334d;
+  box-shadow: 3px 0px 10px #263a47;
 }
 
 /* navigation menu links */
@@ -10952,16 +10952,16 @@ body {
   padding: 8px 8px 8px 32px;
   width: 100%;
   text-decoration: none;
-  background-color: #204060;
+  background-color: #2f4858;
   font-size: 18px;
-  color: #9cbdde;
+  color: #adc5d3;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
   color: white;
-  background-color: #336699;
+  background-color: #4a718a;
 }
 
 /* main right content */

@@ -1,7 +1,9 @@
+// #461b4b
 
-$bg-nav-color : #204060;
+$bg-nav-color :#2f4858;
 $text-nav-color : lighten($bg-nav-color,49);
 $text-hover :lighten($bg-nav-color,89);
+
 
 body{
     background-color : lighten($bg-nav-color,70%)!important;

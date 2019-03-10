@@ -10,17 +10,17 @@
     </a>
 
 
-    <a href="#"><i class="far fa-address-book"></i> Users</a>
-    <a href="#"><i class="fas fa-fingerprint"></i> Droits</a>
+    <a href="/admin"><i class="far fa-address-book"></i> Users</a>
+    <a href="//admin"><i class="fas fa-fingerprint"></i> Droits</a>
     <hr>
     <a href="{{route('cat.index')}}"> <i class="fas fa-archive"></i> Categories</a>
     <a href="{{route('product.index')}}"><i class="fas fa-carrot"></i> Produits</a>
-    <a href="#"><i class="fas fa-globe"></i> Pays</a>
+    <a href="/admin"><i class="fas fa-globe"></i> Pays</a>
     <hr>
-    <a href="#"><i class="far fa-clipboard"></i> Commandes</a>
-    <a href="#"><i class="fas fa-gift"></i> Cadeaux</a>
-    <a href="#"><i class="fas fa-truck"></i> Transporteurs</a>
-    <a href="#"><i class="far fa-address-card"></i> Clients</a>
+    <a href="/admin"><i class="far fa-clipboard"></i> Commandes</a>
+    <a href="/admin"><i class="fas fa-gift"></i> Cadeaux</a>
+    <a href="/admin"><i class="fas fa-truck"></i> Transporteurs</a>
+    <a href="/admin"><i class="far fa-address-card"></i> Clients</a>
     <hr>
     <a href="{{route('home.index')}}"><i class="fas fa-sign-out-alt"></i> Exit</a>
 </div>
