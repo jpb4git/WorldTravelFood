@@ -10,16 +10,14 @@
 @import 'headerstyle';
 
 @import 'home';
-
 @import 'product';
 @import 'basket';
 @import 'nav';
-
 @import'footer';
 
-@import'footer.scss';
-
 // Panier
-@import 'panierIndex.scss';
-
+@import 'panierIndex';
 @import'PanierfraisDePort';
+
+//admin
+@import'admin';

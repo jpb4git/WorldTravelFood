@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Backoffice;
-
+use Validator;
+use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -34,7 +35,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $cats = Category::get();
+
+        return view('admin.products.create',['cats' => $cats]);
     }
 
     /**
@@ -45,7 +48,34 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|max:255',
+            'description' => 'required',
+            'price' => 'required|numeric',
+            'weight' => 'required|numeric',
+            'stock' => 'required|numeric',
+            'category' =>'numeric'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('admin/product/create')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $product = new Product();
+        $product->name  = $request->input('name');
+        $product->description  = $request->input('description');
+        $product->price  = $request->input('price');
+        $product->weight  = $request->input('weight');
+        $product->stock  = $request->input('stock');
+        $product->category_id  = $request->input('category');
+        $product->image  = "new-1.jpg";
+        $product->save();
+
+
+        $products = Product::with('category')->get();
+        return view("admin.products.showAll", ['products' => $products]);
     }
 
     /**
@@ -67,7 +97,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+        $cats = Category::get();
+
+        return view('admin.products.edit', ['product' => $product,'cats' => $cats]);
     }
 
     /**
@@ -79,7 +112,36 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $product  = Product::find($id);
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|max:255',
+            'description' => 'required',
+            'price' => 'required|numeric',
+            'weight' => 'required|numeric',
+            'stock' => 'required|numeric',
+            'category' =>'numeric'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('admin/product/edit')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+
+        $product->name  = $request->input('name');
+        $product->description  = $request->input('description');
+        $product->price  = $request->input('price');
+        $product->weight  = $request->input('weight');
+        $product->stock  = $request->input('stock');
+        $product->category_id  = $request->input('category');
+        $product->image  = "new-1.jpg";
+        $product->save();
+
+
+        $products = Product::with('category')->get();
+        return view("admin.products.showAll", ['products' => $products]);
     }
 
     /**
@@ -90,6 +152,27 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+
+        $product = Product::find($id);
+        if (!is_null($product)) {
+            $label = $product->name;
+            try {
+                $product->delete();
+            } catch (\Illuminate\Database\QueryException $e) {
+
+                $products = Product::with('category')->get();
+                return view('admin.products.showAll', ['products' => $products, 'errorsConstraint' => 'l\'enregistrement est lié à au moins une commande. Vous ne pouvez pas supprimer cet article.']);
+            }
+
+            $products = Product::with('category')->get();
+            return view('admin.products.showAll', ['products' => $products, 'supprProd' => 'le produit ' . $label . " est supprimé de la base de données."]);
+
+        } else {
+
+            $products = Product::with('category')->get();
+            return view('admin.products.showAll', ['products' => $products]);
+
+        }
     }
 }

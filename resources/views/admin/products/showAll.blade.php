@@ -18,16 +18,16 @@
         <div class="row toaster-info">
             <div class="col">
                 <div class="bg-success text-center p-3 mt-5 mb-5">
-                    <p class="text-light">{{ $Addproduc }}</p>
+                    <p class="text-light">{{ $Addproduct }}</p>
                 </div>
             </div>
         </div>
     @endif
-    @if (isset($supprProduc))
+    @if (isset($supprProd))
         <div class="row toaster-info">
             <div class="col">
                 <div class="bg-success text-center p-3 mt-5 mb-5">
-                    <p class="text-light">{{ $supprProduct }}</p>
+                    <p class="text-light">{{ $supprProd }}</p>
                 </div>
             </div>
         </div>
