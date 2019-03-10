@@ -1,6 +1,6 @@
-// #461b4b
+// #461b4b #2f4858
 
-$bg-nav-color :#2f4858;
+$bg-nav-color :#204060;
 $text-nav-color : lighten($bg-nav-color,49);
 $text-hover :lighten($bg-nav-color,89);
 
@@ -104,6 +104,9 @@ body{
 #main {
     transition: margin-left .5s;
     margin-left:220px;
+}
+.card{
+    box-shadow: 3px 0px 7px darken($bg-nav-color,5%);
 }
 
 
