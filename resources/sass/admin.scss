@@ -1,10 +1,7 @@
 
-
-
-
 $bg-nav-color : #204060;
-$text-nav-color : #818181;
-
+$text-nav-color : lighten($bg-nav-color,49);
+$text-hover :lighten($bg-nav-color,89);
 
 body{
     background-color : lighten($bg-nav-color,70%)!important;
@@ -97,7 +94,7 @@ body{
 
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: $text-hover;
     background-color: lighten($bg-nav-color ,15%);
 }
 

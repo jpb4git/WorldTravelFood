@@ -10954,13 +10954,13 @@ body {
   text-decoration: none;
   background-color: #204060;
   font-size: 18px;
-  color: #818181;
+  color: #9cbdde;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: white;
   background-color: #336699;
 }
 
