@@ -13,7 +13,7 @@
                 <h1 class="ml-5 d-flex align-items-center"><div class="vapor">Dashboard</div></h1>
             </div>
         </div>
-        <div class="row mt-5 ">
+        <div class="row mt-0 ">
             <div class="col-12 text-center mb-3 border-2 rounded">
 
                 <i class="fas fa-database w-100 big-icon text-light"></i>
@@ -61,7 +61,7 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Clients : <strong>178</strong></h5>
-                                <p class="card-text">CLients enregistrés dans la base de données.</p>
+                                <p class="card-text">Clients enregistrés dans la base de données.</p>
 
                             </div>
                         </div>
@@ -94,6 +94,38 @@
                             <div class="card-body">
                                 <h5 class="card-title">Transporteurs : <strong>4</strong></h5>
                                 <p class="card-text">Transporteurs presents dans la base de données.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <i class="far fa-address-book big-icon"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Utilisateurs : <strong>4</strong></h5>
+                                <p class="card-text">Utilisateurs presents dans la base de données.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <i class="fas fa-fingerprint big-icon"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Droits : <strong>4</strong></h5>
+                                <p class="card-text">Rôles presents dans la base de données.</p>
 
                             </div>
                         </div>
