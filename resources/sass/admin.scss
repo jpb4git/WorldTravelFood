@@ -1,6 +1,16 @@
 
 
 
+
+$bg-nav-color : #204060;
+$text-nav-color : #818181;
+
+
+body{
+    background-color : lighten($bg-nav-color,70%)!important;
+
+}
+
 .row {
     .col {
         width: 100%!important;
@@ -15,6 +25,86 @@
         }
     }
 
+}
+
+.adminImgLogo{
+    width :50px;
+    height: 50px;
+    filter: grayscale(1);
+
+}
+
+.logo{
+    position: relative;
+    top:-50px;
+
+
+}
+.big-icon{
+    padding:5px;
+    font-size: 100px;
+    color : $bg-nav-color;
+
+}
+.h1-color{
+    color :$bg-nav-color;
+    font-style: italic ;
+}
+.vapor{
+    position: fixed;
+    opacity: 0.05;
+    font-size: 228px;
+    color : $bg-nav-color;
+}
+
+.color-active{
+    color : yellowgreen!important;
+}
+.wrapper-logo-admin{
+    position: relative;
+    padding: 8px 8px 8px 32px;
+    top :-18px;
+    left :-35px;
+}
+
+/* side navigation menu */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $bg-nav-color ;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    box-shadow: 3px 0px 10px darken($bg-nav-color,5%);
+}
+
+/* navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    width:100%;
+
+    text-decoration: none;
+    background-color: $bg-nav-color;
+    font-size: 18px;
+    color: $text-nav-color;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover {
+    color: #f1f1f1;
+    background-color: lighten($bg-nav-color ,15%);
+}
+
+/* main right content */
+#main {
+    transition: margin-left .5s;
+    margin-left:220px;
 }
 
 

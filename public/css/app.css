@@ -10873,6 +10873,10 @@ div.choix {
   float: right;
 }
 
+body {
+  background-color: #ecf3f9 !important;
+}
+
 .row .col {
   width: 100% !important;
 }
@@ -10883,5 +10887,87 @@ div.choix {
 
 .row .col .form-group select {
   width: 100% !important;
+}
+
+.adminImgLogo {
+  width: 50px;
+  height: 50px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.logo {
+  position: relative;
+  top: -50px;
+}
+
+.big-icon {
+  padding: 5px;
+  font-size: 100px;
+  color: #204060;
+}
+
+.h1-color {
+  color: #204060;
+  font-style: italic;
+}
+
+.vapor {
+  position: fixed;
+  opacity: 0.05;
+  font-size: 228px;
+  color: #204060;
+}
+
+.color-active {
+  color: yellowgreen !important;
+}
+
+.wrapper-logo-admin {
+  position: relative;
+  padding: 8px 8px 8px 32px;
+  top: -18px;
+  left: -35px;
+}
+
+/* side navigation menu */
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #204060;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  box-shadow: 3px 0px 10px #1a334d;
+}
+
+/* navigation menu links */
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  width: 100%;
+  text-decoration: none;
+  background-color: #204060;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  background-color: #336699;
+}
+
+/* main right content */
+
+#main {
+  transition: margin-left 0.5s;
+  margin-left: 220px;
 }
 

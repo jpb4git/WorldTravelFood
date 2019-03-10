@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <h1 class="w100 bg-dark text-light text-center mt-5 mb-5">Catégories</h1>
+    <h1 class="w100 bg-dark text-light text-center mb-5">Catégories</h1>
     <a class="btn btn-success ml-5 mb-5" href="{{route('cat.create')}}">Ajouter une  catégorie</a>
 
     @if (isset($errorsConstraint))

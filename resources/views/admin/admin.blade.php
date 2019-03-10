@@ -13,7 +13,7 @@
 @include('admin.header')
 @include('admin.menu')
 
-<div>
+<div id="main">
     @yield('content')
 </div>
 

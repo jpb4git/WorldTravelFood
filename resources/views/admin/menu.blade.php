@@ -1,33 +1,24 @@
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
 
-<hr class="style1">
 
-<nav class="navbar-light navbar-expand-lg navbar-expand-sm navbar-expand-md">
+<div id="mySidenav" class="sidenav">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="nav justify-content-center collapse navbar-collapse" id="navbarNav">
+    <a class="justify-content-center align-items-center logo" href="{{route('index')}}">
+        <div class="wrapper-logo-admin d-flex flex-row justify-content-center align-items-center">
+            <img src="{{asset('assets/images/logo.png')}}" class="adminImgLogo" alt="Responsive image">Administration
+        </div>
+    </a>
 
-        <ul class="navbar-nav justify-content-center">
+    <a href="{{route('cat.index')}}"> <i class="fas fa-archive"></i> Categories</a>
+    <a href="{{route('product.index')}}"><i class="fas fa-carrot"></i> Produits</a>
+    <a href="#"><i class="fas fa-globe"></i> Pays</a>
+    <a href="#"><i class="far fa-address-card"></i> Users</a>
+    <a href="#"><i class="far fa-clipboard"></i> Commandes</a>
+    <a href="#"><i class="fas fa-gift"></i> Cadeaux</a>
+    <a href="#"><i class="fas fa-truck"></i> Transporteurs</a>
+    <a href="#">  </a>
+    <a href="{{route('home.index')}}"><i class="fas fa-sign-out-alt"></i> Exit</a>
+</div>
 
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('index')}}">BACK-OFFICE</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('cat.index')}}">CATÉGORIES</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('product.index')}}">PRODUITS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{--route('layouts.contact.showAll')--}}">PAYS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{--route('layouts.contact.showAll')--}}">USERS</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()">open</span>
