@@ -18,8 +18,8 @@ class OrderTableSeeder extends Seeder
             $order->number = "1234567890";
             $order->date = \Carbon\Carbon::now();
             $order->user_id = 1;
-            $order->address_shipping = 1;
-            $order->address_delivery = 1;
+            $order->address_shipping_id = 1;
+            $order->address_delivery_id = 1;
             $order->save();
         }
     }

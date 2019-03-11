@@ -19,10 +19,10 @@ class CreateOrdersTable extends Migration
             $table->dateTime('date');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedInteger('address_shipping');
-            $table->foreign('address_shipping')->references('id')->on('addresses');
-            $table->unsignedInteger('address_delivery');
-            $table->foreign('address_delivery')->references('id')->on('addresses');
+            $table->unsignedInteger('address_shipping_id');
+            $table->foreign('address_shipping_id')->references('id')->on('addresses');
+            $table->unsignedInteger('address_delivery_id');
+            $table->foreign('address_delivery_id')->references('id')->on('addresses');
             $table->timestamps();
         });
     }
