@@ -74,3 +74,7 @@ Route::get('/newsLetter', 'NewLetterController@show');
 Route::get('/order', 'OrderController@show');
 
 
+Route::get('/admin', 'AdminController@getProduct');
+
+
+
