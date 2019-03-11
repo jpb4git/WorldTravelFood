@@ -14,27 +14,25 @@ class ProductController extends Controller
     {
         $products = Product::all();
 
-        return view("layouts.product.showAll", [
-            'products' => $products
-        ]);
+        return view("layouts.product.showAll", ['products' => $products]);
 
     }
 
     public function showByCat()
     {
-        return  view("layouts.product.showByCat" ,['cat' => 'catalogue']);
+        return view("layouts.product.showByCat", ['cat' => 'catalogue']);
     }
 
     public function showByCountry()
     {
-        return  view("layouts.product.showByCountry" ,['name' => 'catalogue']);
+        return view("layouts.product.showByCountry", ['name' => 'catalogue']);
     }
 
     public function getProduct($id)
     {
-       // $product = Product::where('id', $id)->get();
         $product = Product::find($id);
-        return  view("layouts.product.getProduct" ,['product' => $product]);
+
+        return view("layouts.product.getProduct", ['product' => $product]);
     }
 
 }

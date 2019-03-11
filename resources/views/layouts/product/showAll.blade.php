@@ -36,37 +36,39 @@
         </div>
         <div class="row mt-4 mb-5">
             @foreach ($products as $product)
-            <div class="col-xl-3 text-center">
-                <a class="product-a" href="{{Route('product.getProduct',$product -> id)}}">
-                    <div class="card text-center mb-3">
-                        <div class="text-center pt-2">
-                            <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 " alt="product 1 ">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><strong>{{$product->title}}</strong></h5>
-                            <h6 class="card-title">{{$product->provenance}}</h6>
-                            <p class="card-text">{{$product->price}}</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="row d-flex flex-row">
-                                <div class="col">
-                                    <a class="product-a" href="">
-                                        <img class="basket-size" src="{{asset('assets/images/basket-plus.svg')}}" alt="basket">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a class="product-a" href="">
+                <div class="col-xl-3 text-center">
+                    <a class="product-a" href="/product/{{ $product->id }}">
+                        <div class="card text-center mb-3">
+                            <div class="text-center pt-2">
+                                <img src="{{ asset('assets/images/mnm.jpg') }}" class="card-img-top w-50 "
+                                     alt="product 1 ">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>{{ $product->title }}</strong></h5>
+                                <h6 class="card-title">{{ $product->provenance }}</h6>
+                                <p class="card-text">{{ $product->price }}</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row d-flex flex-row">
+                                    <div class="col">
+                                        <a class="product-a" href="">
+                                            <img class="basket-size" src="{{asset('assets/images/basket-plus.svg')}}"
+                                                 alt="basket">
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="product-a" href="">
                                              <span class="orange-Text grey p-1 mr-1"><img
                                                      src="{{asset('assets/images/eye.svg')}}"
                                                      alt="eye"> </span>
-                                        <span class="orange-Text grey p-1"></span>
-                                    </a>
+                                            <span class="orange-Text grey p-1"></span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
             @endforeach
         </div>
 
