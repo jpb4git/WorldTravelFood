@@ -15,14 +15,15 @@ class Order extends Model
      * wait and see the damocles-camille-point-of-vue.
      *
      */
-    public function AddressF(){
+    public function AddressF()
+    {
         return $this->belongsTo('App\Address');
     }
 
-    public function AddressL(){
+    public function AddressL()
+    {
         return $this->belongsTo('App\Address');
     }
-
 
 
     /**

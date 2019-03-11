@@ -9,14 +9,19 @@
 // header css
 @import 'headerstyle';
 
+// Layouts
 @import 'home';
+
 @import 'product';
 @import 'basket';
 @import 'nav';
 @import'footer';
 
 // Panier
-@import 'panierIndex';
+//@import 'panierIndex';
+
+
+// Layouts basket
 @import'PanierfraisDePort';
 
 //admin

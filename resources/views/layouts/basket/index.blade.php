@@ -1,16 +1,28 @@
 @extends('layouts.app', ['title' => 'Home'])
-
 @section('content')
+
     <form action="index.blade.php" method="post">
-        <main class="container border mt-4 mb-5">
-            <div class="row">
+        <main class="container border mt-5 mb-5">
+            <nav class="breadcrumb mt-2">
+                <span class="breadcrumb-item active text-primary">RECAPITULATIF DE COMMANDE</span>
+                <a class="breadcrumb-item text-dark">IDENTIFICATION</a>
+                <a class="breadcrumb-item text-dark">ADRESSE</a>
+                <a class="breadcrumb-item text-dark">FRAIS DE PORT</a>
+                <a class="breadcrumb-item text-dark">PAIEMENT</a>
+            </nav>
+            <div class="row bg-secondary text-white justify-content-start py-2">
+                <div class="col-sm-12 ">
+                    <h1 class="h5 my-auto">COMMANDE</h1>
+                </div>
+            </div>
+            <div class="row mt-3">
                 <table class="table">
-                    <thead class="bg-primary table-bordered">
+                    <thead class="bg-dark table-bordered">
                     <tr>
-                        <th class="text-white text-left" scope="col">Article</th>
-                        <th class="text-white text-center" scope="col">Prix</th>
-                        <th class="text-white text-center" scope="col">Quantité</th>
-                        <th class="text-white text-center" scope="col">Total</th>
+                        <th class="text-white text-left" scope="col">ARTICLE</th>
+                        <th class="text-white text-center" scope="col">PRIX</th>
+                        <th class="text-white text-center" scope="col">QUANTITE</th>
+                        <th class="text-white text-center" scope="col">TOTAL</th>
                         <th class="text-white" scope="col"></th>
                     </tr>
                     </thead>
@@ -87,8 +99,7 @@
                 </div>
             <div class="row pt-5">
                 <div class="col d-flex justify-content-start ">
-                    <input class="text-right btn btn-outline-primary" type="submit" value="CONTINUER MES ACHATS"
-                           name="return">
+                    <a href="{{route('home.index')}}" class="btn btn-outline-primary" role="button" aria-pressed="true">CONTINUER MES ACHATS</a>
                 </div>
                 <div class="col d-flex justify-content-end">
                     <input class="btn btn-primary" type="submit" value="COMMANDER" name="recalcul">

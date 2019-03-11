@@ -15,10 +15,12 @@ class User extends Authenticatable
     /**
      * Get the address that owns the user.
      */
-    public function Address()
+    public function Addresses()
     {
         return $this->hasMany('App\Address');
     }
+
+
 
 
 

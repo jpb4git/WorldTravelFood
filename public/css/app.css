@@ -10755,8 +10755,9 @@ linkProd:hover {
   width: 200px !important;
 }
 
-.ChampsRequis {
-  color: #dd352e !important;
+.imgPaiement {
+  width: 100px;
+  height: 100px;
 }
 
 div.dropdown-menu a {
@@ -10847,11 +10848,6 @@ footer i {
 
 a.fdp {
   color: #FFFFFF !important;
-}
-
-.bandeau {
-  height: 30px;
-  background-color: #dd352e;
 }
 
 .choix {
@@ -10967,11 +10963,37 @@ body {
 /* main right content */
 
 #main {
-  transition: margin-left 0.5s;
   margin-left: 220px;
 }
 
+/*  ****  CARD ****  */
+
 .card {
   box-shadow: 3px 0px 7px #1a334d;
+}
+
+.card:hover {
+  background-color: #264d73;
+  color: white;
+}
+
+.card:hover i:not(:hover) {
+  color: white;
+}
+
+i:hover {
+  color: white;
+}
+
+.img-product-admin {
+  width: 4em;
+  height: 4em;
+}
+
+.toaster-info {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
 }
 

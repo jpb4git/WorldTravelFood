@@ -10,7 +10,9 @@
                     <h1 class="ml-5 h1-color"> Administration World Travel Food</h1>
                 </div>
                 <hr>
-                <h1 class="ml-5 d-flex align-items-center"><div class="vapor">Dashboard</div></h1>
+                <h1 class="ml-5 d-flex align-items-center">
+                    <div class="vapor">Dashboard</div>
+                </h1>
             </div>
         </div>
         <div class="row mt-0 ">
@@ -28,7 +30,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Produits : <strong>18</strong></h5>
+                                <h5 class="card-title">Produits : <strong>{{$productCount}}</strong></h5>
                                 <p class="card-text">Produits presents dans la base de données.</p>
 
                             </div>
@@ -44,7 +46,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title"> Categories : <strong>15</strong></h5>
+                                <h5 class="card-title"> Categories : <strong>{{$catCount}}</strong></h5>
                                 <p class="card-text">Catégories presentes dans la base de données. </p>
 
                             </div>
@@ -60,7 +62,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Clients : <strong>178</strong></h5>
+                                <h5 class="card-title">Clients : <strong>{{$userCount}}</strong></h5>
                                 <p class="card-text">Clients enregistrés dans la base de données.</p>
 
                             </div>
@@ -108,7 +110,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Utilisateurs : <strong>4</strong></h5>
+                                <h5 class="card-title">Utilisateurs : <strong>{{$userCount}}</strong></h5>
                                 <p class="card-text">Utilisateurs presents dans la base de données.</p>
 
                             </div>
@@ -148,7 +150,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Commandes passées ce mois : <strong>118</strong></h5>
+                                <h5 class="card-title">Commandes passées ce mois : <strong>{{$orderCount}}</strong></h5>
                                 <p class="card-text">Nombre de commandes passées toutes catégories confondues</p>
 
                             </div>
@@ -223,6 +225,4 @@
         </div>
     </div>
     <hr>
-
-
 @endsection

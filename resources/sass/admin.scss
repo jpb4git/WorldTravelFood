@@ -102,11 +102,31 @@ body{
 
 /* main right content */
 #main {
-    transition: margin-left .5s;
     margin-left:220px;
 }
+/*  ****  CARD ****  */
 .card{
     box-shadow: 3px 0px 7px darken($bg-nav-color,5%);
 }
+.card:hover{
+    background-color: lighten($bg-nav-color ,05%);
+    color:$text-hover;
+}
+
+.card:hover i:not(:hover) {
+    color: $text-hover;
+}
+i:hover {
+    color: $text-hover;
+}
+
+.img-product-admin{
+    width:4em;
+    height: 4em;
+}
 
 
+.toaster-info{
+    animation-duration: 3s;
+    animation-name: slidein;
+}

@@ -1,10 +1,17 @@
 @extends('layouts.app', ['title' => 'Votre Panier'])
 
 @section('content')
-    <div class="container mt-5">
-        <div class="row justify-content-start">
-            <div class="col-sm-12">
-                <h1 class="h5 my-auto bg-primary p-2 text-white ">VOS ADRESSES</h1>
+    <main class="container border mt-5 mb-5">
+        <nav class="breadcrumb mt-2">
+            <a class="breadcrumb-item text-dark">RECAPITULATIF DE COMMANDE</a>
+            <a class="breadcrumb-item text-dark">IDENTIFICATION</a>
+            <span class="breadcrumb-item active text-primary">ADRESSE</span>
+            <a class="breadcrumb-item text-dark">FRAIS DE PORT</a>
+            <a class="breadcrumb-item text-dark">PAIEMENT</a>
+        </nav>
+        <div class="row bg-secondary text-white justify-content-start py-2">
+            <div class="col-sm-12 ">
+                <h1 class="h5 my-auto">VOS ADRESSES</h1>
             </div>
         </div>
         <form>
@@ -50,20 +57,11 @@
             </button>
         </div>
 
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                <div class="text-left py-5">
-                    <button type="submit" name="submitPrecedentNouvelleAdresse" class="btn btn-primary">PRÉCEDENT
-                    </button>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                <div class="text-right py-5">
-                    <button type="submit" name="submitSuivantNouvelleAdresse" class="btn btn-primary">SUIVANT
-                    </button>
-                </div>
+        <div class="row pt-5">
+            <div class="col d-flex justify-content-start ">
+                <a href="{{route('panier.identification')}}" class="btn btn-outline-primary" role="button" aria-pressed="true">PRECEDENT</a>
             </div>
         </div>
-    </div>
+    </main>
 
 @endsection
