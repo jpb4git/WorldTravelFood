@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->decimal('price',5,2);
             $table->string('image',250);
-            $table->decimal('weight',2,2);
+            $table->decimal('weight',5,2);
             $table->integer('stock');
             $table->unsignedInteger('category_id');
             $table->timestamps();
