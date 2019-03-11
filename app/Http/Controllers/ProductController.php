@@ -32,9 +32,9 @@ class ProductController extends Controller
 
     public function getProduct($id)
     {
-        $product = Product::where('id', $id)->get();
-
-        return  view("layouts.product.getProduct" ,['products' => $id]);
+       // $product = Product::where('id', $id)->get();
+        $product = Product::find($id);
+        return  view("layouts.product.getProduct" ,['product' => $product]);
     }
 
 }

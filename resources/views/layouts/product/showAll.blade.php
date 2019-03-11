@@ -37,7 +37,7 @@
         <div class="row mt-4 mb-5">
             @foreach ($products as $product)
             <div class="col-xl-3 text-center">
-                <a class="product-a" href="{{$product -> id}}">
+                <a class="product-a" href="{{Route('product.getProduct',$product -> id)}}">
                     <div class="card text-center mb-3">
                         <div class="text-center pt-2">
                             <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 " alt="product 1 ">

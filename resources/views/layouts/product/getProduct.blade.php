@@ -25,7 +25,7 @@
             </div>
             <div class="col-md-8">
                 <div class="wrapper mb-5">
-                    <span><strong>VIN DE COBRA & SCORPION - GRANDE BOUTEILLE</strong></span>
+                    <span><strong>{{$product->name}}VIN DE COBRA & SCORPION - GRANDE BOUTEILLE</strong></span>
                     <div class="wrapper-stars">
                         <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
                         <img class="starSize" src="{{asset('assets/images/starOn.svg')}}" alt="">
