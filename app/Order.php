@@ -15,12 +15,12 @@ class Order extends Model
      * wait and see the damocles-camille-point-of-vue.
      *
      */
-    public function AddressF()
+    public function adressDelivery()
     {
-        return $this->belongsTo('App\Address');
+        return $this->belongsTo('App\Address','address_shipping' );
     }
 
-    public function AddressL()
+    public function adressShipping()
     {
         return $this->belongsTo('App\Address');
     }
@@ -32,6 +32,11 @@ class Order extends Model
     public function products()
     {
         return $this->belongsToMany('App\Product');
+    }
+
+
+    public function user(){
+        return $this->belongsTo('App\User');
     }
 
 }

@@ -21,7 +21,7 @@ class Product extends Model
      */
     public function discount()
     {
-        return $this->hasMany('App\Discount');
+        return $this->hasOne('App\Discount');
     }
 
 
