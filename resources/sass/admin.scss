@@ -1,69 +1,75 @@
 // #461b4b #2f4858
 
-$bg-nav-color :#204060;
-$text-nav-color : lighten($bg-nav-color,49);
-$text-hover :lighten($bg-nav-color,89);
+$bg-nav-color: #204060;
+$text-nav-color: lighten($bg-nav-color, 49);
+$text-hover: lighten($bg-nav-color, 89);
 
 
-body{
-    background-color : lighten($bg-nav-color,70%)!important;
+body {
+    background-color: lighten($bg-nav-color, 70%) !important;
 
 }
 
 .row {
     .col {
-        width: 100%!important;
+        width: 100% !important;
+
         .form-group {
             textarea {
-                width: 100%!important;
+                width: 100% !important;
 
             }
-            select{
-                width: 100%!important;
+
+            select {
+                width: 100% !important;
             }
         }
     }
 
 }
 
-.adminImgLogo{
-    width :45px;
+.adminImgLogo {
+    width: 45px;
     height: 45px;
     filter: grayscale(1);
 
 }
 
-.logo{
+.logo {
     position: relative;
-    top:-50px;
+    top: -50px;
 
 
 }
-.big-icon{
-    padding:5px;
+
+.big-icon {
+    padding: 5px;
     font-size: 100px;
-    color : $bg-nav-color;
+    color: $bg-nav-color;
 
 }
-.h1-color{
-    color :$bg-nav-color;
-    font-style: italic ;
+
+.h1-color {
+    color: $bg-nav-color;
+    font-style: italic;
 }
-.vapor{
+
+.vapor {
     position: fixed;
     opacity: 0.05;
     font-size: 228px;
-    color : $bg-nav-color;
+    color: $bg-nav-color;
 }
 
-.color-active{
-    color : yellowgreen!important;
+.color-active {
+    color: yellowgreen !important;
 }
-.wrapper-logo-admin{
+
+.wrapper-logo-admin {
     position: relative;
     padding: 8px 8px 8px 32px;
-    top :-18px;
-    left :-35px;
+    top: -18px;
+    left: -35px;
 }
 
 /* side navigation menu */
@@ -74,17 +80,17 @@ body{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: $bg-nav-color ;
+    background-color: $bg-nav-color;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
-    box-shadow: 3px 0px 10px darken($bg-nav-color,5%);
+    box-shadow: 3px 0px 10px darken($bg-nav-color, 5%);
 }
 
 /* navigation menu links */
 .sidenav a {
     padding: 8px 8px 8px 32px;
-    width:100%;
+    width: 100%;
 
     text-decoration: none;
     background-color: $bg-nav-color;
@@ -97,36 +103,54 @@ body{
 
 .sidenav a:hover {
     color: $text-hover;
-    background-color: lighten($bg-nav-color ,15%);
+    background-color: lighten($bg-nav-color, 15%);
 }
 
 /* main right content */
 #main {
-    margin-left:220px;
+    margin-left: 220px;
 }
+
 /*  ****  CARD ****  */
-.card{
-    box-shadow: 3px 0px 7px darken($bg-nav-color,5%);
+.card {
+    box-shadow: 3px 0px 7px darken($bg-nav-color, 5%);
 }
-.card:hover{
-    background-color: lighten($bg-nav-color ,05%);
-    color:$text-hover;
+
+.card:hover {
+    background-color: lighten($bg-nav-color, 05%);
+    color: $text-hover;
 }
 
 .card:hover i:not(:hover) {
     color: $text-hover;
 }
+
 i:hover {
     color: $text-hover;
 }
 
-.img-product-admin{
-    width:4em;
+.img-product-admin {
+    width: 4em;
     height: 4em;
 }
 
 
-.toaster-info{
+.toaster-info {
+    opacity: 0;
     animation-duration: 3s;
-    animation-name: slidein;
+    animation-name: getOut;
+
+}
+
+
+@keyframes getOut {
+    from {
+
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
 }
