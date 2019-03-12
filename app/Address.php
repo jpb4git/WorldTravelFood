@@ -6,20 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Address extends Model
 {
-
-    /**
-     * Get the user record associated with the address.
-     */
-    public function User()
+    public function user()
     {
         return $this->belongsTo('App\User');
     }
 
-
-    public function orders()
+    public function ordersShipping()
     {
-        return $this > $this->hasMany('App\Order');
+        return $this->hasMany('App\Order', 'address_shipping_id');
+    }
 
+    public function ordersDelivery()
+    {
+        return $this->hasMany('App\Order', 'address_delivery_id');
     }
 
 

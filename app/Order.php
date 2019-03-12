@@ -6,37 +6,23 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    //
-    /**
-     *
-     * Get the Address record associated with the Order.
-     * bug how to put a second FK on the same table ?
-     * tryed that stuff but really not sure about that ...
-     * wait and see the damocles-camille-point-of-vue.
-     *
-     */
-    public function adressDelivery()
+    public function user()
     {
-        return $this->belongsTo('App\Address','address_shipping' );
+        return $this->belongsTo('App\User');
     }
 
-    public function adressShipping()
+    public function addressShipping()
     {
-        return $this->belongsTo('App\Address');
+        return $this->belongsTo('App\Address', 'address_shipping_id');
     }
 
+    public function addressDelivery()
+    {
+        return $this->belongsTo('App\Address','address_delivery_id');
+    }
 
-    /**
-     * The pruducts that belong to the orders. manyToMany
-     */
     public function products()
     {
         return $this->belongsToMany('App\Product');
     }
-
-
-    public function user(){
-        return $this->belongsTo('App\User');
-    }
-
 }

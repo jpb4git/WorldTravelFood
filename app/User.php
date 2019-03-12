@@ -10,17 +10,6 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-
-
-    /**
-     * Get the address that owns the user.
-     */
-    public function Addresses()
-    {
-        return $this->hasMany('App\Address');
-    }
-
-
     /**
      * The attributes that are mass assignable.
      *
@@ -48,6 +37,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function addresses()
+    {
+        return $this->hasMany('App\Address');
+    }
 
-
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
 }
