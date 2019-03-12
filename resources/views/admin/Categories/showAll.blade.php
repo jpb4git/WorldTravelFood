@@ -32,6 +32,15 @@
             </div>
         </div>
     @endif
+    @if (isset($pudateCat))
+        <div class="row toaster-info">
+            <div class="col">
+                <div class="bg-success text-center p-3 mt-5 mb-5">
+                    <p class="text-light">{{ $updateCat }}</p>
+                </div>
+            </div>
+        </div>
+    @endif
     <table class="table">
         <thead>
         <tr>

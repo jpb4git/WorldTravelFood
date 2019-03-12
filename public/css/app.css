@@ -10992,8 +10992,8 @@ i:hover {
 
 .toaster-info {
   opacity: 0;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 7.5s;
+          animation-duration: 7.5s;
   -webkit-animation-name: getOut;
           animation-name: getOut;
 }

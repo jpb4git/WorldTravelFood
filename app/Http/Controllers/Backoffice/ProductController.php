@@ -65,6 +65,7 @@ class ProductController extends Controller
 
         $product = new Product();
         $product->name  = $request->input('name');
+        $label = $product->name;
         $product->description  = $request->input('description');
         $product->price  = $request->input('price');
         $product->weight  = $request->input('weight');
@@ -75,7 +76,7 @@ class ProductController extends Controller
 
 
         $products = Product::with('category')->get();
-        return view("admin.products.showAll", ['products' => $products]);
+        return view("admin.products.showAll", ['products' => $products,'addProd' => 'le produit ' . $label . " est modifié avec succés."]);
     }
 
     /**
@@ -131,6 +132,7 @@ class ProductController extends Controller
 
 
         $product->name  = $request->input('name');
+        $label = $product->name ;
         $product->description  = $request->input('description');
         $product->price  = $request->input('price');
         $product->weight  = $request->input('weight');
@@ -141,7 +143,7 @@ class ProductController extends Controller
 
 
         $products = Product::with('category')->get();
-        return view("admin.products.showAll", ['products' => $products]);
+        return view("admin.products.showAll", ['products' => $products,'updateProd' => 'le produit ' . $label . " est modifié avec succés."]);
     }
 
     /**

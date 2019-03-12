@@ -104,7 +104,7 @@ class CategoryController extends Controller
 
         //grab from Model ... nite !
         $cat = Category::find($id);
-
+        $label = $cat->name;
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255'
         ]);
@@ -121,7 +121,7 @@ class CategoryController extends Controller
 
 
         $categories = Category::all();
-        return view('admin.Categories.showAll', ['cats' => $categories]);
+        return view('admin.Categories.showAll', ['cats' => $categories,'updateCat' => 'la catégorie ' . $label . " est modifiée avec succes."]);
 
     }
 

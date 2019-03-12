@@ -14,11 +14,11 @@
             </div>
         </div>
     @endif
-    @if (isset($Addproduct))
+    @if (isset($addProd))
         <div class="row toaster-info">
             <div class="col">
                 <div class="bg-success text-center p-3 mt-5 mb-5">
-                    <p class="text-light">{{ $Addproduct }}</p>
+                    <p class="text-light">{{ $addProd}}</p>
                 </div>
             </div>
         </div>
@@ -28,6 +28,15 @@
             <div class="col">
                 <div class="bg-success text-center p-3 mt-5 mb-5">
                     <p class="text-light">{{ $supprProd }}</p>
+                </div>
+            </div>
+        </div>
+    @endif
+    @if (isset($updateProd))
+        <div class="row toaster-info">
+            <div class="col">
+                <div class="bg-success text-center p-3 mt-5 mb-5">
+                    <p class="text-light">{{ $updateProd }}</p>
                 </div>
             </div>
         </div>
