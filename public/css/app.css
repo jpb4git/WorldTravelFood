@@ -10972,12 +10972,12 @@ body {
   box-shadow: 3px 0px 7px #1a334d;
 }
 
-.card:hover {
+.card-admin:hover {
   background-color: #264d73;
   color: white;
 }
 
-.card:hover i:not(:hover) {
+.card-admin:hover i:not(:hover) {
   color: white;
 }
 
