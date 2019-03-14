@@ -27,7 +27,7 @@
         </div>
         <div class="row text-center">
             <div class="col">
-                <form action="store" method="post">
+                <form action="store" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         @csrf
                         <label for="name">Nom de la Catégorie</label>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="form-group">
                         <label for="price">price</label>
-                        <input type="text"  class="form-control" name="price">
+                        <input type="text" class="form-control" name="price">
                     </div>
                     <div class="form-group">
                         <label for="weight">weight</label>
@@ -53,11 +53,15 @@
 
                     <div class="form-group">
                         <select name="category">
-                            <option value="--">Select a catégorie </option>
-                           @foreach($cats as $cat)
-                            <option value="{{$cat->id}}">{{$cat->name}}</option>
+                            <option value="--">Select a catégorie</option>
+                            @foreach($cats as $cat)
+                                <option value="{{$cat->id}}">{{$cat->name}}</option>
                             @endforeach
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="file">Sélectionner l'image du produit</label>
+                        <input type="file" id="file" name="file" multiple>
                     </div>
                     <button type="submit" class="btn btn-primary" value="submit">Enregistrer</button>
                 </form>
