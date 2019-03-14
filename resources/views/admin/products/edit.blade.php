@@ -28,6 +28,7 @@
         <div class="row text-center">
             <div class="col">
                 <form action="/admin/product/update/{{$product->id}}" method="post">
+                    @csrf
                     <div class="form-group p-3">
 
                         <img name="imag" class="img-fluid small-img" src="{{asset('assets/images/imgcatalogue/' . $product->image)}}" alt="">

@@ -106,10 +106,10 @@ class ProductController extends Controller
      * @param Product $product
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
         $cats = Category::get();
-         $product = Product::findorfail($id);
+
         return view('admin.products.edit', ['product' => $product, 'cats' => $cats]);
     }
 

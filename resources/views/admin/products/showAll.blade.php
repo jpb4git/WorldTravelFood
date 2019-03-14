@@ -3,7 +3,7 @@
 
 @section('content')
     <h1 class="w100 bg-dark text-light text-center mb-5">Products</h1>
-    <a class="btn btn-success ml-5 mb-5" href="{{route('product.create')}}">Ajouter un  Produit</a>
+    <a class="btn btn-success ml-5 mb-5" href="{{route('products.create')}}">Ajouter un Produit</a>
 
     @if (isset($errorsConstraint))
         <div class="row toaster-info">
@@ -67,15 +67,16 @@
                 <td>{{$product->weight}}</td>
                 <td>{{$product->stock}}</td>
                 <td>{{ $product->category ? $product->category->name : 'nomane' }}</td>
-                <td><img class="img-product-admin" src="{{asset('assets/images/imgcatalogue/'.$product->image)}}" alt=""></td>
-                <form action="/admin/product/edit/{{$product->id}}" method="post">
-                    @csrf
-                    <td><button type="submit" class="btn btn-secondary" href="/admin/product/edit/{{$product->id}}">Modifier</button></td>
-                </form>
-                <form action="/admin/product/destroy/{{$product->id}}" method="post">
-                    @csrf
-                    <td><button type="submit" class="btn btn-primary" href="/admin/product/destroy/{{$product->id}}">supprimer</button></td>
-                </form>
+                <td><img class="img-product-admin" src="{{asset('assets/images/imgcatalogue/'.$product->image)}}"
+                         alt=""></td>
+
+                <td><a class="btn btn-secondary" href="{{ route('products.edit', ['product' => $product]) }}">Modifier</a></td>
+                <td>
+                    <form action="{{ route('products.destroy', $product) }}" method="post">
+                        @csrf
+                        @method('DELETE')<input type="submit" class="btn btn-primary" value="supprimer">
+                    </form>
+                </td>
             </tr>
 
 
