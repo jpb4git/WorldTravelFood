@@ -28,6 +28,15 @@
         <div class="row text-center">
             <div class="col">
                 <form action="/admin/product/update/{{$product->id}}" method="post">
+                    <div class="form-group p-3">
+
+                        <img name="imag" class="img-fluid small-img" src="{{asset('assets/images/imgcatalogue/' . $product->image)}}" alt="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file">Image</label>
+                        <input type="file" class="form-control" name="file">
+                    </div>
                     <div class="form-group">
                         @csrf
                         <label for="name">Nom de la Catégorie</label>

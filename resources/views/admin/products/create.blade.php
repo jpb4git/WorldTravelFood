@@ -27,7 +27,7 @@
         </div>
         <div class="row text-center">
             <div class="col">
-                <form action="store" method="post">
+                <form action="store" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         @csrf
                         <label for="name">Nom de la Catégorie</label>
@@ -50,7 +50,10 @@
                         <label for="stock">stock</label>
                         <input type="text" class="form-control" name="stock">
                     </div>
-
+                    <div class="form-group">
+                        <label for="file">image du produit</label>
+                        <input type="file" class="form-control" name="file">
+                    </div>
                     <div class="form-group">
                         <select name="category">
                             <option value="--">Select a catégorie </option>

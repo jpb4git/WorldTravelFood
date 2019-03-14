@@ -67,7 +67,7 @@
                 <td>{{$product->weight}}</td>
                 <td>{{$product->stock}}</td>
                 <td>{{ $product->category ? $product->category->name : 'nomane' }}</td>
-                <td><img class="img-product-admin" src="{{asset('assets/images/'.$product->image)}}" alt=""></td>
+                <td><img class="img-product-admin" src="{{asset('assets/images/imgcatalogue/'.$product->image)}}" alt=""></td>
                 <form action="/admin/product/edit/{{$product->id}}" method="post">
                     @csrf
                     <td><button type="submit" class="btn btn-secondary" href="/admin/product/edit/{{$product->id}}">Modifier</button></td>

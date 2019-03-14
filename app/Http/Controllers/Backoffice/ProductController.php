@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Backoffice;
+
 use Validator;
 use App\Category;
 use App\Product;
@@ -37,7 +38,7 @@ class ProductController extends Controller
     {
         $cats = Category::get();
 
-        return view('admin.products.create',['cats' => $cats]);
+        return view('admin.products.create', ['cats' => $cats]);
     }
 
     /**
@@ -48,35 +49,44 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|max:255',
-            'description' => 'required',
-            'price' => 'required|numeric',
-            'weight' => 'required|numeric',
-            'stock' => 'required|numeric',
-            'category' =>'numeric'
-        ]);
+        //dd($request->all());
+        try {
+            $validator = Validator::make($request->all(), [
+                'name' => 'required|max:255',
+                'description' => 'required',
+                'price' => 'required|numeric',
+                'weight' => 'required|numeric',
+                'stock' => 'required|numeric',
+                'category' => 'numeric',
+                'file' => 'required|file|image|mimes:jpeg,png,gif,webp|max:2048',
+            ]);
 
-        if ($validator->fails()) {
-            return redirect('admin/product/create')
-                ->withErrors($validator)
-                ->withInput();
+            if ($validator->fails()) {
+                return redirect('admin/product/create')
+                    ->withErrors($validator)
+                    ->withInput();
+            }
+
+            $file = $request->file('file');
+            $file->move(public_path('/assets/images/imgcatalogue'), $file->getClientOriginalName());
+
+            $product = new Product();
+            $product->name = $request->input('name');
+            $label = $product->name;
+            $product->description = $request->input('description');
+            $product->price = $request->input('price');
+            $product->weight = $request->input('weight');
+            $product->stock = $request->input('stock');
+            $product->category_id = $request->input('category');
+            $product->image = $file->getClientOriginalName();
+            $product->save();
+
+
+            $products = Product::with('category')->get();
+            return view("admin.products.showAll", ['products' => $products, 'addProd' => 'le produit ' . $label . " est modifié avec succés."]);
+        } catch (\Exception $e) {
+
         }
-
-        $product = new Product();
-        $product->name  = $request->input('name');
-        $label = $product->name;
-        $product->description  = $request->input('description');
-        $product->price  = $request->input('price');
-        $product->weight  = $request->input('weight');
-        $product->stock  = $request->input('stock');
-        $product->category_id  = $request->input('category');
-        $product->image  = "new-1.jpg";
-        $product->save();
-
-
-        $products = Product::with('category')->get();
-        return view("admin.products.showAll", ['products' => $products,'addProd' => 'le produit ' . $label . " est modifié avec succés."]);
     }
 
     /**
@@ -93,15 +103,14 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param Product $product
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $product = Product::find($id);
         $cats = Category::get();
-
-        return view('admin.products.edit', ['product' => $product,'cats' => $cats]);
+         $product = Product::findorfail($id);
+        return view('admin.products.edit', ['product' => $product, 'cats' => $cats]);
     }
 
     /**
@@ -114,15 +123,49 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
 
-        $product  = Product::find($id);
+
+        /*if (!$request->file) {
+            // l'utilisateur change la photo de l'article
+
+            // on test l'image si pas ok redirect
+            $validator = Validator::make($request->all(), [
+                'file' => 'required|file|image|mimes:jpeg,png,gif,webp|max:2048'
+            ]);
+
+            if ($validator->fails()) {
+                return redirect('admin/product/edit')
+                    ->withErrors($validator)
+                    ->withInput();
+            }
+
+            //  on cherche l'image actuelle pour destruction
+            $product = Product::find($id);
+            $image_path = public_path() . "/assets/images/imgcatalogue/" . $product->image;  // Value is not URL but directory file path
+            dump('not null');
+            dd($image_path);
+            if (File::exists($image_path)) {
+                File::delete($image_path);
+            }
+
+
+        } else {
+
+            dump('null');
+
+
+        }*/
+
+        $product = Product::find($id);
+
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',
             'description' => 'required',
             'price' => 'required|numeric',
             'weight' => 'required|numeric',
             'stock' => 'required|numeric',
-            'category' =>'numeric'
+            'category' => 'numeric'
         ]);
+
 
         if ($validator->fails()) {
             return redirect('admin/product/edit')
@@ -131,19 +174,19 @@ class ProductController extends Controller
         }
 
 
-        $product->name  = $request->input('name');
-        $label = $product->name ;
-        $product->description  = $request->input('description');
-        $product->price  = $request->input('price');
-        $product->weight  = $request->input('weight');
-        $product->stock  = $request->input('stock');
-        $product->category_id  = $request->input('category');
-        $product->image  = "new-1.jpg";
+        $product->name = $request->input('name');
+        $label = $product->name;
+        $product->description = $request->input('description');
+        $product->price = $request->input('price');
+        $product->weight = $request->input('weight');
+        $product->stock = $request->input('stock');
+        $product->category_id = $request->input('category');
+        $product->image = "new-1.jpg";
         $product->save();
 
 
         $products = Product::with('category')->get();
-        return view("admin.products.showAll", ['products' => $products,'updateProd' => 'le produit ' . $label . " est modifié avec succés."]);
+        return view("admin.products.showAll", ['products' => $products, 'updateProd' => 'le produit ' . $label . " est modifié avec succés."]);
     }
 
     /**
