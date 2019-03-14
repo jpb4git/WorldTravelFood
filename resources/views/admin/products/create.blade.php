@@ -27,7 +27,7 @@
         </div>
         <div class="row text-center">
             <div class="col">
-                <form action="store" method="post" enctype="multipart/form-data">
+                <form action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         @csrf
                         <label for="name">Nom de la Catégorie</label>
@@ -62,10 +62,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="file">Sélectionner l'image du produit</label>
-                        <input type="file" id="file" name="file" multiple>
-                    </div>
+
                     <button type="submit" class="btn btn-primary" value="submit">Enregistrer</button>
                 </form>
             </div>

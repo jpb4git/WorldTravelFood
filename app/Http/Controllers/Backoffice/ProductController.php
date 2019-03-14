@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backoffice;
 
+use File;
 use Validator;
 use App\Category;
 use App\Product;
@@ -25,7 +26,7 @@ class ProductController extends Controller
         //   $products->load('category');
         // [ qui fait la même chose
 
-        return view("admin.products.showAll", ['products' => $products]);
+        return view("admin.products.index", ['products' => $products]);
 
     }
 
@@ -49,44 +50,33 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
-        try {
-            $validator = Validator::make($request->all(), [
-                'name' => 'required|max:255',
-                'description' => 'required',
-                'price' => 'required|numeric',
-                'weight' => 'required|numeric',
-                'stock' => 'required|numeric',
-                'category' => 'numeric',
-                'file' => 'required|file|image|mimes:jpeg,png,gif,webp|max:2048',
-            ]);
+        $request->validate([
+                               'name' => 'required|max:255',
+                               'description' => 'required',
+                               'price' => 'required|numeric',
+                               'weight' => 'required|numeric',
+                               'stock' => 'required|numeric',
+                               'category' => 'numeric',
+                               'file' => 'required|file|image|mimes:jpeg,png,gif,webp|max:2048',
+                           ]);
 
-            if ($validator->fails()) {
-                return redirect('admin/product/create')
-                    ->withErrors($validator)
-                    ->withInput();
-            }
+        $file = $request->file('file');
+        $file->move(public_path('/assets/images/imgcatalogue'), $file->getClientOriginalName());
 
-            $file = $request->file('file');
-            $file->move(public_path('/assets/images/imgcatalogue'), $file->getClientOriginalName());
+        $product = new Product();
+        $product->name = $request->input('name');
+        $label = $product->name;
+        $product->description = $request->input('description');
+        $product->price = $request->input('price');
+        $product->weight = $request->input('weight');
+        $product->stock = $request->input('stock');
+        $product->category_id = $request->input('category');
+        $product->image = $file->getClientOriginalName();
+        $product->save();
 
-            $product = new Product();
-            $product->name = $request->input('name');
-            $label = $product->name;
-            $product->description = $request->input('description');
-            $product->price = $request->input('price');
-            $product->weight = $request->input('weight');
-            $product->stock = $request->input('stock');
-            $product->category_id = $request->input('category');
-            $product->image = $file->getClientOriginalName();
-            $product->save();
+        $products = Product::with('category')->get();
+        return view("admin.products.showAll", ['products' => $products, 'addProd' => 'le produit ' . $label . " est modifié avec succés."]);
 
-
-            $products = Product::with('category')->get();
-            return view("admin.products.showAll", ['products' => $products, 'addProd' => 'le produit ' . $label . " est modifié avec succés."]);
-        } catch (\Exception $e) {
-
-        }
     }
 
     /**
@@ -95,9 +85,10 @@ class ProductController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
         //
+
     }
 
     /**
@@ -120,58 +111,34 @@ class ProductController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
 
-
-        /*if (!$request->file) {
-            // l'utilisateur change la photo de l'article
-
-            // on test l'image si pas ok redirect
-            $validator = Validator::make($request->all(), [
-                'file' => 'required|file|image|mimes:jpeg,png,gif,webp|max:2048'
-            ]);
-
-            if ($validator->fails()) {
-                return redirect('admin/product/edit')
-                    ->withErrors($validator)
-                    ->withInput();
-            }
-
+        // si on a un nouveau fichier image pour le produit
+        if ($request->file <> null) {
+            // validation fichier
+            $request->validate(['file' => 'max:2048']);
             //  on cherche l'image actuelle pour destruction
-            $product = Product::find($id);
-            $image_path = public_path() . "/assets/images/imgcatalogue/" . $product->image;  // Value is not URL but directory file path
-            dump('not null');
-            dd($image_path);
+            $image_path = public_path() . "/assets/images/imgcatalogue/" . $product->image;
             if (File::exists($image_path)) {
                 File::delete($image_path);
             }
+            // copie image vers dossier correspondant
+            $file = $request->file('file');
+            $file->move(public_path('/assets/images/imgcatalogue'), $request->file->getClientOriginalName());
+            $product->image = $request->file->getClientOriginalName();
 
-
-        } else {
-
-            dump('null');
-
-
-        }*/
-
-        $product = Product::find($id);
-
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|max:255',
-            'description' => 'required',
-            'price' => 'required|numeric',
-            'weight' => 'required|numeric',
-            'stock' => 'required|numeric',
-            'category' => 'numeric'
-        ]);
-
-
-        if ($validator->fails()) {
-            return redirect('admin/product/edit')
-                ->withErrors($validator)
-                ->withInput();
         }
+
+
+        $request->validate([
+                               'name' => 'required|max:255',
+                               'description' => 'required',
+                               'price' => 'required|numeric',
+                               'weight' => 'required|numeric',
+                               'stock' => 'required|numeric',
+                               'category' => 'numeric'
+                           ]);
 
 
         $product->name = $request->input('name');
@@ -181,7 +148,6 @@ class ProductController extends Controller
         $product->weight = $request->input('weight');
         $product->stock = $request->input('stock');
         $product->category_id = $request->input('category');
-        $product->image = "new-1.jpg";
         $product->save();
 
 
@@ -195,15 +161,20 @@ class ProductController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
 
-
-        $product = Product::find($id);
         if (!is_null($product)) {
             $label = $product->name;
             try {
+                //suppression produit
                 $product->delete();
+
+                //suppression image
+                $image_path = public_path() . "/assets/images/imgcatalogue/" . $product->image;  // Value is not URL but directory file path
+                if (File::exists($image_path)) {
+                    File::delete($image_path);
+                }
             } catch (\Illuminate\Database\QueryException $e) {
 
                 $products = Product::with('category')->get();

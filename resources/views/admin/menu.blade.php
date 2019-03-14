@@ -13,7 +13,7 @@
     <a href="/admin"><i class="far fa-address-book"></i></a>
     <a href="//admin"><i class="fas fa-fingerprint"></i></a>
     <hr>
-    <a href="{{route('cat.index')}}"> <i class="fas fa-archive"></i></a>
+    <a href="{{route('categories.index')}}"> <i class="fas fa-archive"></i></a>
     <a href="{{route('products.index')}}"><i class="fas fa-carrot"></i></a>
     <a href="/admin"><i class="fas fa-globe"></i></a>
     <hr>
