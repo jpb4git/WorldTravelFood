@@ -23,7 +23,7 @@
             </div>
 
             <div class="col-md-4">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 card-admin" >
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <i class="fas fa-carrot big-icon"></i>
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 card-admin" >
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <i class="fas fa-archive big-icon"></i>
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 card-admin" >
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <i class="far fa-address-card big-icon"></i>
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 card-admin" >
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <i class="fas fa-globe big-icon"></i>
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 card-admin" >
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <i class="fas fa-truck big-icon"></i>
@@ -103,7 +103,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 card-admin" >
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <i class="far fa-address-book big-icon"></i>
@@ -119,7 +119,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 card-admin">
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <i class="fas fa-fingerprint big-icon"></i>
@@ -143,7 +143,7 @@
 
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 card-admin" >
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <i class="fab fa-cc-visa big-icon"></i>
@@ -159,7 +159,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 card-admin" >
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <i class="fas fa-gift big-icon"></i>
@@ -175,7 +175,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 card-admin" >
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <i class="fab fa fa-percent big-icon"></i>
@@ -191,7 +191,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 card-admin" >
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <i class="fab fa fa-percent big-icon color-active"></i>
@@ -207,7 +207,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 card-admin">
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <i class="fas fa-archive big-icon"></i>

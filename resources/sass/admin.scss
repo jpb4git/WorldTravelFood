@@ -116,12 +116,12 @@ body {
     box-shadow: 3px 0px 7px darken($bg-nav-color, 5%);
 }
 
-.card:hover {
+.card-admin:hover {
     background-color: lighten($bg-nav-color, 05%);
     color: $text-hover;
 }
 
-.card:hover i:not(:hover) {
+.card-admin:hover i:not(:hover) {
     color: $text-hover;
 }
 
