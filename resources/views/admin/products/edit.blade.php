@@ -27,8 +27,9 @@
         </div>
         <div class="row text-center">
             <div class="col">
-                <form action="/admin/product/update/{{$product->id}}" method="post">
+                <form action="{{ route('products.update', ['product' => $product]) }}" method="post">
                     @csrf
+                    @method('PUT')
                     <div class="form-group p-3">
 
                         <img name="imag" class="img-fluid small-img" src="{{asset('assets/images/imgcatalogue/' . $product->image)}}" alt="">
