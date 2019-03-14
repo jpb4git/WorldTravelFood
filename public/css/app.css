@@ -10832,7 +10832,7 @@ footer .legal a {
 }
 
 footer i {
-  width: 30 px;
+  width: 30px;
   height: 30px;
 }
 
@@ -10922,15 +10922,15 @@ body {
 .wrapper-logo-admin {
   position: relative;
   padding: 8px 8px 8px 32px;
-  top: -18px;
-  left: -35px;
+  top: -13px;
+  left: -30px;
 }
 
 /* side navigation menu */
 
 .sidenav {
   height: 100%;
-  width: 200px;
+  width: 70px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -10955,9 +10955,18 @@ body {
   transition: 0.3s;
 }
 
+.sidenav a i {
+  position: relative;
+  left: -5px;
+}
+
 .sidenav a:hover {
   color: white;
   background-color: #336699;
+}
+
+.sidenav home {
+  background-color: #67c7c6 !important;
 }
 
 /* main right content */
@@ -10990,6 +10999,11 @@ i:hover {
   height: 4em;
 }
 
+.small-img {
+  width: 4em;
+  height: 4em;
+}
+
 .toaster-info {
   opacity: 0;
   -webkit-animation-duration: 7.5s;
@@ -11015,6 +11029,18 @@ i:hover {
 
   to {
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #main {
+    margin-left: 75px;
+  }
+
+  .row {
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
   }
 }
 

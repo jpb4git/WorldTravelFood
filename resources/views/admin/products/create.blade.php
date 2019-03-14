@@ -50,7 +50,10 @@
                         <label for="stock">stock</label>
                         <input type="text" class="form-control" name="stock">
                     </div>
-
+                    <div class="form-group">
+                        <label for="file">image du produit</label>
+                        <input type="file" class="form-control" name="file">
+                    </div>
                     <div class="form-group">
                         <select name="category">
                             <option value="--">Select a catégorie</option>
