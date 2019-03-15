@@ -23,7 +23,7 @@
                                 </ul>
                             </div>
                         @endif
-                        <label for="exampleInputEmail1">Nom de la Catégorie</label>
+                        <label for="name">Nom de la Catégorie</label>
                         <input type="text" class="form-control" name="name" value="{{ old('name') }}">
 
                     </div>
