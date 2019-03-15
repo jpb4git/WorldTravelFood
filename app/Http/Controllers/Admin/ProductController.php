@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -17,7 +18,7 @@ class ProductController extends Controller
     {
         $products = Product::all();
 
-        return view("admin.product.index", ['products' => $products]);
+        return view('admin.product.index', ['products' => $products]);
     }
 
     /**
@@ -27,7 +28,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view("admin.product.create");
+        return view('admin.product.create');
     }
 
     /**
@@ -38,7 +39,26 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'category_id'=>'required',
+            'description'=>'required',
+            'price'=>'required',
+            'weight'=>'required',
+            'stock'=>'required',
+        ]);
+
+        $product = new Product();
+        $product->name = $request->name;
+        $product->category_id = $request->category_id;
+        $product->description = $request->description;
+        $product->image = 'new-1.jpg';
+        $product->price = $request->price;
+        $product->weight = $request->weight;
+        $product->stock = $request->stock;
+        $product->save();
+
+        return redirect()->route('admin.products.index');
     }
 
     /**
@@ -49,9 +69,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        $product = Product::find($id);
-
-        return view("admin.product.show", ['product' => $product]);
+        return view('admin.product.show', ['product' => $product]);
     }
 
     /**
@@ -60,9 +78,12 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Product $product, Category $categories)
     {
-        return view("admin.product.edit");
+        $categories = Category::all();
+        $product->load('category');
+
+        return view('admin.product.edit',['product' => $product, 'categories' => $categories]);
     }
 
     /**
@@ -74,7 +95,26 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'category_id'=>'required',
+            'description'=>'required',
+            'price'=>'required',
+            'weight'=>'required',
+            'stock'=>'required',
+        ]);
+
+        $product = new Product();
+        $product->name = $request->name;
+        $product->category_id = $request->category_id;
+        $product->description = $request->description;
+        $product->image = 'new-1.jpg';
+        $product->price = $request->price;
+        $product->weight = $request->weight;
+        $product->stock = $request->stock;
+        $product->save();
+
+        return redirect()->route('admin.products.show',['product' => $product]);
     }
 
     /**
@@ -85,6 +125,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return redirect('admin.product.index',['product' => $product]);
     }
 }

@@ -74,8 +74,9 @@ Route::get('/order', 'OrderController@show');
 /**
  * ADMIN
  */
-//methode resource : permet de simplifier l'écriture des routes (ici Une au lieu de 4 avec methode get)
-Route::resource('admin/products', 'Admin\ProductController')->only('index','create','store', 'show', 'update','edit', 'destroy');
 
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
+    Route::resource('products', 'ProductController');
+});
 
 

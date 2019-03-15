@@ -32,7 +32,7 @@
     @yield('content')
 </div>
 
-<footer class="container-fluid p-4">
+<footer class="container-fluid pt-5">
     <div class="row no-gutters justify-content-center text-center">
         <div class="col-12, col-md-6, col-lg-3">
             <a>

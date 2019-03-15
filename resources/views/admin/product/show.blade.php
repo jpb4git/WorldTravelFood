@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        <div class="row">
+        <div class="row pb-5">
             <h1>{{$product->name}}</h1>
         </div>
         <div class="row">
@@ -20,5 +20,6 @@
                 <p>Stock: {{$product->stock}}</p>
             </div>
         </div>
+    </div>
 
 @endsection

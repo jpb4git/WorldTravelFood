@@ -3,9 +3,13 @@
 
 @section('content')
     <div class="container">
+        <div class="row bg-primary text-white justify-content-start py-2">
+            <div class="col-sm-12 ">
+                <h1 class="h5 my-auto">PRODUITS</h1>
+            </div>
+        </div>
         <div>
-            <button type="submit" name="submitAjoutProduit" class="btn btn-primary mt-4">Ajouter un produit
-            </button>
+            <a href="{{ route('admin.products.create') }}" class="btn btn-primary mt-4">Ajouter un produit</a>
         </div>
         <div class="row mt-4 mb-5">
             @foreach ($products as $product)
@@ -28,7 +32,7 @@
                     <tr>
                         <td>
                             <img src="{{ asset('assets/images/mnm.jpg') }}" class="card-img-top w-50 "
-                                  alt=>
+                                 alt=>
                         </td>
                         <td> {{ $product->name }}</td>
                         <td>{{ $product->category->name }}</td>
@@ -36,15 +40,24 @@
                         <td>{{ $product->price }}</td>
                         <td>{{ $product->weight }}</td>
                         <td>{{ $product->stock }}</td>
-
                         <td>
-                            <button type="submit" name="submitMiseAJourProduit" class="btn btn-primary mt-4">Mise à jour
-                            </button>
+                            <a href="{{ route('admin.products.show', $product) }}"
+                               class="btn btn-outline-primary mt-4">Consulter
+                            </a>
                         </td>
                         <td>
-                            <button type="submit" name="suppressionArticle" value=""
-                                    class="btn btn-primary mt-4 ">Supprimer
-                            </button>
+                            <a href="{{ route('admin.products.edit', $product) }}"
+                               class="btn btn-primary mt-4">Modifier
+                            </a>
+                        </td>
+                        <td>
+                            <form action="{{ route('admin.products.destroy', $product) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" name="suppressionArticle" value=""
+                                        class="btn btn-primary mt-4 ">Supprimer
+                                </button>
+                            </form>
                         </td>
                     </tr>
                     </tbody>
