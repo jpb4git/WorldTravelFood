@@ -80,40 +80,14 @@ Route::get('/order', 'OrderController@show');
  *BACK OFFICE
  *
  */
-Route::get('/admin', 'Backoffice\AdminController@index')->name('index');
-
-/**
- * CATS
- */
-
-/* for memory only
-Route::get('/admin/cats', 'Backoffice\CategoryController@index')->name('cat.index');
-Route::get('/admin/cat/create', 'Backoffice\CategoryController@create')->name('cat.create');
-Route::post('/admin/cat/store', 'Backoffice\CategoryController@store')->name('cat.store');
-Route::post('/admin/cat/destroy/{id}', 'Backoffice\CategoryController@destroy')->name('cat.destroy');
-Route::post('/admin/cat/edit/{id}', 'Backoffice\CategoryController@edit')->name('cat.edit');
-Route::post('/admin/cat/update/{id}', 'Backoffice\CategoryController@update')->name('cat.update');
-*/
-
-Route::resource('categories', 'Backoffice\CategoryController');
-
-/*Route::namespace('Backoffice')->prefix('/admin')->name('admin.')->group(function () {
+Route::namespace('Backoffice')->prefix('/admin')->name('admin.')->group(function () {
     Route::get('', 'AdminController@index')->name('index');
     Route::resource('categories', 'CategoryController');
+    Route::resource('products', 'ProductController');
 });
-*/
 
-/**
- * PRODUCT
- */
-/* for memory only !
-Route::get('/admin/products', 'Backoffice\ProductController@index')->name('product.index');
-Route::get('/admin/product/create', 'Backoffice\ProductController@create')->name('product.create');
-Route::post('/admin/product/store', 'Backoffice\ProductController@store')->name('product.store');
-Route::post('/admin/product/destroy/{id}', 'Backoffice\ProductController@destroy')->name('product.destroy');
-Route::post('/admin/product/edit/{id}', 'Backoffice\ProductController@edit')->name('product.edit');
-Route::post('/admin/product/update/{id}', 'Backoffice\ProductController@update')->name('product.update');
-*/
 
-Route::resource('products', 'Backoffice\ProductController');
+
+
+
 

@@ -27,7 +27,7 @@
         </div>
         <div class="row text-center">
             <div class="col">
-                <form action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('admin.products.store') }}" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         @csrf
                         <label for="name">Nom de la Catégorie</label>

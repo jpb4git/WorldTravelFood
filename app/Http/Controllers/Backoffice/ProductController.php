@@ -26,7 +26,7 @@ class ProductController extends Controller
         //   $products->load('category');
         // [ qui fait la même chose
 
-        return view("admin.products.index", ['products' => $products]);
+        return view('admin.products.index', ['products' => $products]);
 
     }
 
@@ -37,9 +37,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $cats = Category::get();
+        $categories = Category::get();
 
-        return view('admin.products.create', ['cats' => $cats]);
+        return view('admin.products.create', ['cats' => $categories]);
     }
 
     /**
@@ -50,8 +50,6 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-
-
         $request->validate([
             'name' => 'required|max:255',
             'description' => 'required',
@@ -79,7 +77,6 @@ class ProductController extends Controller
 
         ]);
 
-
         $file = $request->file('file');
         $file->move(public_path('/assets/images/imgcatalogue'), $file->getClientOriginalName());
 
@@ -94,9 +91,11 @@ class ProductController extends Controller
         $product->image = $file->getClientOriginalName();
         $product->save();
 
-        $products = Product::with('category')->get();
-        return view("admin.products.index", ['products' => $products, 'addProd' => 'le produit ' . $label . " est modifié avec succés."]);
+        //$products = Product::with('category')->get();
 
+        //return view('admin.products.index', ['products' => $products, 'addProd' => 'le produit ' . $label . " est modifié avec succés."]);
+        $request->session()->flash('success', 'Le produit est crée !!!!!!!!!');
+        return redirect()->route('admin.products.index');
     }
 
     /**
@@ -186,8 +185,10 @@ class ProductController extends Controller
         $product->save();
 
 
-        $products = Product::with('category')->get();
-        return view("admin.products.index", ['products' => $products, 'updateProd' => 'le produit ' . $label . " est modifié avec succés."]);
+        //$products = Product::with('category')->get();
+       // return view("admin.products.index", ['products' => $products, 'updateProd' => 'le produit ' . $label . " est modifié avec succés."]);
+        $request->session()->flash('success', 'Le produit est correctement modifié');
+        return redirect()->route('admin.products.index');
     }
 
     /**

@@ -3,7 +3,7 @@
 
 @section('content')
     <h1 class="w100 bg-dark text-light text-center mb-5">Products</h1>
-    <a class="btn btn-success ml-5 mb-5" href="{{route('products.create')}}">Ajouter un Produit</a>
+    <a class="btn btn-success ml-5 mb-5" href="{{route('admin.products.create')}}">Ajouter un Produit</a>
 
     @if (isset($errorsConstraint))
         <div class="row toaster-info">
@@ -70,9 +70,9 @@
                 <td><img class="img-product-admin" src="{{asset('assets/images/imgcatalogue/'.$product->image)}}"
                          alt=""></td>
 
-                <td><a class="btn btn-secondary" href="{{ route('products.edit', ['product' => $product]) }}">Modifier</a></td>
+                <td><a class="btn btn-secondary" href="{{ route('admin.products.edit', ['product' => $product]) }}">Modifier</a></td>
                 <td>
-                    <form action="{{ route('products.destroy', $product) }}" method="post">
+                    <form action="{{ route('admin.products.destroy', $product) }}" method="post">
                         @csrf
                         @method('DELETE')
                         <input type="submit" class="btn btn-primary" value="supprimer">

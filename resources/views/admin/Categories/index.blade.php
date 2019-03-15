@@ -3,7 +3,7 @@
 
 @section('content')
     <h1 class="w100 bg-dark text-light text-center mb-5">Catégories</h1>
-    <a class="btn btn-success ml-5 mb-5" href="{{route('categories.create')}}">Ajouter une catégorie</a>
+    <a class="btn btn-success ml-5 mb-5" href="{{route('admin.categories.create')}}">Ajouter une catégorie</a>
 
     @if (isset($errorsConstraint))
         <div class="row toaster-info">
@@ -58,17 +58,17 @@
                 <td>{{$category->name}}</td>
 
                 <td>
-                    <form action="{{route('categories.edit',[$category])}}" method="get">
+                    <form action="{{route('admin.categories.edit',[$category])}}" method="get">
                         @csrf
                         <button type="submit" class="btn btn-secondary"
-                                href="{{ route('categories.edit', ['category' => $category])}}">Modifier
+                                href="{{ route('admin.categories.edit', ['category' => $category])}}">Modifier
                         </button>
                     </form>
                 </td>
 
 
                 <td>
-                    <form action="{{ route('categories.destroy', $category) }}" method="post">
+                    <form action="{{ route('admin.categories.destroy', $category) }}" method="post">
                         @csrf
                         @method('DELETE')
                         <input type="submit" class="btn btn-primary" value="supprimer">

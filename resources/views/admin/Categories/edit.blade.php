@@ -11,7 +11,7 @@
         </div>
         <div class="row text-center">
             <div class="col">
-                <form action="{{route('categories.update',[$category])}}" method="post">
+                <form action="{{route('admin.categories.update',[$category])}}" method="post">
                     <div class="form-group">
                         @csrf
                         @method('PUT')

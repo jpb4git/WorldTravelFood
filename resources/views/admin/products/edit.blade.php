@@ -27,7 +27,7 @@
         </div>
         <div class="row text-center">
             <div class="col">
-                <form action="{{ route('products.update', ['product' => $product]) }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('admin.products.update', ['product' => $product]) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="form-group p-3">

@@ -58,7 +58,7 @@ class CategoryController extends Controller
 
 
         $categories = Category::all();
-        return view('admin.Categories.index', ['cats' => $categories,
+        return view('admin.Categories.index', ['categories' => $categories,
             'AddCat' => 'la catégorie ' . $request->input('name') . ' est enregistrée avec success.'
 
         ]);

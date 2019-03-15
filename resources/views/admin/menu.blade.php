@@ -3,7 +3,7 @@
 
 <div id="mySidenav" class="sidenav">
 
-    <a class="justify-content-center align-items-center logo" href="{{route('index')}}">
+    <a class="justify-content-center align-items-center logo" href="{{route('admin.index')}}">
         <div class="wrapper-logo-admin d-flex flex-row justify-content-center align-items-center">
             <img src="{{asset('assets/images/logo.png')}}" class="adminImgLogo" alt="Responsive image">
         </div>
@@ -13,8 +13,8 @@
     <a href="/admin"><i class="far fa-address-book"></i></a>
     <a href="//admin"><i class="fas fa-fingerprint"></i></a>
     <hr>
-    <a href="{{route('categories.index')}}"> <i class="fas fa-archive"></i></a>
-    <a href="{{route('products.index')}}"><i class="fas fa-carrot"></i></a>
+    <a href="{{route('admin.categories.index')}}"> <i class="fas fa-archive"></i></a>
+    <a href="{{route('admin.products.index')}}"><i class="fas fa-carrot"></i></a>
     <a href="/admin"><i class="fas fa-globe"></i></a>
     <hr>
     <a href="/admin"><i class="far fa-clipboard"></i></a>

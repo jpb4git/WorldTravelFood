@@ -11,7 +11,7 @@
         </div>
         <div class="row text-center">
             <div class="col">
-                <form action="{{route('categories.store')}}" method="POST">
+                <form action="{{route('admin.categories.store')}}" method="POST">
                     <div class="form-group">
                         @csrf
                         @if ($errors->any())
