@@ -86,7 +86,7 @@ Route::get('/admin', 'Backoffice\AdminController@index')->name('index');
  * CATS
  */
 
-/*
+/* for memory only
 Route::get('/admin/cats', 'Backoffice\CategoryController@index')->name('cat.index');
 Route::get('/admin/cat/create', 'Backoffice\CategoryController@create')->name('cat.create');
 Route::post('/admin/cat/store', 'Backoffice\CategoryController@store')->name('cat.store');
@@ -99,8 +99,6 @@ Route::resource('categories', 'Backoffice\CategoryController');
 
 /*Route::namespace('Backoffice')->prefix('/admin')->name('admin.')->group(function () {
     Route::get('', 'AdminController@index')->name('index');
-
-
     Route::resource('categories', 'CategoryController');
 });
 */
@@ -108,7 +106,7 @@ Route::resource('categories', 'Backoffice\CategoryController');
 /**
  * PRODUCT
  */
-/*
+/* for memory only !
 Route::get('/admin/products', 'Backoffice\ProductController@index')->name('product.index');
 Route::get('/admin/product/create', 'Backoffice\ProductController@create')->name('product.create');
 Route::post('/admin/product/store', 'Backoffice\ProductController@store')->name('product.store');

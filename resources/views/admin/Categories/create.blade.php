@@ -11,13 +11,11 @@
         </div>
         <div class="row text-center">
             <div class="col">
-                <form action="store" method="post">
+                <form action="{{route('categories.store')}}" method="POST">
                     <div class="form-group">
                         @csrf
-                        <label for="exampleInputEmail1">Nom de la Catégorie</label>
-                        <input type="text" class="form-control" name="name">
                         @if ($errors->any())
-                            <div class="alert alert-danger">
+                            <div class="alert alert-danger toaster-info">
                                 <ul>
                                     @foreach ($errors->all() as $error)
                                         <li>{{ $error }}</li>
@@ -25,6 +23,9 @@
                                 </ul>
                             </div>
                         @endif
+                        <label for="exampleInputEmail1">Nom de la Catégorie</label>
+                        <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+
                     </div>
 
                     <button type="submit" class="btn btn-primary" value="submit">submit</button>

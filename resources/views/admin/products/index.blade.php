@@ -74,7 +74,8 @@
                 <td>
                     <form action="{{ route('products.destroy', $product) }}" method="post">
                         @csrf
-                        @method('DELETE')<input type="submit" class="btn btn-primary" value="supprimer">
+                        @method('DELETE')
+                        <input type="submit" class="btn btn-primary" value="supprimer">
                     </form>
                 </td>
             </tr>

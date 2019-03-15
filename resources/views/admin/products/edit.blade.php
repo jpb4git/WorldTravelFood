@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-12">
                 @if ($errors->any())
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger toaster-info">
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li>{{ $error }}</li>
@@ -67,8 +67,8 @@
                     <div class="form-group">
                         <select name="category">
                             <option value="--">Select a catégorie </option>
-                            @foreach($cats as $cat)
-                                <option value="{{$cat->id}}" {{($product->category_id == $cat->id ? "selected" : "" )}}  >{{$cat->name}}</option>
+                            @foreach($categories as $category)
+                                <option value="{{$category->id}}" {{($product->category_id == $category->id ? "selected" : "" )}}  >{{$category->name}}</option>
                             @endforeach
                         </select>
                     </div>

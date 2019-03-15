@@ -3,7 +3,7 @@
 
 @section('content')
     <h1 class="w100 bg-dark text-light text-center mb-5">Catégories</h1>
-    <a class="btn btn-success ml-5 mb-5" href="{{route('categories.create')}}">Ajouter une  catégorie</a>
+    <a class="btn btn-success ml-5 mb-5" href="{{route('categories.create')}}">Ajouter une catégorie</a>
 
     @if (isset($errorsConstraint))
         <div class="row toaster-info">
@@ -51,19 +51,29 @@
         </tr>
         </thead>
 
-        @foreach($cats as $cat)
+        @foreach($categories as $category)
             <tbody>
             <tr>
-                <th scope="row">{{$cat->id}}</th>
-                <td>{{$cat->name}}</td>
-                <form action="/admin/cat/edit/{{$cat->id}}" method="post">
-                    @csrf
-                    <td><button type="submit" class="btn btn-secondary" href="/admin/cat/edit/{{$cat->id}}">Modifier</button></td>
-                </form>
-                <form action="/admin/cat/destroy/{{$cat->id}}" method="post">
-                    @csrf
-                    <td><button type="submit" class="btn btn-primary" href="/admin/cat/destroy/{{$cat->id}}">supprimer</button></td>
-                </form>
+                <th scope="row">{{$category->id}}</th>
+                <td>{{$category->name}}</td>
+
+                <td>
+                    <form action="{{route('categories.edit',[$category])}}" method="get">
+                        @csrf
+                        <button type="submit" class="btn btn-secondary"
+                                href="{{ route('categories.edit', ['category' => $category])}}">Modifier
+                        </button>
+                    </form>
+                </td>
+
+
+                <td>
+                    <form action="{{ route('categories.destroy', $category) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" class="btn btn-primary" value="supprimer">
+                    </form>
+                </td>
 
 
             </tr>

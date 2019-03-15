@@ -50,15 +50,35 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+
+
         $request->validate([
-                               'name' => 'required|max:255',
-                               'description' => 'required',
-                               'price' => 'required|numeric',
-                               'weight' => 'required|numeric',
-                               'stock' => 'required|numeric',
-                               'category' => 'numeric',
-                               'file' => 'required|file|image|mimes:jpeg,png,gif,webp|max:2048',
-                           ]);
+            'name' => 'required|max:255',
+            'description' => 'required',
+            'price' => 'required|numeric',
+            'weight' => 'required|numeric',
+            'stock' => 'required|numeric',
+            'category' => 'numeric',
+            'file' => 'required|file|image|mimes:jpeg,png,gif,webp|max:2048',
+
+        ], [
+            'name.required' => 'Le nom de la Catégorie est obligatoire',
+            'name.max:255' => 'Le champs ne doit pas depasser 255 caractères',
+            'description.required' => 'la description est obligatoire',
+            'price.required' => 'le prix est obligatoire',
+            'price.numeric' => 'le prix doit être au format numérique',
+            'weight.required' => 'le poids est obligatoire',
+            'weight.numeric' => 'le poids doit être au format numérique',
+            'stock.required' => 'le stock est obligatoire',
+            'category.numeric' => 'le produit doit être associé à une catégorie',
+            'file.required' => 'la photo du produit  est obligatoire',
+            'file.file' => 'le fichier associé doit être du type File',
+            'file.image' => 'la photo du produit  doit eêtre du type image',
+            'file.mimes' => 'La type du fichier doit être jpeg,png,gif,webp',
+            'file.max' => 'la la taille du fichier ne doit pas depasser 2048 kb',
+
+        ]);
+
 
         $file = $request->file('file');
         $file->move(public_path('/assets/images/imgcatalogue'), $file->getClientOriginalName());
@@ -75,7 +95,7 @@ class ProductController extends Controller
         $product->save();
 
         $products = Product::with('category')->get();
-        return view("admin.products.showAll", ['products' => $products, 'addProd' => 'le produit ' . $label . " est modifié avec succés."]);
+        return view("admin.products.index", ['products' => $products, 'addProd' => 'le produit ' . $label . " est modifié avec succés."]);
 
     }
 
@@ -99,9 +119,9 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        $cats = Category::get();
+        $categories = Category::get();
 
-        return view('admin.products.edit', ['product' => $product, 'cats' => $cats]);
+        return view('admin.products.edit', ['product' => $product, 'categories' => $categories]);
     }
 
     /**
@@ -132,13 +152,28 @@ class ProductController extends Controller
 
 
         $request->validate([
-                               'name' => 'required|max:255',
-                               'description' => 'required',
-                               'price' => 'required|numeric',
-                               'weight' => 'required|numeric',
-                               'stock' => 'required|numeric',
-                               'category' => 'numeric'
-                           ]);
+
+            'name' => 'required|max:255',
+            'description' => 'required',
+            'price' => 'required|numeric',
+            'weight' => 'required|numeric',
+            'stock' => 'required|numeric',
+            'category' => 'numeric',
+
+
+        ], [
+            'name.required' => 'Le nom de la Catégorie est obligatoire',
+            'name.max:255' => 'Le champs ne doit pas depasser 255 caractères',
+            'description.required' => 'la description est obligatoire',
+            'price.required' => 'le prix est obligatoire',
+            'price.numeric' => 'le prix doit être au format numérique',
+            'weight.required' => 'le poids est obligatoire',
+            'weight.numeric' => 'le poids doit être au format numérique',
+            'stock.required' => 'le stock est obligatoire',
+            'category.numeric' => 'le produit doit être associé à une catégorie',
+
+
+        ]);
 
 
         $product->name = $request->input('name');
@@ -152,7 +187,7 @@ class ProductController extends Controller
 
 
         $products = Product::with('category')->get();
-        return view("admin.products.showAll", ['products' => $products, 'updateProd' => 'le produit ' . $label . " est modifié avec succés."]);
+        return view("admin.products.index", ['products' => $products, 'updateProd' => 'le produit ' . $label . " est modifié avec succés."]);
     }
 
     /**
@@ -178,16 +213,16 @@ class ProductController extends Controller
             } catch (\Illuminate\Database\QueryException $e) {
 
                 $products = Product::with('category')->get();
-                return view('admin.products.showAll', ['products' => $products, 'errorsConstraint' => 'l\'enregistrement est lié à au moins une commande. Vous ne pouvez pas supprimer cet article.']);
+                return view('admin.products.index', ['products' => $products, 'errorsConstraint' => 'l\'enregistrement est lié à au moins une commande. Vous ne pouvez pas supprimer cet article.']);
             }
 
             $products = Product::with('category')->get();
-            return view('admin.products.showAll', ['products' => $products, 'supprProd' => 'le produit ' . $label . " est supprimé de la base de données."]);
+            return view('admin.products.index', ['products' => $products, 'supprProd' => 'le produit ' . $label . " est supprimé de la base de données."]);
 
         } else {
 
             $products = Product::with('category')->get();
-            return view('admin.products.showAll', ['products' => $products]);
+            return view('admin.products.index', ['products' => $products]);
 
         }
     }

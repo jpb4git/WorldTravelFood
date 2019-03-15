@@ -18,7 +18,7 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
 
-        return view('admin.Categories.index', ['cats' => $categories]);
+        return view('admin.Categories.index', ['categories' => $categories]);
 
     }
 
@@ -42,24 +42,23 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+            $request->validate([
+                'name' => 'required|max:255'
 
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|max:255'
-        ]);
+            ], [
+                'name.required' => 'Le nom de la Catégorie est obligatoire',
+                'name.max:255' => 'Le champs ne doit pas depasser 255 caractères'
+            ]);
 
-        if ($validator->fails()) {
-            return redirect('admin/cat/create')
-                ->withErrors($validator)
-                ->withInput();
-        }
 
-        $cat = new Category();
-        $cat->name = $request->input('name');
-        $cat->save();
+
+        $category = new Category();
+        $category->name = $request->input('name');
+        $category->save();
 
 
         $categories = Category::all();
-        return view('admin.Categories.showAll', ['cats' => $categories,
+        return view('admin.Categories.index', ['cats' => $categories,
             'AddCat' => 'la catégorie ' . $request->input('name') . ' est enregistrée avec success.'
 
         ]);
@@ -73,7 +72,7 @@ class CategoryController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Category $category)
     {
         //
     }
@@ -84,11 +83,11 @@ class CategoryController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Category $category)
     {
 
-        $cat = Category::find($id);
-        return view('admin.Categories.edit', ['cat' => $cat]);
+
+        return view('admin.Categories.edit', ['category' => $category]);
 
     }
 
@@ -96,32 +95,28 @@ class CategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param Category $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Category $category)
     {
 
-        //grab from Model ... nite !
-        $cat = Category::find($id);
-        $label = $cat->name;
-        $validator = Validator::make($request->all(), [
+        $label = $category->name;
+
+        $request->validate([
             'name' => 'required|max:255'
+
+        ], [
+            'name.required' => 'Le nom de la Catégorie est obligatoire',
+            'name.max:255' => 'Le champs ne doit pas depasser 255 caractères'
         ]);
 
-        if ($validator->fails()) {
-            return redirect('admin/cat/edit')
-                ->withErrors($validator)
-                ->withInput();
-        }
-
-
-        $cat->name = $request->input('name');
-        $cat->save();
+        $category->name = $request->input('name');
+        $category->save();
 
 
         $categories = Category::all();
-        return view('admin.Categories.showAll', ['cats' => $categories,'updateCat' => 'la catégorie ' . $label . " est modifiée avec succes."]);
+        return view('admin.Categories.index', ['categories' => $categories, 'updateCat' => 'la catégorie ' . $label . " est modifiée avec succes."]);
 
     }
 
@@ -131,26 +126,26 @@ class CategoryController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Category $category)
     {
 
         //grab from Model ... nite !
-        $cat = Category::find($id);
-        if (!is_null($cat)) {
-            $label = $cat->name;
+
+        if (!is_null($category)) {
+            $label = $category->name;
             try {
-                $cat->delete();
+                $category->delete();
             } catch (\Illuminate\Database\QueryException $e) {
                 $categories = Category::all();
-                return view('admin.Categories.showAll', ['cats' => $categories, 'errorsConstraint' => 'l\'enregistrement est lié à au moins un produit. Vous ne pouvez pas supprimer cette catégorie.']);
+                return view('admin.Categories.index', ['categories' => $categories, 'errorsConstraint' => 'l\'enregistrement est lié à au moins un produit. Vous ne pouvez pas supprimer cette catégorie.']);
             }
             $categories = Category::all();
-            return view('admin.Categories.showAll', ['cats' => $categories, 'supprCat' => 'la catégorie ' . $label . " est supprimée de la base de données."]);
+            return view('admin.Categories.index', ['categories' => $categories, 'supprCat' => 'la catégorie ' . $label . " est supprimée de la base de données."]);
 
         } else {
 
             $categories = Category::all();
-            return view('admin.Categories.showAll', ['cats' => $categories]);
+            return view('admin.Categories.index', ['categories' => $categories]);
         }
     }
 }
