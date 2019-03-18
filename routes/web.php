@@ -11,6 +11,12 @@
 |
 */
 
+Route::resource('/admin/products','Admin\ProductController');
+/**
+ *
+ */
+
+
 Route::get('/', "HomeController@index")->name('home.index');
 
 

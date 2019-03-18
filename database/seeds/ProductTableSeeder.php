@@ -24,7 +24,7 @@ class ProductTableSeeder extends Seeder
             $product->price = '10'. $i;
             $product->image = 'new-1.jpeg';
             $product->weight = 1.50;
-            $product->stock = 100;
+            $product->stock = '1'.$i;
             $product->category_id = $i;
 
             $product->save();
