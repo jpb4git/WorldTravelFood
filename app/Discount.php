@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Discount extends Model
 {
-    public function product()
-    {
+    //
+    /**
+     * Get the product record associated with the discount.
+     */
+    public function Product(){
+        // un produit unique par discount
         return $this->belongsTo('App\Product');
     }
+
 }

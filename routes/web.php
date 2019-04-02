@@ -74,3 +74,20 @@ Route::get('/newsLetter', 'NewLetterController@show');
 Route::get('/order', 'OrderController@show');
 
 
+
+
+/**
+ *BACK OFFICE
+ *
+ */
+Route::namespace('Backoffice')->prefix('/admin')->name('admin.')->group(function () {
+    Route::get('', 'AdminController@index')->name('index');
+    Route::resource('categories', 'CategoryController');
+    Route::resource('products', 'ProductController');
+});
+
+
+
+
+
+

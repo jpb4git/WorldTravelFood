@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Order;
 use Illuminate\Database\Seeder;
 
@@ -14,7 +15,7 @@ class OrderTableSeeder extends Seeder
     {
         for ($i = 1; $i < 7; $i++) {
 
-            $order = new order;
+            $order = new Order;
             $order->number = "1234567890";
             $order->date = \Carbon\Carbon::now();
             $order->user_id = 1;

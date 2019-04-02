@@ -1,6 +1,7 @@
 <?php
 
-use App\OrderProduct;
+
+use App\Order_product;
 use Illuminate\Database\Seeder;
 
 class OrderProductTableSeeder extends Seeder
@@ -14,7 +15,7 @@ class OrderProductTableSeeder extends Seeder
     {
         for ($i = 1; $i < 7; $i++) {
 
-            $orderProduct= new OrderProduct;
+            $orderProduct= new Order_product;
             $orderProduct->quantity =$i;
             $orderProduct->price = 15.9;
             $orderProduct->order_id = 1;

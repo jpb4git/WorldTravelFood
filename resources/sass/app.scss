@@ -6,17 +6,24 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
-// Header
+// header css
 @import 'headerstyle';
 
 // Layouts
 @import 'home';
+
 @import 'product';
 @import 'basket';
 @import 'nav';
 @import'footer';
-@import'footer.scss';
+
+// Panier
+//@import 'panierIndex';
+
 
 // Layouts basket
 @import'PanierfraisDePort';
+
+
+//admin
+@import'admin';
