@@ -45,7 +45,7 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -101,7 +101,7 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show(Product $product)
@@ -126,8 +126,8 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Product $product)
@@ -186,7 +186,7 @@ class ProductController extends Controller
 
 
         //$products = Product::with('category')->get();
-       // return view("admin.products.index", ['products' => $products, 'updateProd' => 'le produit ' . $label . " est modifié avec succés."]);
+        // return view("admin.products.index", ['products' => $products, 'updateProd' => 'le produit ' . $label . " est modifié avec succés."]);
         $request->session()->flash('success', 'Le produit est correctement modifié');
         return redirect()->route('admin.products.index');
     }
@@ -194,13 +194,15 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param Product $product
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
+        $product = Product::find($id);
 
-        if (!is_null($product)) {
+        if ($product) {
             $label = $product->name;
             try {
                 //suppression produit
@@ -219,7 +221,6 @@ class ProductController extends Controller
 
             $products = Product::with('category')->get();
             return view('admin.products.index', ['products' => $products, 'supprProd' => 'le produit ' . $label . " est supprimé de la base de données."]);
-
         } else {
 
             $products = Product::with('category')->get();

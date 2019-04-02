@@ -17,6 +17,10 @@
 @include('layouts.header')
 @include('layouts.menu')
 
+@if(Session::has('success'))
+    <div class="alert alert-success">{{ Session::get('flash_message') }}</div>
+@endif
+
     <div>
         @yield('content')
     </div>
