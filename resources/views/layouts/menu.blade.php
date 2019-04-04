@@ -1,8 +1,7 @@
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
 
-<hr class="style1">
 
-<nav class="navbar-light navbar-expand-lg navbar-expand-sm navbar-expand-md">
+<nav class="navbar-light navbar-expand-lg navbar-expand-sm navbar-expand-md mt-3">
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,3 +51,6 @@
         </ul>
     </div>
 </nav>
+
+
+
