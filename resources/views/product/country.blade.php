@@ -1,5 +1,7 @@
-@extends('layouts.app', ['title' => 'Catalogue'])
-
+@extends('layouts.app')
+@section('title')
+    Pays
+@stop
 
 @section('content')
     <div class="container">
@@ -8,7 +10,7 @@
             <div class="col-sm-12 header-tonique bg-secondary d-flex justify-content-start align-items-center">
                 <div class="barre"></div>
                 <div class="w-100">
-                    <span class="ml-2"><strong> Cat Bonbons</strong></span>
+                    <span class="ml-2"><strong> Amerique</strong></span>
                 </div>
             </div>
         </div>

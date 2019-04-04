@@ -10,29 +10,26 @@ class ProductController extends Controller
 {
     //
 
-    public function showAll()
+    public function index()
     {
         $products = Product::all();
-
-        return view("layouts.product.showAll", ['products' => $products]);
+        return view("product.index", ['products' => $products]);
 
     }
 
-    public function showByCat()
+    public function category()
     {
-        return view("layouts.product.showByCat", ['cat' => 'catalogue']);
+        return view("product.category", ['cat' => 'catalogue']);
     }
 
-    public function showByCountry()
+    public function country()
     {
-        return view("layouts.product.showByCountry", ['name' => 'catalogue']);
+        return view("product.country", ['name' => 'catalogue']);
     }
 
-    public function getProduct($id)
+    public function show(Product $product)
     {
-        $product = Product::find($id);
-
-        return view("layouts.product.getProduct", ['product' => $product]);
+        return view("product.show", ['product' => $product]);
     }
 
 }

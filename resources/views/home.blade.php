@@ -1,4 +1,7 @@
-@extends('layouts.app', ['title' => 'Home'])
+@extends('layouts.app')
+@section('title')
+    Page d'accueil
+@stop
 @section('content')
 
 
@@ -77,24 +80,27 @@
                 <div class="wrapper m-1">
                     <a class="text-decoration-none" href="#">
                     <div class="bg-primary d-flex justify-content-center align-items-center">
-                        <h2>SWEET FOOD</h2>
+                        <h2 class="text-white police">SWEET FOOD</h2>
                     </div>
                     <div>
                         <img class="img-fluid " src= https://smhttp-ssl-77206.nexcesscdn.net/pub/media/wysiwyg/Blog/Sweet-Dreams.jpg
                              alt="">
                     </div>
+                    </a>
                 </div>
             </div>
             <div class="col-lg-3 text-center">
                 <div class="wrapper m-1">
+                    <a class="text-decoration-none" href="#">
                     <div class="bg-primary d-flex justify-content-center align-items-center">
-                        <h2>BAD FOOD</h2>
+                        <h2 class="text-white police">BAD FOOD</h2>
                     </div>
                     <div>
                         <img class="img-fluid " src=https://o.aolcdn.com/images/dims?quality=80&thumbnail=1200%2C630&image_uri=https%3A%2F%2Fo.aolcdn.com%2Fimages%2Fdims3%2FGLOB%2Fcrop%2F5479x2876%2B0%2B0%2Fresize%2F1200x630%21%2Fformat%2Fjpg%2Fquality%2F85%2Fhttp%253A%252F%252Fo.aolcdn.com%252Fhss%252Fstorage%252Fmidas%252Fa4092f647c6567928a7cab0132af95c8%252F204818175%252F475895644.jpg&client=cbc79c14efcebee57402&signature=18eae370d5e271adfbe6e19d70e98b642b9f5760
 
                              alt="">
                     </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -144,7 +150,7 @@
         {{-------------------------------  BEST SELLERS    -----------------------------------------------}}
         <div class="row mt-4 mb-5">
             <div class="col-xl-3 text-center">
-                <a class="product-a" href="{{route('product.getProduct', ['id' => 1]) }}">
+                <a class="product-a" href="{{route('product.show', ['id' => 1]) }}">
                     <div class="card text-center">
                         <div class="text-center pt-2">
                             <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 " alt="product 1 ">
@@ -158,7 +164,7 @@
                 </a>
             </div>
             <div class="col-xl-3 text-center">
-                <a class="product-a" href="{{route('product.getProduct', ['id' => 1]) }}">
+                <a class="product-a" href="{{route('product.show', ['id' => 1]) }}">
                     <div class="card text-center">
                         <div class="text-center pt-2">
                             <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 " alt="product 1 ">
