@@ -1,4 +1,7 @@
-@extends('layouts.app', ['title' => 'Votre Panier'])
+@extends('layouts.app')
+@section('title')
+    Adresse livraison
+@stop
 
 @section('content')
     <div class="container mt-5">

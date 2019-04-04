@@ -1,4 +1,8 @@
-@extends('layouts.app', ['title' => 'Fiche Produit'])
+@extends('layouts.app')
+@section('title')
+    Paiement
+@stop
+
 @section('content')
 
 

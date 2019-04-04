@@ -17,23 +17,23 @@ Route::get('/', "HomeController@index")->name('home.index');
 /**
  *
  */
-Route::get('/product/{id}', 'ProductController@getProduct')->name('product.getProduct');
+Route::get('/product/{id}', 'ProductController@show')->name('product.show');
 
 /**
  *
  */
-Route::get('/produits', 'ProductController@showAll');
+Route::get('/produits', 'ProductController@index')->name('product.index');
 
-Route::get('/produitsCat', 'ProductController@showByCat');
+Route::get('/produits/category', 'ProductController@category')->name('product.category');
 
-Route::get('/produitsCountry', 'ProductController@showByCountry');
+Route::get('/produits/country', 'ProductController@country')->name('product.country');
 
 
 
 /**
  *
  *
- *      BASKET
+ *      CART
  *
  *
  *
