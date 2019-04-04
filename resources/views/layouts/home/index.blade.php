@@ -13,20 +13,19 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href=""></a>
-                    <img src="{{asset('assets/images/1.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="...">
+                    <img src="{{asset('assets/images/1.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="food1">
                     <div class="carousel-caption d-none d-md-block">
                         <h1 class="texteslider">Food from all over the world</h1>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('assets/images/2.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="...">
+                    <img src="{{asset('assets/images/2.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="food2">
                     <div class="carousel-caption d-none d-md-block">
                         <h1 class="texteslider">5 continents s'offrent à vous</h1>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('assets/images/3.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="...">
+                    <img src="{{asset('assets/images/3.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="food3">
                     <div class="carousel-caption d-none d-md-block">
                         <h1 class="texteslider">Plaisir et saveurs</h1>
                     </div>
