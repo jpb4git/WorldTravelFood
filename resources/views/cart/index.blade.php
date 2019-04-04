@@ -1,4 +1,8 @@
-@extends('layouts.app', ['title' => 'Home'])
+@extends('layouts.app')
+@section('title')
+    Panier
+@stop
+
 @section('content')
 
     <form action="index.blade.php" method="post">

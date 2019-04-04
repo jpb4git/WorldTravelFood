@@ -1,5 +1,7 @@
-@extends('layouts.app', ['title' => 'Catalogue'])
-
+@extends('layouts.app')
+@section('title')
+    Liste produits
+@stop
 
 @section('content')
     <div class="container">
@@ -25,8 +27,8 @@
                             <option>--</option>
                             <option>Prix croissant</option>
                             <option>Prix décroissant</option>
-                             <option>de A à Z</option>
-                             <option>de Z à A</option>
+                              <option>de A à Z</option>
+                              <option>de Z à A</option>
                               <option>produits en stock</option>
                           </select>
 
@@ -59,8 +61,8 @@
                                     <div class="col">
                                         <a class="product-a" href="">
                                              <span class="orange-Text grey p-1 mr-1"><img
-                                                     src="{{asset('assets/images/eye.svg')}}"
-                                                     alt="eye"> </span>
+                                                         src="{{asset('assets/images/eye.svg')}}"
+                                                         alt="eye"> </span>
                                             <span class="orange-Text grey p-1"></span>
                                         </a>
                                     </div>

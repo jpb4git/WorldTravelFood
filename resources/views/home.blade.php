@@ -1,4 +1,7 @@
-@extends('layouts.app', ['title' => 'World Travel Food - Accueil'])
+@extends('layouts.app')
+@section('title')
+    Page d'accueil
+@stop
 @section('content')
 
 
@@ -106,7 +109,7 @@
         {{-------------------------------  BEST SELLERS    -----------------------------------------------}}
         <div class="row mt-4 mb-5">
             <div class="col-xl-3 text-center">
-                <a class="product-a" href="{{route('product.getProduct', ['id' => 1]) }}">
+                <a class="product-a" href="{{route('product.show', ['id' => 1]) }}">
                     <div class="card text-center">
                         <div class="text-center pt-2">
                             <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 " alt="product 1 ">
@@ -120,7 +123,7 @@
                 </a>
             </div>
             <div class="col-xl-3 text-center">
-                <a class="product-a" href="{{route('product.getProduct', ['id' => 1]) }}">
+                <a class="product-a" href="{{route('product.show', ['id' => 1]) }}">
                     <div class="card text-center">
                         <div class="text-center pt-2">
                             <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 " alt="product 1 ">
