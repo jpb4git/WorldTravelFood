@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => 'Home'])
+@extends('layouts.app', ['title' => 'World Travel Food - Accueil'])
 @section('content')
 
 
@@ -16,22 +16,19 @@
                     <a href=""></a>
                     <img src="{{asset('assets/images/1.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Test</h5>
-                        <p>caption n 1 </p>
+                        <h1 class="texteslider">Food from all over the world</h1>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{asset('assets/images/2.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Test</h5>
-                        <p>caption n 2</p>
+                        <h1 class="texteslider">5 continents s'offrent à vous</h1>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{asset('assets/images/3.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Test</h5>
-                        <p>caption n 3 </p>
+                        <h1 class="texteslider">Plaisir et saveurs</h1>
                     </div>
                 </div>
             </div>

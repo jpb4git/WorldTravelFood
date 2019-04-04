@@ -10660,6 +10660,11 @@ a.text-dark:focus {
   height: 130px;
 }
 
+.texteslider {
+  font-size: 100px;
+  background-color: darkturquoise;
+}
+
 .wave {
   position: absolute;
   width: 90%;
