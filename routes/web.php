@@ -26,7 +26,7 @@ Route::get('/produits', 'ProductController@index')->name('product.index');
 
 Route::get('/produits/boissons', 'ProductController@boissons')->name('product.boissons');
 Route::get('/produits/bonbons', 'ProductController@bonbons')->name('product.bonbons');
-Route::get('/produits/food', 'ProductController@food')->name('product.food');
+Route::get('/produits/snacking', 'ProductController@snacking')->name('product.snacking');
 Route::get('/produits/aperitif', 'ProductController@aperitif')->name('product.aperitif');
 Route::get('/produits/vegan', 'ProductController@vegan')->name('product.vegan');
 

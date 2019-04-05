@@ -54,9 +54,9 @@
         <div class="row mt-4">
             <div class="col-lg-3 text-center">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="{{route('product.food')}}">
+                    <a class="text-decoration-none" href="{{route('product.aperitif')}}">
                     <div class="bg-primary d-flex justify-content-center align-items-center">
-                        <h2 class="text-white police">luxury food</h2>
+                        <h2 class="text-white police">apetizer food</h2>
                     </div>
                     <div>
                         <img class="img-fluid" src="https://static.750g.com/images/1200-630/c8b5d6e22615273f117330fc8628a1cb/thinkstockphotos-925210714.jpg" alt="">
@@ -66,7 +66,7 @@
             </div>
             <div class="col-lg-3 text-center">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="{{route('product.food')}}">
+                    <a class="text-decoration-none" href="{{route('product.vegan')}}">
                     <div class="bg-primary d-flex justify-content-center align-items-center">
                         <h2 class="text-white police">vegan food</h2>
                     </div>
@@ -78,7 +78,7 @@
             </div>
             <div class="col-lg-3 text-center">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="{{route('product.food')}}">
+                    <a class="text-decoration-none" href="{{route('product.bonbons')}}">
                     <div class="bg-primary d-flex justify-content-center align-items-center">
                         <h2 class="text-white police">sweet food</h2>
                     </div>
@@ -91,7 +91,7 @@
             </div>
             <div class="col-lg-3 text-center">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="{{route('product.food')}}">
+                    <a class="text-decoration-none" href="{{route('product.snacking')}}">
                     <div class="bg-primary d-flex justify-content-center align-items-center">
                         <h2 class="text-white police">bad food</h2>
                     </div>

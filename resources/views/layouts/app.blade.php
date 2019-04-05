@@ -99,7 +99,7 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{route('product.boissons')}}">Boissons</a>
                     <a class="dropdown-item" href="{{route('product.bonbons')}}">Bonbons</a>
-                    <a class="dropdown-item" href="{{route('product.food')}}">Food</a>
+                    <a class="dropdown-item" href="{{route('product.snacking')}}">Snacking</a>
                     <a class="dropdown-item" href="{{route('product.aperitif')}}">Apéritif</a>
                     <a class="dropdown-item" href="{{route('product.vegan')}}">Vegan</a>
                     <div class="dropdown-divider"></div>
