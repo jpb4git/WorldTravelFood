@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Page d'accueil
+    World Travel Food - accueil
 @stop
 @section('content')
 
@@ -30,7 +30,7 @@
                 <div class="carousel-item">
                     <img src="{{asset('assets/images/3.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="food3">
                     <div class="carousel-caption d-none d-md-block">
-                        <h1 class="texteslider">Plaisir et saveurs</h1>
+                        <h1 class="texteslider">Plaisirs exotiques et saveurs inédites</h1>
                     </div>
                 </div>
             </div>
@@ -240,14 +240,14 @@
                 <p class="text-light">48h</p>
             </div>
             <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
-                <img class="w-25 text-center " src="{{asset('assets/images/car.svg')}}" alt="car">
+                <img class="w-25 text-center " src="{{asset('assets/images/pouce.png')}}" alt="car">
                 <p class="text-light mb-0">DÉJÀ PLUS DE </p>
-                <p class="text-light">69884 COMMANDES</p>
+                <p class="text-light">150 000 CLIENTS SATISFAITS</p>
             </div>
             <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
-                <img class="w-25 text-center" src="{{asset('assets/images/car.svg')}}" alt="car">
-                <p class="text-light mb-0">DÉJÀ PLUS DE </p>
-                <p class="text-light">69884 COMMANDES</p>
+                <img class="w-25 text-center" src="{{asset('assets/images/telephone.png')}}" alt="car">
+                <p class="text-light mb-0">BESOINS DE CONSEILS ?</p>
+                <p class="text-light">HOTLINE GRATUITE AU 0405060708</p>
             </div>
         </div>
 
