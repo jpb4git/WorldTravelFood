@@ -54,14 +54,13 @@ Route::get('/panier', 'CartController@index')->name('panier.index');
 
 Route::get('/panier/createAccount', 'CartController@createAccount')->name('panier.account');
 
-Route::get('/panier/adresse1', 'CartController@adresse1')->name('panier.adresse1');
+Route::get('/panier/adresse1', 'CartController@adresse1')->name('panier.adresse1')->middleware('auth');
 
-Route::get('/panier/adresse2', 'CartController@adresse2')->name('panier.adresse2');
+Route::get('/panier/adresse2', 'CartController@adresse2')->name('panier.adresse2')->middleware('auth');
 
+Route::get('/panier/fraisdeport', 'CartController@fraisDePort')->name('panier.shipping')->middleware('auth');
 
-Route::get('/panier/fraisdeport', 'CartController@fraisDePort')->name('panier.shipping');
-
-Route::get('/panier/paiement', 'CartController@paiement')->name('panier.payment');
+Route::get('/panier/paiement', 'CartController@paiement')->name('panier.payment')->middleware('auth');
 
 
 /**
