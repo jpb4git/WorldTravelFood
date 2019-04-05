@@ -97,13 +97,13 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false" href="{{--route('layouts.cat.showAll')--}}">CATÉGORIES</a>
+                   aria-expanded="false" href="{{--route('product.index')--}}">CATÉGORIES</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Boissons</a>
-                    <a class="dropdown-item" href="#">Bonbons</a>
-                    <a class="dropdown-item" href="#">Food</a>
-                    <a class="dropdown-item" href="#">Apéritif</a>
-                    <a class="dropdown-item" href="#">Vegan</a>
+                    <a class="dropdown-item" href="{{route('product.boissons')}}">Boissons</a>
+                    <a class="dropdown-item" href="{{route('product.bonbons')}}">Bonbons</a>
+                    <a class="dropdown-item" href="{{route('product.food')}}">Food</a>
+                    <a class="dropdown-item" href="{{route('product.aperitif')}}">Apéritif</a>
+                    <a class="dropdown-item" href="{{route('product.vegan')}}">Vegan</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Autres</a>
                 </div>

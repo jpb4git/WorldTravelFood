@@ -17,10 +17,32 @@ class ProductController extends Controller
 
     }
 
-    public function category()
+    public function boissons()
     {
-        return view("product.category", ['cat' => 'catalogue']);
+        $products = Product::all();
+        return view("product.boissons", ['products' => $products]);
     }
+
+    public function bonbons()
+    {
+        return view("product.bonbons", ['cat' => 'catalogue']);
+    }
+
+    public function food()
+    {
+        return view("product.food", ['cat' => 'catalogue']);
+    }
+
+    public function aperitif()
+    {
+        return view("product.aperitif", ['cat' => 'catalogue']);
+    }
+
+    public function vegan()
+    {
+        return view("product.vegan", ['cat' => 'catalogue']);
+    }
+
 
     public function country()
     {
