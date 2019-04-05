@@ -108,9 +108,9 @@
 
         {{-------------------------------  HEADER SPAN EN CE MOMENT------------------------------------------------}}
        <div class="container-fluid">
-           <div class="row mt-5 mb-5">
-               <div class="col header-tonique bg-secondary">
-                   <div class="w-100 d-flex justify-content-center">
+           <div class="row  mt-5 mb-5">
+               <div class="col bg-secondary">
+                   <div class="d-flex justify-content-center p-3">
                        <h3 class="police">EN CE MOMENT</h3>
                    </div>
                </div>
@@ -120,15 +120,15 @@
         {{-------------------------------  IMG SPAN EN CE MOMENT------------------------------------------------}}
 
         <div class="row mt-4  d-flex justify-content-start">
-            <div class="col-md-8 text-left p-0 m-0">
+            <div class="col-8 text-left p-0 m-0">
                 <img class="new-left" src="{{asset('assets/images/new-3.jpg')}}" alt="">
             </div>
-            <div class="col-md-4 text-left p-0">
+            <div class="col-2 text-left p-0">
                 <div class="row d-flex flex-column ">
                     <div class="col-md-6 text-left p-0 m-0">
                         <img class="new-right" src="{{asset('assets/images/new-2.jpg')}}" alt="">
                     </div>
-                    <div class="col-md-6 text-left p-0 m-0">
+                    <div class="col-2 text-left p-0 m-0">
                         <img class="new-right" src="{{asset('assets/images/new-1.jpg')}}" alt="">
 
                     </div>
