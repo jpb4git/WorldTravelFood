@@ -10660,8 +10660,9 @@ a.text-dark:focus {
   height: 130px;
 }
 
-.img-car {
-  height: 500px;
+.texteslider {
+  font-size: 100px;
+  background-color: #67c7c6;
 }
 
 .wave {

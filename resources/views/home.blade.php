@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('title')
-    Page d'accueil
+    World Travel Food - accueil
 @stop
 @section('content')
 
 
 
     {{-------------------------------  GAMMES  --------------------------------------------------}}
-    <div class="container mt-5 mb-5">
+    <div class="container-fluid mt-5 mb-5">
         <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -16,25 +16,21 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href=""></a>
-                    <img src="{{asset('assets/images/car-1.jpg')}}" class="d-block w-100 img-fluid img-car" alt="...">
+                    <img src="{{asset('assets/images/1.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="food1">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Test</h5>
-                        <p>caption n 1 </p>
+                        <h1 class="texteslider">Food from all over the world</h1>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('assets/images/car-2.jpg')}}" class="d-block w-100 img-fluid img-car" alt="...">
+                    <img src="{{asset('assets/images/2.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="food2">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Test</h5>
-                        <p>caption n 2</p>
+                        <h1 class="texteslider">5 continents s'offrent à vous</h1>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('assets/images/car-3.jpg')}}" class="d-block w-100 img-fluid img-car" alt="...">
+                    <img src="{{asset('assets/images/3.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive" alt="food3">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Test</h5>
-                        <p>caption n 3 </p>
+                        <h1 class="texteslider">Plaisirs exotiques et saveurs inédites</h1>
                     </div>
                 </div>
             </div>
@@ -49,7 +45,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         {{-------------------------------  GAMMES  --------------------------------------------------}}
         <div class="row mt-4">
             <div class="col-md-4 text-center">
@@ -240,18 +236,18 @@
         <div class="row mb-5">
             <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
                 <img class="w-25 text-center" src="{{asset('assets/images/car.svg')}}" alt="car">
-                <p class="text-light mb-0">DÉJÀ PLUS DE </p>
-                <p class="text-light">69884 COMMANDES</p>
+                <p class="text-light mb-0">LIVRAISON EXPRESS</p>
+                <p class="text-light">48h</p>
             </div>
             <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
-                <img class="w-25 text-center " src="{{asset('assets/images/car.svg')}}" alt="car">
+                <img class="w-25 text-center " src="{{asset('assets/images/pouce.png')}}" alt="car">
                 <p class="text-light mb-0">DÉJÀ PLUS DE </p>
-                <p class="text-light">69884 COMMANDES</p>
+                <p class="text-light">150 000 CLIENTS SATISFAITS</p>
             </div>
             <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
-                <img class="w-25 text-center" src="{{asset('assets/images/car.svg')}}" alt="car">
-                <p class="text-light mb-0">DÉJÀ PLUS DE </p>
-                <p class="text-light">69884 COMMANDES</p>
+                <img class="w-25 text-center" src="{{asset('assets/images/telephone.png')}}" alt="car">
+                <p class="text-light mb-0">BESOINS DE CONSEILS ?</p>
+                <p class="text-light">HOTLINE GRATUITE AU 0405060708</p>
             </div>
         </div>
 
