@@ -45,27 +45,24 @@ Route::get('/produits/country', 'ProductController@country')->name('product.coun
  *
  *
  */
-Route::get('/panier', 'BasketController@index')->name('panier.recapitulatif');
+Route::get('/panier', 'CartController@index')->name('panier.index');
 
-Route::get('/panier/identification', 'BasketController@identification')->name('panier.identification');
+Route::get('/panier/createAccount', 'CartController@createAccount')->name('panier.account');
 
-Route::get('/panier/createAccount', 'BasketController@createAccount')->name('panier.account');
+Route::get('/panier/adresse1', 'CartController@adresse1')->name('panier.adresse1');
 
-Route::get('/panier/adresse1', 'BasketController@adresse1')->name('panier.adresse1');
-
-Route::get('/panier/adresse2', 'BasketController@adresse2')->name('panier.adresse2');
+Route::get('/panier/adresse2', 'CartController@adresse2')->name('panier.adresse2');
 
 
-Route::get('/panier/fraisdeport', 'BasketController@fraisDePort')->name('panier.fraisdeport');
+Route::get('/panier/fraisdeport', 'CartController@fraisDePort')->name('panier.shipping');
 
-Route::get('/panier/paiement', 'BasketController@paiement')->name('panier.paiement');
+Route::get('/panier/paiement', 'CartController@paiement')->name('panier.payment');
 
 
 /**
  *
  *
  */
-Route::get('/newsLetter', 'NewLetterController@show');
 
 /**
  *
