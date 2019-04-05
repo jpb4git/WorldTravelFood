@@ -53,8 +53,8 @@
     <div class="container-fluid ">
         <div class="row mt-4">
             <div class="col-lg-3 text-center">
-                <div class="police wrapper m-1">
-                    <a class="text-decoration-none" href="#">
+                <div class="wrapper m-1">
+                    <a class="text-decoration-none" href="{{route('product.food')}}">
                     <div class="bg-primary d-flex justify-content-center align-items-center">
                         <h2 class="text-white police">luxury food</h2>
                     </div>
@@ -66,7 +66,7 @@
             </div>
             <div class="col-lg-3 text-center">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="#">
+                    <a class="text-decoration-none" href="{{route('product.food')}}">
                     <div class="bg-primary d-flex justify-content-center align-items-center">
                         <h2 class="text-white police">vegan food</h2>
                     </div>
@@ -78,7 +78,7 @@
             </div>
             <div class="col-lg-3 text-center">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="#">
+                    <a class="text-decoration-none" href="{{route('product.food')}}">
                     <div class="bg-primary d-flex justify-content-center align-items-center">
                         <h2 class="text-white police">sweet food</h2>
                     </div>
@@ -91,7 +91,7 @@
             </div>
             <div class="col-lg-3 text-center">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="#">
+                    <a class="text-decoration-none" href="{{route('product.food')}}">
                     <div class="bg-primary d-flex justify-content-center align-items-center">
                         <h2 class="text-white police">bad food</h2>
                     </div>
