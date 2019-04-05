@@ -79,7 +79,7 @@ Route::get('/order', 'OrderController@index')->name('order.index');
  *BACK OFFICE
  *
  */
-Route::namespace('Backoffice')->prefix('/admin')->name('admin.')->group(function () {
+Route::namespace('Backoffice')->prefix('/admin')->middleware('is_admin')->name('admin.')->group(function () {
     Route::get('', 'AdminController@index')->name('index');
     Route::resource('categories', 'CategoryController');
     Route::resource('products', 'ProductController');
@@ -94,3 +94,4 @@ Route::namespace('Backoffice')->prefix('/admin')->name('admin.')->group(function
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
