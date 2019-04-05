@@ -21,7 +21,7 @@
 
         <div class="row ">
             <div class="col p-2 text-white d-flex justify-content-center  ">
-                <i class="font-family fas fa-shipping-fast fa-1x "> Livraison offerte dès 50€ d'achat !!</i>
+                <i class="font-family fas fa-shipping-fast fa-1x"> Livraison offerte dès 50€ d'achat !!</i>
             </div>
         </div>
     </div>
@@ -65,9 +65,7 @@
 </header>
 
 
-<hr class="style1">
-
-<nav class="navbar-light navbar-expand-lg navbar-expand-sm navbar-expand-md">
+<nav class="navbar-light navbar-expand-lg navbar-expand-sm navbar-expand-md mt-5">
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
