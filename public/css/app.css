@@ -10661,10 +10661,6 @@ a.text-dark:focus {
   height: 130px;
 }
 
-.police {
-  font-family: "Nunito", sans-serif !important;
-}
-
 .img-car {
   height: 500px;
 }
@@ -10806,10 +10802,6 @@ hr.style1 {
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 5rem;
   padding-left: 0.5rem;
-}
-
-.police {
-  font-family: "Nunito", sans-serif !important;
 }
 
 .blue {
