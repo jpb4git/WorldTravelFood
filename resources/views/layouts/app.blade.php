@@ -44,12 +44,14 @@
                 <div class="d-flex justify-content-end">
                     @guest
                         <a class="nav-link text-decoration-none text-dark"
-                           href="{{ route('login') }}">{{ __('Connexion') }}
+                           href="{{ route('login') }}">
+                            <i class="fas fa-user"> {{ __('Connexion') }}</i>
                         </a>
                         <span class="border-right"></span>
                         @if (Route::has('register'))
                             <a class="nav-link text-decoration-none text-dark"
-                               href="{{ route('register') }}">{{ __('Créer mon compte') }}
+                               href="{{ route('register') }}">
+                                <i class="fas fa-plus-circle"> {{ __('Créer mon compte') }}</i>
                             </a>
                         @endif
                     @else
@@ -133,7 +135,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{--route('layouts.concept.showAll')--}}">LE CONCEPT</a>
+                <a class="nav-link" href="{{route('concept.index')}}">LE CONCEPT</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{--route('layouts.contact.showAll')--}}">CONTACT</a>
