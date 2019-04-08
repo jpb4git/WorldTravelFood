@@ -95,15 +95,6 @@ class ProductTableSeeder extends Seeder
             'category_id' => 1 ,
         ]);
 
-        DB::table('products')->insert([
-            'name' => 'Chocolate Fish',
-            'description' =>'Océanie',
-            'price' => 2.45 ,
-            'image' => 'oce_chocolatefish.png',
-            'weight' => 0.500 ,
-            'stock' => 50,
-            'category_id' => 2 ,
-        ]);
 
         DB::table('products')->insert([
             'name' => 'Choco Boy',
@@ -210,6 +201,16 @@ class ProductTableSeeder extends Seeder
             'description' =>'Océanie',
             'price' => 1.45 ,
             'image' => 'oce_wizzfizz.jpg',
+            'weight' => 0.500 ,
+            'stock' => 50,
+            'category_id' => 2 ,
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Chocolate Fish',
+            'description' =>'Océanie',
+            'price' => 2.45 ,
+            'image' => 'oce_chocolatefish.png',
             'weight' => 0.500 ,
             'stock' => 50,
             'category_id' => 2 ,

@@ -1,18 +1,16 @@
 @extends('layouts.app')
 @section('title')
-    Catégorie - BOISSONS
+    Catégorie - {{ $category->name }}
 @stop
 
 @section('content')
     <div class="container">
-
-
         {{--            trier par                      --}}
         <div class="row mt-5 mb-5">
             <div class="col-sm-12 header-tonique bg-secondary d-flex justify-content-start align-items-center">
                 <div class="barre"></div>
                 <div class="w-100">
-                    <span class="ml-2"><strong>Boissons</strong></span>
+                    <span class="ml-2"><strong>{{ $category->name }}</strong></span>
                 </div>
             </div>
             <div class="col-sm-12 header-tonique bg-secondary d-flex justify-content-start align-items-center">
@@ -35,10 +33,9 @@
             </div>
         </div>
 
-
         <div class="row mt-4 mb-5">
             <div class="card-deck">
-                @foreach($products as $product)
+                @foreach($category->products as $product)
                     <div class="col-sd-6 col-md-3 mb-3 p-0 text-center">
                         <div class="card text-center mb-3">
                             <div class="text-center pt-2">
@@ -76,29 +73,6 @@
                 @endforeach
             </div>
 
-        </div>
-
-
-        {{--            trier par                      --}}
-        <div class="row mt-5 mb-5">
-            <div class="col-sm-12 header-tonique bg-secondary d-flex justify-content-start align-items-center">
-                <div class="barre"></div>
-                <div class="w-100">
-                    <span class="ml-2"><strong> trier par</strong></span>
-                    <span class="pl-3">
-
-                          <select>
-                            <option>--</option>
-                            <option>Prix croissant</option>
-                            <option>Prix décroissant</option>
-                             <option>de A à Z</option>
-                             <option>de Z à A</option>
-                              <option>produits en stock</option>
-                          </select>
-
-                    </span>
-                </div>
-            </div>
         </div>
     </div>
 
