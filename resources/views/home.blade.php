@@ -128,7 +128,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title"><strong>Bissap</strong></h5>
-                            <h6 class="card-title">description</h6>
+                            <h6 class="card-title">Afirque</h6>
                             <p class="card-text">5.45€</p>
                         </div>
                         <div class="card-footer">
@@ -161,7 +161,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title"><strong>Nik Naks</strong></h5>
-                            <h6 class="card-title">description</h6>
+                            <h6 class="card-title">Afrique</h6>
                             <p class="card-text">2.23€</p>
                         </div>
                         <div class="card-footer">
@@ -194,7 +194,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title"><strong>Don Simon</strong></h5>
-                            <h6 class="card-title">description</h6>
+                            <h6 class="card-title">Europe</h6>
                             <p class="card-text">8.45€</p>
                         </div>
                         <div class="card-footer">
