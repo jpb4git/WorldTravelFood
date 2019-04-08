@@ -44,7 +44,7 @@
                             <div class="text-center pt-2">
                                 <img src="{{asset('assets/images/'.$product->image)}}"
                                      class="card-img-top w-75"
-                                     alt="{{$product->image}}">
+                                     alt="{{$product->name}}">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title"><strong>{{$product->name}}</strong></h5>
