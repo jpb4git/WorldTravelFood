@@ -13,14 +13,27 @@ class CategoryTableSeeder extends Seeder
     public function run()
     {
 
-        for ($i=1; $i<7; $i++)
-        {
 
-            $category = new category;
-            $category->name = 'Boissons'.$i;
-            $category->save();
 
-        }
+        DB::table('categories')->insert([
+                'name' => 'Boissons',
+                ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Bonbons',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Snacking',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Aperitif',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Vegan',
+        ]);
 
 
     }
