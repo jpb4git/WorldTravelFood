@@ -37,41 +37,45 @@
 
 
         <div class="row mt-4 mb-5">
-            @foreach($products as $product)
-            <div class="col-xl-3 text-center">
-                <a class="product-a" href="">
-                    <div class="card text-center mb-3">
-                        <div class="text-center pt-2">
-                            <img src="{{asset('assets/images/'.$product->image)}}" class="card-img-top w-50 " alt="product 1 ">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><strong>{{$product->name}}</strong></h5>
-                            <h6 class="card-title">{{$product->description}}</h6>
-                            <p class="card-text">{{$product->price}}</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="row d-flex flex-row">
-                                <div class="col">
-                                    <a class="product-a" href="">
-                                        <img class="basket-size" src="{{asset('assets/images/basket-plus.svg')}}"
-                                             alt="basket">
+            <div class="card-deck">
+                @foreach($products as $product)
+                    <div class="col-sd-6 col-md-3 mb-3 p-0 text-center">
+                        <div class="card text-center mb-3">
+                            <div class="text-center pt-2">
+                                <img src="{{asset('assets/images/'.$product->image)}}"
+                                     class="card-img-top w-75"
+                                     alt="{{$product->image}}">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>{{$product->name}}</strong></h5>
+                                <h6 class="card-title">{{$product->description}}</h6>
+                                <p class="card-text">{{$product->price}}</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row d-flex flex-row">
+                                    <div class="col">
+                                        <a class="product-a" href="">
+                                            <img class="basket-size"
+                                                 src="{{asset('assets/images/basket-plus.svg')}}"
+                                                 alt="basket">
 
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a class="product-a" href="">
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="product-a" href="">
                                              <span class="orange-Text grey p-1 mr-1"><img
-                                                     src="{{asset('assets/images/eye.svg')}}"
-                                                     alt="eye"> </span>
-                                        <span class="orange-Text grey p-1"></span>
-                                    </a>
+                                                         src="{{asset('assets/images/eye.svg')}}"
+                                                         alt="eye"> </span>
+                                            <span class="orange-Text grey p-1"></span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </a>
+                @endforeach
             </div>
-            @endforeach
+
         </div>
 
 
