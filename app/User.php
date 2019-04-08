@@ -46,4 +46,14 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Order');
     }
+
+
+    const ADMIN_TYPE = 'admin';
+    const DEFAULT_TYPE = 'default';
+
+    public function isAdmin()
+    {
+        return $this->type === self::ADMIN_TYPE;
+    }
+
 }

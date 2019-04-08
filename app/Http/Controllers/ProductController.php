@@ -28,9 +28,9 @@ class ProductController extends Controller
         return view("product.bonbons", ['cat' => 'catalogue']);
     }
 
-    public function food()
+    public function snacking()
     {
-        return view("product.food", ['cat' => 'catalogue']);
+        return view("product.snacking", ['cat' => 'catalogue']);
     }
 
     public function aperitif()

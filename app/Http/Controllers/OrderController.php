@@ -8,8 +8,8 @@ use App\Http\Controllers\Controller;
 class OrderController extends Controller
 {
     //
-    public function show()
+    public function index()
     {
-        return view("order.show");
+        return view("order.index");
     }
 }
