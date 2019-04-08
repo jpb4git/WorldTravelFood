@@ -19,7 +19,7 @@ class ProductController extends Controller
 
     public function boissons()
     {
-        $products = Product::all();
+        $products = Product::where('category_id',1)->get();
         return view("product.boissons", ['products' => $products]);
     }
 

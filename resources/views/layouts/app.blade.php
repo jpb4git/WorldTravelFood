@@ -123,11 +123,12 @@
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                    aria-expanded="false" href="{{--route('product.index')--}}">CATÉGORIES</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{route('product.boissons')}}">Boissons</a>
-                    <a class="dropdown-item" href="{{route('product.bonbons')}}">Bonbons</a>
-                    <a class="dropdown-item" href="{{route('product.snacking')}}">Snacking</a>
-                    <a class="dropdown-item" href="{{route('product.aperitif')}}">Apéritif</a>
-                    <a class="dropdown-item" href="{{route('product.vegan')}}">Vegan</a>
+                    @php
+                    $categories = \App\Category::all();
+                    @endphp
+                    @foreach($categories as $category)
+                        <a class="dropdown-item" href="{{ route('category.show', $category) }}">{{ $category->name }}</a>
+                    @endforeach
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Autres</a>
                 </div>
