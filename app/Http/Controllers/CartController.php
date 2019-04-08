@@ -27,12 +27,12 @@ class CartController extends Controller
         return view("cart.adresseChoix");
     }
 
-    public function fraisDePort()
+    public function shipping()
     {
         return view("cart.shipping");
     }
 
-    public function paiement()
+    public function payment()
     {
         return view("cart.payment");
     }

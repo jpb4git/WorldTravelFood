@@ -52,16 +52,13 @@ Route::get('/produits/country', 'ProductController@country')->name('product.coun
  */
 Route::get('/panier', 'CartController@index')->name('panier.index');
 
-Route::get('/panier/createAccount', 'CartController@createAccount')->name('panier.account');
+Route::get('/panier/adresse1', 'CartController@adresse1')->name('panier.adresse1')->middleware('auth');
 
-Route::get('/panier/adresse1', 'CartController@adresse1')->name('panier.adresse1');
+Route::get('/panier/adresse2', 'CartController@adresse2')->name('panier.adresse2')->middleware('auth');
 
-Route::get('/panier/adresse2', 'CartController@adresse2')->name('panier.adresse2');
+Route::get('/panier/fraisdeport', 'CartController@shipping')->name('panier.shipping')->middleware('auth');
 
-
-Route::get('/panier/fraisdeport', 'CartController@fraisDePort')->name('panier.shipping');
-
-Route::get('/panier/paiement', 'CartController@paiement')->name('panier.payment');
+Route::get('/panier/paiement', 'CartController@payment')->name('panier.payment')->middleware('auth');
 
 
 /**
@@ -73,7 +70,7 @@ Route::get('/panier/paiement', 'CartController@paiement')->name('panier.payment'
  *
  *
  */
-Route::get('/order', 'OrderController@show');
+Route::get('/order', 'OrderController@index')->name('order.index');
 
 
 

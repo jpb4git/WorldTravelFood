@@ -42,7 +42,7 @@
                 <a class="product-a" href="">
                     <div class="card text-center mb-3">
                         <div class="text-center pt-2">
-                            <img src="{{asset('assets/images/boisson1.jpg')}}" class="card-img-top w-50 " alt="product 1 ">
+                            <img src="{{asset('assets/images/'.$product->image)}}" class="card-img-top w-50 " alt="product 1 ">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title"><strong>{{$product->name}}</strong></h5>
