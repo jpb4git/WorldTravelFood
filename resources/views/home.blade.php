@@ -45,7 +45,7 @@
         <div class="row mt-4">
             <div class="col-lg-3 text-center">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="{{route('product.aperitif')}}">
+                    <a class="text-decoration-none" href="{{ '/category/4' }}">
                         <div class="bg-primary d-flex justify-content-center align-items-center">
                             <h2 class="text-white police">Apetizer food</h2>
                         </div>
@@ -59,7 +59,7 @@
             </div>
             <div class="col-lg-3 text-center">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="{{route('product.vegan')}}">
+                    <a class="text-decoration-none" href="{{ '/category/5' }}">
                         <div class="bg-primary d-flex justify-content-center align-items-center">
                             <h2 class="text-white police">Vegan food</h2>
                         </div>
@@ -73,7 +73,7 @@
             </div>
             <div class="col-lg-3 text-center">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="{{route('product.bonbons')}}">
+                    <a class="text-decoration-none" href="{{ '/category/2' }}">
                         <div class="bg-primary d-flex justify-content-center align-items-center">
                             <h2 class="text-white police">Sweet food</h2>
                         </div>
@@ -87,9 +87,9 @@
             </div>
             <div class="col-lg-3 text-center">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="{{route('product.snacking')}}">
+                    <a class="text-decoration-none" href="{{ '/category/3' }}">
                         <div class="bg-primary d-flex justify-content-center align-items-center">
-                            <h2 class="text-white police">Bad food</h2>
+                            <h2 class="text-white police">Junk food</h2>
                         </div>
                         <div>
                             <img class="img-fluid "
