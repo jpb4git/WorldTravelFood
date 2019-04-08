@@ -12,4 +12,19 @@ class UserController extends Controller
     {
         return view('pages.user.login', ['title' => 'Authentification']);
     }
+
+    public function account()
+    {
+        return view ('user.account');
+    }
+
+    public function orders()
+    {
+        return view('user.orders');
+    }
+
+    public function addresses()
+    {
+        return view ('user.addresses');
+    }
 }
