@@ -41,15 +41,15 @@
             </div>
 
             <div class="col">
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-end">
                     @guest
-
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Connexion') }}
-                            <i class="fas fa-user"></i>
+                        <a class="nav-link text-decoration-none text-dark"
+                           href="{{ route('login') }}">{{ __('Connexion') }}
                         </a>
+                        <span class="border-right"></span>
                         @if (Route::has('register'))
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Créer mon compte') }}
-                                <i class="fas fa-user"></i>
+                            <a class="nav-link text-decoration-none text-dark"
+                               href="{{ route('register') }}">{{ __('Créer mon compte') }}
                             </a>
                         @endif
                     @else
@@ -58,6 +58,9 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/user/account">Mon compte</a>
+                            <a class="dropdown-item" href="/user/addresses">Mes adresses</a>
+                            <a class="dropdown-item" href="/user/orders">Mes commandes</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -68,11 +71,6 @@
                             </form>
                         </div>
                     @endguest
-                </div>
-                <div class="d-flex justify-content-end">
-                    <a class="nav-link text-decoration-none text-dark " href="#">
-                        <i class="fas fa-user"> Mon compte</i>
-                    </a>
                     <span class="border-right"></span>
                     <a class="nav-link text-decoration-none text-dark " href="{{route('panier.index')}}">
                         <i class="fas fa-shopping-basket"> Mon panier</i>

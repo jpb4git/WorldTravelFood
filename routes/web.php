@@ -35,6 +35,19 @@ Route::get('/produits/country', 'ProductController@country')->name('product.coun
 
 
 
+/*
+ *      USER
+ */
+
+Route::get('/user/account', 'UserController@account')->name('user.account');
+Route::get('/user/orders', 'UserController@orders')->name('user.orders');
+Route::get('/user/addresses', 'UserController@addresses')->name('user.addresses');
+
+
+
+
+
+
 /**
  *
  *
