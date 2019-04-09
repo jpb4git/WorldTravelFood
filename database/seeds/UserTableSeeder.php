@@ -1,4 +1,4 @@
-  <?php
+<?php
 
 use Illuminate\Database\Seeder;
 use App\User;
@@ -13,13 +13,25 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 8; $i++) {
-            $user = new User;
-            $user->name = Str::random(10);
-            $user->email = Str::random(10) . '@domain.com';
-            $user->password = Hash::make('motdepasse');
-            $user->save();
-        }
+
+        $user = new User;
+        $user->name = 'aaa';
+        $user->email = 'aaa@aaa.fr';
+        $user->password = Hash::make('aaa');
+        $user->save();
+
+        $user = new User;
+        $user->name = Str::random(10);
+        $user->email = Str::random(10) . '@domain.com';
+        $user->password = Hash::make('motdepasse');
+        $user->save();
+
+        $user = new User;
+        $user->name = 'bbb';
+        $user->email = 'bbb@bbb.fr';
+        $user->password = Hash::make('bbb');
+        $user->save();
+
 
     }
 
