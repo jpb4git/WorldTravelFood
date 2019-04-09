@@ -72,7 +72,7 @@
                         </div>
                     @endguest
                     <span class="border-right"></span>
-                    <a class="nav-link text-decoration-none text-dark " href="{{route('panier.index')}}">
+                    <a class="nav-link text-decoration-none text-dark " href="{{route('cart.index')}}">
                         <i class="fas fa-shopping-basket"> Mon panier</i>
                     </a>
                 </div>
@@ -181,13 +181,13 @@
 
     </div>
     <div class="row no-gutters justify-content-center text-center">
-        <div class="col-12, col-md-6, col-lg-3">
-            <a>
+        <div class="col-12 col-md-6 col-lg-3">
+            <a href="">
                 <img class="logo" src="{{asset('assets/images/logo-WTF-vertical.png')}}" alt="logo world travel food">
             </a>
             <a href="">Service client</a>
         </div>
-        <div class="col-12, col-md-6, col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3">
             <a href="">
                 <i class="fas fa-envelope"></i>
                 Contact
@@ -226,6 +226,8 @@
         <a href="" class="px-5 py-2">Politique de confidentialité</a>
     </div>
 </footer>
+
+@yield('scripts')
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

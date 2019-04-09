@@ -390,6 +390,7 @@ h6,
 .h5,
 .h6 {
   margin-bottom: 0.5rem;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -10660,6 +10661,10 @@ a.text-dark:focus {
   height: 130px;
 }
 
+.police {
+  font-family: "Nunito", sans-serif !important;
+}
+
 .texteslider {
   font-size: 100px;
   background-color: #67c7c6;
@@ -10802,6 +10807,10 @@ hr.style1 {
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 5rem;
   padding-left: 0.5rem;
+}
+
+.police {
+  font-family: "Nunito", sans-serif !important;
 }
 
 .blue {

@@ -59,30 +59,29 @@ Route::get('/user/addresses', 'UserController@addresses')->name('user.addresses'
  *
  *
  */
-Route::get('/panier', 'CartController@index')->name('panier.index');
+Route::get('/panier', 'CartController@index')->name('cart.index');
 
-Route::get('/panier/adresse1', 'CartController@adresse1')->name('panier.adresse1')->middleware('auth');
+Route::get('/panier/adresse1', 'CartController@adresse1')->name('cart.adresse1')->middleware('auth');
 
-Route::get('/panier/adresse2', 'CartController@adresse2')->name('panier.adresse2')->middleware('auth');
+Route::get('/panier/adresse2', 'CartController@adresse2')->name('cart.adresse2')->middleware('auth');
 
-Route::get('/panier/fraisdeport', 'CartController@shipping')->name('panier.shipping')->middleware('auth');
+Route::get('/panier/fraisdeport', 'CartController@shipping')->name('cart.shipping')->middleware('auth');
 
-Route::get('/panier/paiement', 'CartController@payment')->name('panier.payment')->middleware('auth');
+Route::get('/panier/paiement', 'CartController@payment')->name('cart.payment')->middleware('auth');
 
+Route::get('add-to-cart/{id}', 'ProductController@addToCart');
 
-/**
- *
- *
- */
+Route::patch('update-cart', 'ProductController@update');
+
+Route::delete('remove-from-cart', 'ProductController@remove');
+
+//Route::match(['get', 'post'], '/panier', 'CartController@addtocart');
 
 /**
  *
  *
  */
 Route::get('/order', 'OrderController@index')->name('order.index');
-
-
-
 
 /**
  *BACK OFFICE
