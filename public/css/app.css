@@ -10656,8 +10656,12 @@ a.text-dark:focus {
 }
 
 #header-logo {
-  width: 160px;
-  height: 130px;
+  width: 200px;
+  height: 200px;
+}
+
+.police {
+  font-family: "Nunito", sans-serif !important;
 }
 
 h2 {

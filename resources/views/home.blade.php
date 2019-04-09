@@ -7,7 +7,7 @@
 
 
     {{-------------------------------  Caroussel  --------------------------------------------------}}
-    <div class="container-fluid mt-5 mb-5">
+    <div class="container-fluid mt-4 mb-5">
         <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

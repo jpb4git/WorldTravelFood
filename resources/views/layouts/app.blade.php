@@ -62,7 +62,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/user/account">Mon compte</a>
                             <a class="dropdown-item" href="/user/addresses">Mes adresses</a>
-                            <a class="dropdown-item" href="/user/orders">Mes commandes</a>
+                            <a class="dropdown-item" href="{{ route('user.orders') }}">Mes commandes</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -93,7 +93,7 @@
 </header>
 
 
-<nav class="navbar-light navbar-expand-lg navbar-expand-sm navbar-expand-md mt-5">
+<nav class="navbar-light navbar-expand-lg navbar-expand-sm navbar-expand-md mt-2">
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

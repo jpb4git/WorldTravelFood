@@ -13,7 +13,7 @@
         <form id="formulaire" method="post">
             <div class="form-group">
                 <label class="nomchamp" for="InputEmail">Adresse e-mail actuelle :</label>
-                <h6><strong>jeandupont@chezmoi.fr</strong></h6>
+                <h6><strong>{{ $user->email }}</strong></h6>
                 <input type="email" class="form-control" id="NewEmail" aria-describedby="emailHelp"
                        placeholder="nouvelle adresse e-mail">
                 <small id="emailHelp" class="form-text text-muted mb-2">Nous ne partagerons jamais votre e-mail avec des
