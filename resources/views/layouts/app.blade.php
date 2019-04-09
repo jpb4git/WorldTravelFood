@@ -21,7 +21,7 @@
 
         <div class="row ">
             <div class="col p-2 text-white d-flex justify-content-center  ">
-                <a> <i class="fas fa-shipping-fast"> </i> Livraison offerte dès 50€ d'achat !!</a>
+                <i class="font-family fas fa-shipping-fast fa-1x"> Livraison offerte dès 50€ d'achat !!</i>
             </div>
         </div>
     </div>
@@ -74,8 +74,8 @@
                         </div>
                     @endguest
                     <span class="border-right"></span>
-                    <a class="nav-link text-decoration-none text-dark " href="{{route('panier.index')}}">
-                        <i class="fas fa-shopping-basket"></i> Mon panier
+                    <a class="nav-link text-decoration-none text-dark " href="{{route('cart.index')}}">
+                        <i class="fas fa-shopping-basket"> Mon panier</i>
                     </a>
                 </div>
             </div>
@@ -200,6 +200,8 @@
         </div>
     </div>
 </footer>
+
+@yield('scripts')
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
