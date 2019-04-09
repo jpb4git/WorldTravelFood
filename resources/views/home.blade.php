@@ -7,7 +7,7 @@
 
 
     {{-------------------------------  Caroussel  --------------------------------------------------}}
-    <div class="container-fluid mt-5 mb-5">
+    <div class="container-fluid mt-4 mb-5">
         <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -16,11 +16,11 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{asset('assets/images/1.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive"
+                    <img src="{{asset('assets/images/2.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive"
                          alt="food1">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('assets/images/2.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive"
+                    <img src="{{asset('assets/images/1.jpg')}}" class="d-block w-100 img-fluid img-car img-responsive"
                          alt="food2">
                 </div>
                 <div class="carousel-item">
@@ -41,27 +41,27 @@
 
 
     {{-------------------------------  Gammes  --------------------------------------------------}}
-    <div class="container-fluid ">
-        <div class="row mt-4">
-            <div class="col-lg-3 text-center">
-                <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="{{ '/category/4' }}">
-                        <div class="bg-primary d-flex justify-content-center align-items-center">
-                            <h2 class="text-white police">Apetizer food</h2>
+    <div class="container">
+        <div class="row mt-5 mb-2">
+            <div class="col-lg-6 text-center mb-5 ">
+                <div class="wrapper m-1  ">
+                    <a class="text-decoration-none" href="{{route('product.aperitif')}}">
+                        <div class="bg-primary d-flex justify-content-center align-items-center rounded">
+                            <h2 class="text-white">Apetizer food</h2>
                         </div>
                         <div>
-                            <img class="img-fluid"
+                            <img class="img-fluid "
                                  src="https://static.750g.com/images/1200-630/c8b5d6e22615273f117330fc8628a1cb/thinkstockphotos-925210714.jpg"
                                  alt="">
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-3 text-center">
+            <div class="col-lg-6 text-center mb-5">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="{{ '/category/5' }}">
-                        <div class="bg-primary d-flex justify-content-center align-items-center">
-                            <h2 class="text-white police">Vegan food</h2>
+                    <a class="text-decoration-none" href="{{route('product.vegan')}}">
+                        <div class="bg-primary d-flex justify-content-center align-items-center rounded">
+                            <h2 class="text-white">Vegan food</h2>
                         </div>
                         <div>
                             <img class="img-fluid"
@@ -71,11 +71,11 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-3 text-center">
+            <div class="col-lg-6 text-center mb-5">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="{{ '/category/2' }}">
-                        <div class="bg-primary d-flex justify-content-center align-items-center">
-                            <h2 class="text-white police">Sweet food</h2>
+                    <a class="text-decoration-none" href="{{route('product.bonbons')}}">
+                        <div class="bg-primary d-flex justify-content-center align-items-center rounded">
+                            <h2 class="text-white">Sweet food</h2>
                         </div>
                         <div>
                             <img class="img-fluid "
@@ -85,11 +85,11 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-3 text-center">
+            <div class="col-lg-6 text-center">
                 <div class="wrapper m-1">
-                    <a class="text-decoration-none" href="{{ '/category/3' }}">
-                        <div class="bg-primary d-flex justify-content-center align-items-center">
-                            <h2 class="text-white police">Junk food</h2>
+                    <a class="text-decoration-none" href="{{route('product.snacking')}}">
+                        <div class="bg-primary d-flex justify-content-center align-items-center rounded">
+                            <h2 class="text-white">Bad food</h2>
                         </div>
                         <div>
                             <img class="img-fluid "
@@ -108,9 +108,9 @@
 
     {{-------------------------------  HEADER SPAN EN CE MOMENT------------------------------------------------}}
     <div class="container-fluid">
-        <div class="row mt-5 mb-5">
-            <div class="col header-tonique bg-secondary">
-                <div class="w-100 d-flex justify-content-center">
+        <div class="row ">
+            <div class="col bg-secondary mt-2 mb-5">
+                <div class="d-flex justify-content-center">
                     <h3 class="police">EN CE MOMENT</h3>
                 </div>
             </div>
@@ -118,9 +118,9 @@
     </div>
 
     {{-------------------------------  IMG SPAN EN CE MOMENT------------------------------------------------}}
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-xl-4 text-center">
+            <div class="col-sd-6 col-md-4 col-lg-4 text-center ">
                 <a class="product-a" href="">
                     <div class="card text-center mb-3">
                         <div class="text-center pt-2">
@@ -128,7 +128,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title"><strong>Bissap</strong></h5>
-                            <h6 class="card-title">Afirque</h6>
+                            <h6 class="card-title">Afrique</h6>
                             <p class="card-text">5.45€</p>
                         </div>
                         <div class="card-footer">
@@ -153,7 +153,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xl-4 text-center">
+            <div class="col-sd-6 col-md-4 col-lg-4 text-center">
                 <a class="product-a" href="">
                     <div class="card text-center mb-3">
                         <div class="text-center pt-2">
@@ -186,7 +186,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xl-4 text-center">
+            <div class="col-sd-6 col-md-4 col-lg-4 text-center">
                 <a class="product-a" href="">
                     <div class="card text-center mb-3">
                         <div class="text-center pt-2">
@@ -223,166 +223,76 @@
     </div>
 
     {{-------------------------------  HEADER SPAN BEST SELLERS------------------------------------------------}}
-    <div class="row mt-5 mb-5 ">
-        <div class="col-sm-12 p-0">
-            <div class="w-100 d-flex justify-content-center header-tonique blue">
-                <span>BEST SELLERS !</span>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col bg-secondary mt-5 mb-5">
+                <div class="d-flex justify-content-center">
+                    <h3 class="police">BEST SELLERS</h3>
+                </div>
             </div>
         </div>
     </div>
     {{-------------------------------  BEST SELLERS    -----------------------------------------------}}
-    <div class="row mt-4 mb-5">
-        <div class="col-xl-3 text-center">
-            <a class="product-a" href="{{route('product.show', ['id' => 1]) }}">
-                <div class="card text-center">
-                    <div class="text-center pt-2">
-                        <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 "
-                             alt="product 1 ">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>M&M's Cookies</strong></h5>
-                        <h6 class="card-title">M&M's </h6>
-                        <p class="card-text">1,96 Euros</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-3 text-center">
-            <a class="product-a" href="{{route('product.show', ['id' => 1]) }}">
-                <div class="card text-center">
-                    <div class="text-center pt-2">
-                        <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 "
-                             alt="product 1 ">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>M&M's Cookies</strong></h5>
-                        <h6 class="card-title">M&M's </h6>
-                        <p class="card-text">1,96 Euros</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-3 text-center">
-            <a class="product-a" href="">
-                <div class="card text-center">
-                    <div class="text-center pt-2">
-                        <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 "
-                             alt="product 1 ">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>M&M's Cookies</strong></h5>
-                        <h6 class="card-title">M&M's </h6>
-                        <p class="card-text">1,96 Euros</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-3 text-center">
-            <a class="product-a" href="">
-                <div class="card text-center">
-                    <div class="text-center pt-2">
-                        <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 "
-                             alt="product 1 ">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>M&M's Cookies</strong></h5>
-                        <h6 class="card-title">M&M's </h6>
-                        <p class="card-text">1,96 Euros</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    {{-----------------------------------------------------------------------------------------------------------}}
-    <div class="row mt-4 mb-5">
-        <div class="col-xl-3 text-center">
-            <a class="product-a" href="">
-                <div class="card text-center">
-                    <div class="text-center pt-2">
-                        <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 "
-                             alt="product 1 ">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>M&M's Cookies</strong></h5>
-                        <h6 class="card-title">M&M's </h6>
-                        <p class="card-text">1,96 Euros</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-3 text-center">
-            <a class="product-a" href="">
-                <div class="card text-center">
-                    <div class="text-center pt-2">
-                        <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 "
-                             alt="product 1 ">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>M&M's Cookies</strong></h5>
-                        <h6 class="card-title">M&M's </h6>
-                        <p class="card-text">1,96 Euros</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-3 text-center">
-            <a class="product-a" href="">
-                <div class="card text-center">
-                    <div class="text-center pt-2">
-                        <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 "
-                             alt="product 1 ">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>M&M's Cookies</strong></h5>
-                        <h6 class="card-title">M&M's </h6>
-                        <p class="card-text">1,96 Euros</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-3 text-center">
-            <a class="product-a" href="">
-                <div class="card text-center">
-                    <div class="text-center pt-2">
-                        <img src="{{asset('assets/images/mnm.jpg')}}" class="card-img-top w-50 "
-                             alt="product 1 ">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>M&M's Cookies</strong></h5>
-                        <h6 class="card-title">M&M's </h6>
-                        <p class="card-text">1,96 Euros</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
+    <div class="container">
+        <div class="row mt-4 mb-4">
+            <div class="card-deck">
+                @foreach($products as $product)
+                    <div class="col-sd-6 col-md-3 mb-3 p-0 text-center">
+                        <div class="card text-center mb-3">
+                            <div class="text-center pt-2">
+                                <img src="{{asset('assets/images/'.$product->image)}}"
+                                     class="card-img-top w-75"
+                                     alt="{{$product->image}}">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>{{$product->name}}</strong></h5>
+                                <h6 class="card-title">{{$product->description}}</h6>
+                                <p class="card-text">{{$product->price}}</p>
+                            </div>git
+                            <div class="card-footer">
+                                <div class="row d-flex flex-row">
+                                    <div class="col">
+                                        <a class="product-a" href="">
+                                            <img class="basket-size"
+                                                 src="{{asset('assets/images/basket-plus.svg')}}"
+                                                 alt="basket">
 
-    {{-------------------------------  CONFIANCE    -----------------------------------------------}}
-    <div class="row mt-5 ">
-        <div class="col-sm-12 p-0">
-            <div class="d-flex justify-content-center header-tonique bg-secondary">
-                <span>CONFIANCE</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="product-a" href="">
+                                             <span class="orange-Text grey p-1 mr-1"><img
+                                                         src="{{asset('assets/images/eye.svg')}}"
+                                                         alt="eye"> </span>
+                                            <span class="orange-Text grey p-1"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
-    <div class="row mb-5">
-        <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
-            <img class="w-25 text-center" src="{{asset('assets/images/car.svg')}}" alt="car">
-            <p class="text-light mb-0">LIVRAISON EXPRESS</p>
-            <p class="text-light">48h</p>
+    {{------------------------------- CONFIANCE-----------------------------------------------}}
+
+<div class="container-fluid bg-primary">
+    <div class="row">
+        <div class="col-md-4 d-flex flex-column justify-content-center align-items-center mt-4">
+            <i class="fas fa-shipping-fast fa-5x"></i>
+            <p class="text-light mt-2">LIVRAISON EXPRESS 48h</p>
         </div>
-        <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
-            <img class="w-25 text-center " src="{{asset('assets/images/pouce.png')}}" alt="car">
-            <p class="text-light mb-0">DÉJÀ PLUS DE </p>
-            <p class="text-light">150 000 CLIENTS SATISFAITS</p>
+        <div class="col-md-4 d-flex flex-column justify-content-center align-items-center mt-4">
+            <i class="fas fa-thumbs-up fa-5x"></i>
+            <p class="text-light mt-2">150 000 CLIENTS SATISFAITS</p>
         </div>
-        <div class="col-md-4 bg-primary d-flex flex-column justify-content-center align-items-center p-0 m-0">
-            <img class="w-25 text-center" src="{{asset('assets/images/telephone.png')}}" alt="car">
-            <p class="text-light mb-0">BESOINS DE CONSEILS ?</p>
-            <p class="text-light">HOTLINE GRATUITE AU 0405060708</p>
+        <div class="col-md-4 d-flex flex-column justify-content-center align-items-center mt-4">
+            <i class="fas fa-mobile-alt fa-5x"></i>
+            <p class="text-light mt-2">HOTLINE GRATUITE AU 0405060708</p>
         </div>
     </div>
-
+</div>
 
 
 

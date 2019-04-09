@@ -8,11 +8,11 @@
     <form action="index.blade.php" method="post">
         <main class="container border mt-5 mb-5">
             <nav class="breadcrumb mt-2">
-                <span class="breadcrumb-item active text-primary">RECAPITULATIF DE COMMANDE</span>
-                <a class="breadcrumb-item text-dark">IDENTIFICATION</a>
-                <a class="breadcrumb-item text-dark">ADRESSE</a>
-                <a class="breadcrumb-item text-dark">FRAIS DE PORT</a>
-                <a class="breadcrumb-item text-dark">PAIEMENT</a>
+                <span class="breadcrumb-item active text-primary text-size">RECAPITULATIF DE COMMANDE</span>
+                <a class="breadcrumb-item text-dark text-size">IDENTIFICATION</a>
+                <a class="breadcrumb-item text-dark text-size">ADRESSE</a>
+                <a class="breadcrumb-item text-dark text-size">FRAIS DE PORT</a>
+                <a class="breadcrumb-item text-dark text-size">PAIEMENT</a>
             </nav>
             <div class="row bg-secondary text-white justify-content-start py-2">
                 <div class="col-sm-12 ">

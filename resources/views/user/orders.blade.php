@@ -3,7 +3,7 @@
     Mes commandes
 @stop
 @section('content')
-    <form action="index.blade.php" method="post">
+    <form action="" method="post">
         <main class="container border mt-5 mb-5">
             <div class="row bg-secondary text-white justify-content-start py-2">
                 <div class="col-sm-12 ">
@@ -13,8 +13,7 @@
             <div class="row mt-3">
                 <table class="table">
 
-                    @for($i = 0; $i < 3; $i++)
-
+                    @foreach ($user->orders as $order)
                         <thead class="bg-dark table-bordered">
                         <tr>
                             <th class="text-white text-left" scope="col">REFERENCE</th>
@@ -28,51 +27,40 @@
                         <tbody>
                         <tr class="border-bottom">
                             <td>
-                                1234567890
+                                {{$order->number}}
                             </td>
                             <td>
-                                <img class="w-25"
-                                     src="https://thumbs.dreamstime.com/t/products-colorful-stuck-stripes-text-alphabets-written-over-background-79309192.jpg"
-                                     alt="product image">
-                                <a class="text-decoration-none text-primary" href="nom de l'article">Nom de
-                                    l'article</a>
-                            </td>
 
-                            <td class="text-center">100€</td>
-
-                            <td class="text-center">
-                                    1
                             </td>
 
                             <td class="text-center"></td>
 
-                                </button>
+                            <td class="text-center">
+
                             </td>
+
+                            <td class="text-center"></td>
+
                         </tr>
                         <tr class="border-bottom">
                             <td>
 
                             </td>
                             <td>
-                                <img class="w-25"
-                                     src="https://thumbs.dreamstime.com/t/products-colorful-stuck-stripes-text-alphabets-written-over-background-79309192.jpg"
-                                     alt="product image">
-                                <a class="text-decoration-none text-primary" href="nom de l'article">Nom de
-                                    l'article</a>
+
                             </td>
 
-                            <td class="text-center">100€</td>
+                            <td class="text-center"></td>
 
                             <td class="text-center">
-                            1
+
                             </td>
 
-                            <td class="text-center">200€</td>
+                            <td class="text-center">{{$order->price}} €</td>
 
-                            </button>
-                            </td>
                         </tr>
-                        @endfor
+
+                        @endforeach
 
                         </tbody>
                 </table>

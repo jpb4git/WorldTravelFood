@@ -12,6 +12,8 @@
 */
 
 Route::get('/', "HomeController@index")->name('home.index');
+Route::get('/concept', "ConceptController@index")->name('concept.index');
+Route::get('/contact', "ContactController@index")->name('contact.index');
 
 
 /**
@@ -39,7 +41,9 @@ Route::get('/user/account', 'UserController@account')->name('user.account');
 Route::get('/user/orders', 'UserController@orders')->name('user.orders');
 Route::get('/user/addresses', 'UserController@addresses')->name('user.addresses');
 
-
+/*
+Route::get('/user/addressesupdate', 'UserController@addressesupdate')->name('user.addresses');
+*/
 
 
 
