@@ -21,7 +21,7 @@
 
         <div class="row ">
             <div class="col p-2 text-white d-flex justify-content-center  ">
-                <i class="font-family fas fa-shipping-fast fa-1x"> Livraison offerte dès 50€ d'achat !!</i>
+                <a> <i class="fas fa-shipping-fast"> </i> Livraison offerte dès 50€ d'achat !!</a>
             </div>
         </div>
     </div>
@@ -44,12 +44,14 @@
                 <div class="d-flex justify-content-end">
                     @guest
                         <a class="nav-link text-decoration-none text-dark"
-                           href="{{ route('login') }}">{{ __('Connexion') }}
+                           href="{{ route('login') }}">
+                            <i class="fas fa-user"></i> {{ __('Connexion') }}
                         </a>
                         <span class="border-right"></span>
                         @if (Route::has('register'))
                             <a class="nav-link text-decoration-none text-dark"
-                               href="{{ route('register') }}">{{ __('Créer mon compte') }}
+                               href="{{ route('register') }}">
+                                <i class="fas fa-plus-circle"></i> {{ __('Créer mon compte') }}
                             </a>
                         @endif
                     @else
@@ -73,7 +75,7 @@
                     @endguest
                     <span class="border-right"></span>
                     <a class="nav-link text-decoration-none text-dark " href="{{route('panier.index')}}">
-                        <i class="fas fa-shopping-basket"> Mon panier</i>
+                        <i class="fas fa-shopping-basket"></i> Mon panier
                     </a>
                 </div>
             </div>
@@ -105,20 +107,6 @@
                 <a class="nav-link" href="{{route('home.index')}}">ACCUEIL</a>
             </li>
             <li class="nav-item dropdown">
-
-            <li class="nav-item">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false" href="{{--route('layouts.pays.showAll')--}}">CONTINENTS</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Amérique</a>
-                    <a class="dropdown-item" href="#">Asie</a>
-                    <a class="dropdown-item" href="#">Afrique</a>
-                    <a class="dropdown-item" href="#">Europe</a>
-                    <a class="dropdown-item" href="#">Océanie</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Autres</a>
-                </div>
-            </li>
             <li class="nav-item">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                    aria-expanded="false" href="{{--route('product.index')--}}">CATÉGORIES</a>
@@ -134,10 +122,10 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{--route('layouts.concept.showAll')--}}">LE CONCEPT</a>
+                <a class="nav-link" href="{{route('concept.index')}}">LE CONCEPT</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{--route('layouts.contact.showAll')--}}">CONTACT</a>
+                <a class="nav-link" href="{{route('contact.index')}}">CONTACT</a>
             </li>
 
             <!-- Authentication Links -->
@@ -155,75 +143,61 @@
     @yield('content')
 </div>
 
-<footer class="container-fluid blue p-4">
-    <div class="avantages row no-gutters row no-gutters justify-content-center text-center pb-3">
-        <div class="col-12, col-md-6, col-lg-3">
-            <a href="">
-                <i class="fab fa-cc-paypal "></i>
-                <i class="fab fa-cc-mastercard"></i>
-                <i class="fab fa-cc-amex"></i>
-                <i class="fab fa-cc-visa"></i>
+<footer class="container-fluid bg-secondary pt-5">
+    <div class="row pb-3 ">
+
+        <div class="col-lg-4">
+            <a class="text-decoration-none" href="">
+                <i class="fab fa-cc-paypal fa-2x mr-3"></i>
+                <i class="fab fa-cc-mastercard fa-2x mr-3"></i>
+                <i class="fab fa-cc-amex fa-2x mr-3"></i>
+                <i class="fab fa-cc-visa fa-2x mr-3"></i>
                 Paiement sécurisé
             </a>
         </div>
-        <div class="col-12, col-md-6, col-lg-3">
-            <a href="">
-                <i class="fas fa-shopping-bag"></i>
-                Take away
-            </a>
-        </div>
-        <div class="col-12, col-md-6, col-lg-3">
-            <a href="">
-                <i class="fas fa-shipping-fast"></i>
-                Livraison sous 24 heures
-            </a>
-        </div>
-
-    </div>
-    <div class="row no-gutters justify-content-center text-center">
-        <div class="col-12, col-md-6, col-lg-3">
-            <a>
-                <img class="logo" src="{{asset('assets/images/logo-WTF-vertical.png')}}" alt="logo world travel food">
-            </a>
-            <a href="">Service client</a>
-        </div>
-        <div class="col-12, col-md-6, col-lg-3">
-            <a href="">
-                <i class="fas fa-envelope"></i>
+        <div class="col-lg1">
+            <a class="text-decoration-none" href="">
+                <i class="fas fa-envelope fa-2x mr-3"></i>
                 Contact
             </a>
         </div>
-        <div class="col-12, col-md-6, col-lg-3">
-            <form action="" method="post">
-                <div class="form-inline">
-                    <label for="mail" class="mr-3">S'inscrire à la newsletter</label>
-                    <input type="email" class="form-control" name="mail" placeholder="email">
-                    <button type="submit" name="submitNewsletter" class="btn btn-success">OK</button>
+        <div class="col-lg-5">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="staticEmail2" class="sr-only">Email</label>
+                    <input type="text" readonly class="form-control-plaintext text-right mr-3" id="staticEmail2"
+                           value="Newsletter">
                 </div>
+                <div class="form-group ">
+                    <input type="password" class="form-control" id="staticEmail2" placeholder="Email">
+                </div>
+                <button type="submit" class="btn btn-primary ml-2">OK</button>
             </form>
         </div>
+        <div class="col-lg-2">
+            <a href="" class="mx-2">
+                <img class="RSociaux" src="{{asset('assets/images/facebook.png')}}" alt="logo facebook">
+            </a>
+            <a href="" class="mx-2">
+                <img class="RSociaux" src="{{asset('assets/images/instagram.png')}}" alt="logo instagram">
+            </a>
+            <a href="" class="mx-2">
+                <img class="RSociaux" src="{{asset('assets/images/youtube.png')}}" alt="logo youtube">
+            </a>
+            <a href="" class="mx-2">
+                <img class="RSociaux" src="{{asset('assets/images/twitter.png')}}" alt="logo twitter">
+            </a>
+            <a href="" class="mx-2">
+                <img class="RSociaux" src="{{asset('assets/images/pinterest.png')}}" alt="logo pinterest">
+            </a>
+        </div>
     </div>
-    <div class="row justify-content-center py-4">
-        <a href="" class="mx-2">
-            <img class="RSociaux" src="{{asset('assets/images/facebook.png')}}" alt="logo facebook">
-        </a>
-        <a href="" class="mx-2">
-            <img class="RSociaux" src="{{asset('assets/images/instagram.png')}}" alt="logo instagram">
-        </a>
-        <a href="" class="mx-2">
-            <img class="RSociaux" src="{{asset('assets/images/youtube.png')}}" alt="logo youtube">
-        </a>
-        <a href="" class="mx-2">
-            <img class="RSociaux" src="{{asset('assets/images/twitter.png')}}" alt="logo twitter">
-        </a>
-        <a href="" class="mx-2">
-            <img class="RSociaux" src="{{asset('assets/images/pinterest.png')}}" alt="logo pinterest">
-        </a>
-    </div>
-    <div class="legal row justify-content-center">
-        <a href="" class="px-5 py-2">Conditions générales de vente</a>
-        <a href="" class="px-5 py-2">Mentions légales</a>
-        <a href="" class="px-5 py-2">Politique de confidentialité</a>
+    <div class="legal row ">
+        <div class="col-lg-12 d-flex justify-content-center">
+            <a href="" class="px-5 py-2">Conditions générales de vente</a>
+            <a href="" class="px-5 py-2">Mentions légales</a>
+            <a href="" class="px-5 py-2">Politique de confidentialité</a>
+        </div>
     </div>
 </footer>
 

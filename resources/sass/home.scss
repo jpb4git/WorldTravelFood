@@ -1,17 +1,23 @@
-.police  {
-    font-family: 'Nunito', sans-serif!important;
+h2{
+  font-family: Amatic SC, cursive;
+    font-weight: bold;
+}
+
+h3{
+    font-family: Amatic SC, cursive;
+    font-weight: bold;
+    font-size: 50px;
 }
 
 
-.img-car {
-    //height: 500px;
+.logofooter {
+    width: 80px;
 }
 
 .texteslider {
     font-size: 100px;
     background-color: #67c7c6;
 }
-
 
 .wave {
     position: absolute;
@@ -40,5 +46,4 @@
 .product-a:hover {
     color: #67c7c6;
 }
-
 

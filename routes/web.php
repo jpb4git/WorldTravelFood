@@ -12,6 +12,8 @@
 */
 
 Route::get('/', "HomeController@index")->name('home.index');
+Route::get('/concept', "ConceptController@index")->name('concept.index');
+Route::get('/contact', "ContactController@index")->name('contact.index');
 
 
 /**
