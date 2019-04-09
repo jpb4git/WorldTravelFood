@@ -9,155 +9,91 @@
                 <h1 class="h5 my-auto">MES ADRESSES</h1>
             </div>
         </div>
-    <div class="row mt-3 mb-2">
-        <div class="col-xs-12 col-lg-6">
-            <article id="formulaire" class="container mw-50 w-25 text-center">
-                <form id="formulaire1" method="post">
-                    <div class="form-group">
-                        <fieldset class="container">
-                            <h2 class="nomchamp mb-2">Adresse de livraison</h2>
-                            <div class="row justify-content-center">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label class="label" for="wording">Libellé</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id="adresse" name="wording" type=text required placeholder=" maison">
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <label class="label" for="lastname">Nom</label>
+        <div class="row mt-3 mb-2 mr-5">
+            <?php $count=1;?>
+            @foreach ($user->addresses as $address)
+                <div class="col-xs-12 col-lg-6">
+                    <form class="" action="/user/addresses" method="get">
+                    <article id="formulaire" class="container mw-50 w-25 text-center">
+                        <form id="formulaire1" method="post">
+                            <div class="form-group">
+                                <fieldset class="container">
+                                    <h2 class="nomchamp mb-2">Adresse <?php echo $count++?></h2>
+                                    <div class="row justify-content-center">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label class="label" for="street">Rue</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input id="adresse" name="street" type=text required
+                                                       placeholder="{{ $address->street }}">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <label class="label" for="zip_code">Code postal</label>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input id="adresse" name="zip_code" type=text required
+                                                           placeholder="{{ $address->zip_code }}">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label class="label" for="complement">Complément</label>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input id="adresse" name="complement" type=text required
+                                                           placeholder="{{ $address->complement }}">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label class="label" for="city">Ville</label>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input id="adresse" name="city" type=text required
+                                                           placeholder="{{ $address->city }}">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="label" for="country">Pays</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input id="adresse" name="country" type=text
+                                                       placeholder="{{ $address->country }}">
+                                            </div>
                                         </div>
-                                        <div class="col-6">
-                                            <input id="adresse" name="lastname" type=text required
-                                                   placeholder=" Dupont">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label class="label" for=last_name>Nom</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input id=adresse name=last_name type=text required
+                                                       placeholder="{{ $address->last_name }}">
+                                            </div>
                                         </div>
-                                        <div class="col-6">
-                                            <label class="label" for="firstname">Prénom</label>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label class="label" for=first_name>Prénom</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input id=ville name=first_name type=text required
+                                                       placeholder="{{ $address->first_name }}">
+                                            </div>
                                         </div>
-                                        <div class="col-6">
-                                            <input id="adresse" name="firstname" type=text required
-                                                   placeholder=" Jean">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label class="label" for=wording>Libellé</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input id=pays name=wording type=text required
+                                                       placeholder="{{ $address->wording }}">
+                                            </div>
                                         </div>
-                                        <div class="col-6">
-                                            <label class="label" for="adresse">Adresse</label>
-                                        </div>
-                                        <div class="col-6">
-                                            <input id="adresse" name="adresse" type=text required
-                                                   placeholder=" 99, rue du soleil">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <label class="label" for="adresse">Complément d'adresse</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id="adresse" name="adresse" type=text
-                                               placeholder=" Résidence de l'arbre Bât. D">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label class="label" for=codepostal>C.P.</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id=codepostal name=codepostal type=text required
-                                               placeholder=" 26000">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label class="label" for=ville>Ville</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id=ville name=ville type=text required placeholder=" Valence">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label class="label" for=pays>Pays</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id=pays name=pays type=text required placeholder=" France">
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary mt-2">Modifier</button>
-                        </fieldset>
-                    </div>
-                </form>
-            </article>
-        </div>
-        <div class="col-xs-12 col-lg-6">
-            <article id="formulaire" class="container mw-50 w-25 text-center">
-                <form id="formulaire2" method="post">
-                    <div class="form-group justify-content-around">
-                        <fieldset class="container">
-                            <h2 class="nomchamp mb-2">Adresse de facturation</h2>
-                            <div class="row justify-content-center">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label class="label" for="wording">Libellé</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id="adresse" name="wording" type=text required placeholder=" Travail">
-                                    </div>
-                                    <div class="col-6">
-                                        <label class="label" for="lastname">Nom</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id="adresse" name="lastname" type=text required placeholder=" Dupont">
-                                    </div>
-                                    <div class="col-6">
-                                        <label class="label" for="firstname">Prénom</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id="adresse" name="firstname" type=text required placeholder=" Jean">
-                                    </div>
-                                    <div class="col-6">
-                                        <label class="label" for="adresse">Adresse</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id="adresse" name="adresse" type=text required
-                                               placeholder="55, rue du fleuve">
-                                    </div>
-                                    <div class="col-6">
-                                        <label class="label" for="adresse">Complément d'adresse</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id="adresse" name="adresse" type=text
-                                               placeholder="entreprise Machin">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label class="label" for=codepostal>C.P.</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id=codepostal name=codepostal type=text required placeholder="69001">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label class="label" for=ville>Ville</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id=ville name=ville type=text required placeholder="Lyon">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label class="label" for=pays>Pays</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input id=pays name=pays type=text required placeholder=" France">
-                                    </div>
-                                </div>
+                                        <button type="submit" class="btn btn-primary mt-2">Modifier</button>
+                                </fieldset>
                             </div>
-                            <button type="submit" class="btn btn-primary mt-2">Modifier</button>
-                        </fieldset>
-                    </div>
-                </form>
-            </article>
+                        </form>
+                    </article>
+                    </form>
+                </div>
+            @endforeach
         </div>
-    </div>
     </main>
 @endsection

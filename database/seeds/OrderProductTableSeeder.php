@@ -17,9 +17,9 @@ class OrderProductTableSeeder extends Seeder
 
             $orderProduct= new Order_product;
             $orderProduct->quantity =$i;
-            $orderProduct->price = 15.9;
-            $orderProduct->order_id = 1;
-            $orderProduct->product_id = 1;
+            $orderProduct->price = mt_rand(1,8);
+            $orderProduct->order_id = mt_rand(1,6);
+            $orderProduct->product_id = mt_rand(1,20);
             $orderProduct->save();
         }
     }
