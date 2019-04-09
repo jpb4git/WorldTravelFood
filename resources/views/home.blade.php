@@ -45,7 +45,8 @@
         <div class="row mt-5 mb-2">
             <div class="col-lg-6 text-center mb-5 ">
                 <div class="wrapper m-1  ">
-                    <a class="text-decoration-none" href="{{route('product.aperitif')}}">
+                    <a class="text-decoration-none" href="{{route('product.aperi
+                    tif')}}">
                         <div class="bg-primary d-flex justify-content-center align-items-center rounded">
                             <h2 class="text-white">Apetizer food</h2>
                         </div>
