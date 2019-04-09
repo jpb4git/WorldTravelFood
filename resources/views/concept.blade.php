@@ -4,16 +4,13 @@
 @stop
 @section('content')
 
-    <div class="container p-5">
+    <div class="container pt-5 mt-5">
         <div class="row">
-            <div class="col-lg-6">
-                <img src="//cdn.shopify.com/s/files/1/0862/4302/files/IMG_3439_-_noirjpg_large.jpeg?18331978792082591307">
-            </div>
-            <div class="col-lg-6">
+            <div class="col">
                 <h2>Un voyage parmi les saveurs du monde</h2>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
+            <div class="row mt-5">
+                <div class="col">
                     <p>L'<strong>épicerie en ligne,</strong><strong> World Travel Food</strong> vous propose une large
                         gamme de produits venant de tous horizons, pour vous faire voyager à travers la gastronomie et
                         les
@@ -24,6 +21,7 @@
                         créative.
                     </p>
                     <p>Nous sommes spécialiste des :</p>
+                    <img class="rounded float-right" src="//cdn.shopify.com/s/files/1/0862/4302/files/IMG_3439_-_noirjpg_large.jpeg?18331978792082591307">
                     <ul>
                         <li><strong><span>produits portugais</span></strong></li>
                         <li><strong><span>produits espagnols</span></strong></li>
@@ -46,12 +44,10 @@
                     <p>Nous vous proposons des recettes variées. Tous les jours, nous mettons en œuvre notre créativité
                         pour
                         étonner les gourmands, plaire aux délicats et étonner les curieux.</p>
-                    <h2>Venez découvri r nos produits pour régaler vos papilles et vos convives.</h2>
+                    <h2 class="pb-5">Venez découvri r nos produits pour régaler vos papilles et vos convives.</h2>
                 </div>
             </div>
         </div>
     </div>
-
-
 
 @endsection

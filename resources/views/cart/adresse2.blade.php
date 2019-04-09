@@ -6,11 +6,11 @@
 @section('content')
     <main class="container border mt-5 mb-5">
         <nav class="breadcrumb mt-2">
-            <a class="breadcrumb-item text-dark">RECAPITULATIF DE COMMANDE</a>
-            <a class="breadcrumb-item text-dark">IDENTIFICATION</a>
+            <a class="breadcrumb-item text-dark text-size">RECAPITULATIF DE COMMANDE</a>
+            <a class="breadcrumb-item text-dark text-size">IDENTIFICATION</a>
             <span class="breadcrumb-item active text-primary">ADRESSE</span>
-            <a class="breadcrumb-item text-dark">FRAIS DE PORT</a>
-            <a class="breadcrumb-item text-dark">PAIEMENT</a>
+            <a class="breadcrumb-item text-dark text-size">FRAIS DE PORT</a>
+            <a class="breadcrumb-item text-dark text-size">PAIEMENT</a>
         </nav>
         <div class="row bg-secondary text-white justify-content-start py-2">
             <div class="col-sm-12 ">

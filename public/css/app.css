@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -34,7 +34,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Nunito", sans-serif;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -66,7 +66,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -390,7 +390,6 @@ h6,
 .h5,
 .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Nunito", sans-serif;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -6142,7 +6141,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -6267,7 +6266,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Nunito", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -10661,8 +10660,19 @@ a.text-dark:focus {
   height: 130px;
 }
 
-.police {
-  font-family: "Nunito", sans-serif !important;
+h2 {
+  font-family: Amatic SC, cursive;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: Amatic SC, cursive;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.logofooter {
+  width: 80px;
 }
 
 .texteslider {
@@ -10766,8 +10776,8 @@ linkProd:hover {
   height: 100px;
 }
 
-div.dropdown-menu a {
-  font-family: "Nunito", sans-serif;
+.text-size {
+  font-size: 20px;
 }
 
 a.navbar-light .navbar-nav .nav-link:focus,
@@ -10788,6 +10798,7 @@ a.navbar-light .navbar-nav .nav-link:focus,
 .dropdown-item:hover {
   opacity: 0.8;
   background-color: #67c7c6;
+  font-size: 30px;
 }
 
 a.nav-link {
@@ -10796,7 +10807,7 @@ a.nav-link {
 
 nav {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -10807,10 +10818,6 @@ hr.style1 {
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 5rem;
   padding-left: 0.5rem;
-}
-
-.police {
-  font-family: "Nunito", sans-serif !important;
 }
 
 .blue {
